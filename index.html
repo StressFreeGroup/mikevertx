@@ -58,7 +58,8 @@
         .hero-label { display: inline-block; background: var(--red); color: white; padding: 0.5rem 1rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; margin-bottom: 1.5rem; }
         .hero-content h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; line-height: 1.15; margin-bottom: 1rem; color: var(--grey-900); }
         .hero-content h1 span { color: var(--red); }
-        .hero-headline { font-size: 1.25rem; color: var(--grey-700); margin-bottom: 2rem; font-weight: 400; line-height: 1.6; }
+        .hero-headline { font-size: 1.25rem; color: var(--grey-700); margin-bottom: 1rem; font-weight: 400; line-height: 1.6; }
+        .hero-backstory { font-size: 1rem; color: var(--grey-600); margin-bottom: 2rem; font-style: italic; line-height: 1.7; padding-left: 1rem; border-left: 3px solid var(--teal); }
         .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; padding: 1.5rem 0; border-top: 2px solid var(--grey-200); border-bottom: 2px solid var(--grey-200); }
         .hero-stat { text-align: left; }
         .hero-stat-num { font-family: var(--font-display); font-size: 2.75rem; font-weight: 700; color: var(--red); line-height: 1; }
@@ -123,24 +124,24 @@
         .career-intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
         .career-intro .tagline { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--grey-700); line-height: 1.6; margin-bottom: 1.5rem; }
         .career-intro p { font-size: 1.0625rem; color: var(--grey-600); line-height: 1.8; }
-        .career-grid { display: flex; flex-direction: column; gap: 0; position: relative; max-width: 950px; margin: 0 auto; padding-left: 30px; }
-        .career-grid::before { content: ''; position: absolute; left: 42px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
+        .career-grid { display: flex; flex-direction: column; gap: 0; position: relative; max-width: 950px; margin: 0 auto; padding-left: 60px; }
+        .career-grid::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
 
         /* PRIMARY YEAR ENTRY */
         .career-year-block { position: relative; padding: 1.5rem 0; }
-        .career-year-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
-        .career-year-dot { width: 28px; height: 28px; min-width: 28px; background: var(--red); border-radius: 50%; position: relative; z-index: 2; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
-        .career-year-dot.clickable { cursor: pointer; transition: all 0.3s ease; }
+        .career-year-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; padding-left: 1.5rem; }
+        .career-year-dot { width: 28px; height: 28px; min-width: 28px; background: var(--red); border-radius: 50%; position: absolute; left: 2px; z-index: 2; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
+        .career-year-dot.clickable { cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; }
         .career-year-dot.clickable:hover { background: var(--teal); transform: scale(1.2); box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--teal), 0 0 20px rgba(0,131,143,0.5); }
         .career-year-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--red); }
         .career-year-text small { font-size: 0.875rem; color: var(--grey-500); font-weight: 400; margin-left: 0.5rem; }
         .career-year-label { font-size: 1rem; color: var(--grey-700); font-weight: 500; margin-left: 0.5rem; }
 
         /* SUB-ITEMS under a year - smaller dots, indented */
-        .career-sub-items { margin-left: 14px; padding-left: 2rem; border-left: 3px solid var(--grey-300); }
+        .career-sub-items { margin-left: 0; padding-left: 2rem; border-left: 3px solid var(--grey-300); margin-top: -0.5rem; }
         .career-sub-item { position: relative; padding: 0.75rem 0; display: flex; align-items: flex-start; gap: 1rem; }
-        .career-sub-item::before { content: ''; position: absolute; left: -2rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); }
-        .career-sub-item a.sub-dot { position: absolute; left: -2rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); z-index: 2; transition: all 0.3s; }
+        .career-sub-item::before { content: ''; position: absolute; left: -2.1rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); }
+        .career-sub-item a.sub-dot { position: absolute; left: -2.1rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); z-index: 2; transition: all 0.3s; text-decoration: none; }
         .career-sub-item a.sub-dot:hover { background: var(--red); transform: scale(1.3); box-shadow: 0 0 15px rgba(183,28,28,0.4); }
         .career-sub-card { flex: 1; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; position: relative; }
         .career-sub-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); transform: translateX(4px); }
@@ -162,7 +163,7 @@
         .career-subsub-text a:hover { text-decoration: underline; }
 
         /* MAIN CAREER CARD with logo */
-        .career-main-card { background: white; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; margin-left: 42px; position: relative; }
+        .career-main-card { background: white; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; margin-left: 0; position: relative; }
         .career-main-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         .career-main-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
         .career-main-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--grey-900); margin: 0; }
@@ -311,6 +312,7 @@
                     <div class="hero-label">Experiential Marketing Executive</div>
                     <h1>I Build <span>Brand Loyalty</span> Through Unforgettable Experiences</h1>
                     <p class="hero-headline">Strategic marketing leader with 25+ years driving consumer engagement, brand activations, and field marketing campaigns for Fortune 500 clients. Available for consulting, remote leadership roles, and agency partnerships.</p>
+                    <p class="hero-backstory">From RadioShack and CompUSA retail to cell phone stores, brand ambassador, nightclub promoter, DJ, firefighter, marketing executive, real estate agent, insurance agent, RV rental entrepreneur, to IT startup founder — I've built my career by solving problems across every industry imaginable. That range means I understand your challenges, wherever you're coming from.</p>
                     <div class="hero-stats">
                         <div class="hero-stat"><div class="hero-stat-num">25+</div><div class="hero-stat-label">Years Leading</div></div>
                         <div class="hero-stat"><div class="hero-stat-num">5,000+</div><div class="hero-stat-label">Events Produced</div></div>
@@ -787,37 +789,44 @@
                 <h2 class="section-title">50+ Brand Partners</h2>
                 <p class="section-subtitle">Fortune 500 companies and innovative brands across spirits, beverage, CPG, technology, and entertainment.</p>
             </div>
+            <!-- ALPHABETIZED CLIENT LIST - Confirmed clients only -->
             <div class="clients-grid">
-                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" onerror="this.style.display='none'"><span class="client-text">PepsiCo</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/remymartin.com" alt="Rémy Martin" onerror="this.style.display='none'"><span class="client-text">Rémy Martin</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/grandmarnier.com" alt="Grand Marnier" onerror="this.style.display='none'"><span class="client-text">Grand Marnier</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/evian.com" alt="Evian" onerror="this.style.display='none'"><span class="client-text">Evian</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/danone.com" alt="Danone" onerror="this.style.display='none'"><span class="client-text">Danone</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/activatedrinks.com" alt="Activate" onerror="this.style.display='none'"><span class="client-text">Activate</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/airforce.com" alt="US Air Force" onerror="this.style.display='none'"><span class="client-text">Air Force</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none'"><span class="client-text">Amazon</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/goarmy.com" alt="US Army" onerror="this.style.display='none'"><span class="client-text">Army</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/audible.com" alt="Audible" onerror="this.style.display='none'"><span class="client-text">Audible</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/bestbuy.com" alt="Best Buy" onerror="this.style.display='none'"><span class="client-text">Best Buy</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/breguet.com" alt="Breguet" onerror="this.style.display='none'"><span class="client-text">Breguet</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/budlight.com" alt="Bud Light" onerror="this.style.display='none'"><span class="client-text">Bud Light</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/campbells.com" alt="Campbell's" onerror="this.style.display='none'"><span class="client-text">Campbell's</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/captainmorgan.com" alt="Captain Morgan" onerror="this.style.display='none'"><span class="client-text">Captain Morgan</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/molsoncoors.com" alt="Coors" onerror="this.style.display='none'"><span class="client-text">Coors Light</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/directv.com" alt="DirecTV" onerror="this.style.display='none'"><span class="client-text">DirecTV</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.style.display='none'"><span class="client-text">Samsung</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/sony.com" alt="Sony" onerror="this.style.display='none'"><span class="client-text">Sony</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/evian.com" alt="Evian" onerror="this.style.display='none'"><span class="client-text">Evian</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/grandmarnier.com" alt="Grand Marnier" onerror="this.style.display='none'"><span class="client-text">Grand Marnier</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/hp.com" alt="HP" onerror="this.style.display='none'"><span class="client-text">HP</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/intel.com" alt="Intel" onerror="this.style.display='none'"><span class="client-text">Intel</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/qualcomm.com" alt="Qualcomm" onerror="this.style.display='none'"><span class="client-text">Qualcomm</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/redbull.com" alt="Red Bull" onerror="this.style.display='none'"><span class="client-text">Red Bull</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/monsterenergy.com" alt="Monster Energy" onerror="this.style.display='none'"><span class="client-text">Monster</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/anheuser-busch.com" alt="AB InBev" onerror="this.style.display='none'"><span class="client-text">AB InBev</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/molsoncoors.com" alt="Coors" onerror="this.style.display='none'"><span class="client-text">Coors Light</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/bacardi.com" alt="Bacardi" onerror="this.style.display='none'"><span class="client-text">Bacardi</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/diageo.com" alt="Diageo" onerror="this.style.display='none'"><span class="client-text">Diageo</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/pernod-ricard.com" alt="Pernod Ricard" onerror="this.style.display='none'"><span class="client-text">Pernod Ricard</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/vitacoco.com" alt="Vita Coco" onerror="this.style.display='none'"><span class="client-text">Vita Coco</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/kindsnacks.com" alt="KIND" onerror="this.style.display='none'"><span class="client-text">KIND Snacks</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.style.display='none'"><span class="client-text">Twitter</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/twitch.tv" alt="Twitch" onerror="this.style.display='none'"><span class="client-text">Twitch</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/uber.com" alt="Uber" onerror="this.style.display='none'"><span class="client-text">Uber</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/lyft.com" alt="Lyft" onerror="this.style.display='none'"><span class="client-text">Lyft</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/toshiba.com" alt="Toshiba" onerror="this.style.display='none'"><span class="client-text">Toshiba</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/kindsnacks.com" alt="KIND" onerror="this.style.display='none'"><span class="client-text">KIND</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/drinkkoe.com" alt="KOE Kombucha" onerror="this.style.display='none'"><span class="client-text">KOE</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/lavazza.com" alt="Lavazza" onerror="this.style.display='none'"><span class="client-text">Lavazza</span></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/breguet.com" alt="Breguet" onerror="this.style.display='none'"><span class="client-text">Breguet</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/mastercard.com" alt="MasterCard" onerror="this.style.display='none'"><span class="client-text">MasterCard</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/mcdonalds.com" alt="McDonald's" onerror="this.style.display='none'"><span class="client-text">McDonald's</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/monsterenergy.com" alt="Monster Energy" onerror="this.style.display='none'"><span class="client-text">Monster</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/mtv.com" alt="MTV" onerror="this.style.display='none'"><span class="client-text">MTV</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="O.N.E. / PepsiCo" onerror="this.style.display='none'"><span class="client-text">O.N.E. Coconut</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" onerror="this.style.display='none'"><span class="client-text">PepsiCo</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/redbull.com" alt="Red Bull" onerror="this.style.display='none'"><span class="client-text">Red Bull</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/remymartin.com" alt="Rémy Martin" onerror="this.style.display='none'"><span class="client-text">Rémy Martin</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.style.display='none'"><span class="client-text">Samsung</span></div>
                 <div class="client-card"><span class="client-text">SoBe</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/sony.com" alt="Sony" onerror="this.style.display='none'"><span class="client-text">Sony</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/toshiba.com" alt="Toshiba" onerror="this.style.display='none'"><span class="client-text">Toshiba</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitch.tv" alt="Twitch" onerror="this.style.display='none'"><span class="client-text">Twitch</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.style.display='none'"><span class="client-text">Twitter</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/v8.com" alt="V8" onerror="this.style.display='none'"><span class="client-text">V8</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/verizon.com" alt="Verizon" onerror="this.style.display='none'"><span class="client-text">Verizon</span></div>
+            </div>
             </div>
         </div>
     </section>
@@ -971,9 +980,9 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="section-label">Let's Connect</div>
-                    <h2>Ready to Create Something Memorable?</h2>
-                    <p>Whether you need a strategic campaign leader, someone to build and scale your experiential marketing program, or a partner who can hit the ground running — let's talk.</p>
+                    <div class="section-label">Let's Solve It</div>
+                    <h2>What's Holding Your Brand Back?</h2>
+                    <p>Every brand has obstacles — whether it's breaking through crowded markets, building genuine consumer connections, or scaling campaigns that actually move the needle. I've spent 25 years helping companies get over, around, and through those hurdles. Tell me what you're facing.</p>
                     <div class="contact-methods">
                         <a href="tel:917-477-9887" class="contact-method">
                             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -998,13 +1007,13 @@
                     </div>
                 </div>
                 <div class="contact-card">
-                    <h3>Send a Message</h3>
+                    <h3>Let's Talk Solutions</h3>
                     <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="company" placeholder="Company (Optional)">
-                        <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <input type="text" name="company" placeholder="Company / Brand">
+                        <textarea name="message" placeholder="What challenges is your company currently facing? What's stopping you from reaching your goals?" required></textarea>
+                        <button type="submit" class="btn btn-primary">Let's Solve This Together</button>
                     </form>
                 </div>
             </div>
