@@ -645,6 +645,162 @@
         }
 
         .scroll-indicator svg { width: 20px; height: 20px; fill: var(--grey-400); }
+
+        /* TESTIMONIALS */
+        #testimonials {
+            background: var(--grey-50);
+            padding: 4rem 0;
+        }
+
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--red);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card.hidden {
+            display: none;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .testimonial-meta h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--grey-900);
+            margin-bottom: 0.15rem;
+        }
+
+        .testimonial-meta span {
+            font-size: 0.8rem;
+            color: var(--grey-600);
+        }
+
+        .testimonial-date {
+            font-size: 0.75rem;
+            color: var(--grey-400);
+            margin-left: auto;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--grey-700);
+            font-style: italic;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--red);
+            opacity: 0.3;
+            line-height: 0;
+            vertical-align: -0.3em;
+            margin-right: 0.25rem;
+        }
+
+        .testimonials-toggle {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn-toggle {
+            background: transparent;
+            color: var(--red);
+            border: 2px solid var(--red);
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-toggle:hover {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-toggle svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            transition: transform 0.3s;
+        }
+
+        .btn-toggle.expanded svg {
+            transform: rotate(180deg);
+        }
+
+        .linkedin-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: var(--grey-500);
+        }
+
+        .linkedin-badge svg {
+            width: 18px;
+            height: 18px;
+            fill: #0077B5;
+        }
+
+        .linkedin-badge a {
+            color: #0077B5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .linkedin-badge a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -658,6 +814,7 @@
             <li><a href="#timeline">Experience</a></li>
             <li><a href="#clients">Clients</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
         </ul>
     </nav>
@@ -1134,6 +1291,216 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Recommendations</div>
+                <h2 class="section-title">What Colleagues Say</h2>
+                <p class="section-subtitle">Real testimonials from LinkedIn connections spanning 25+ years of collaboration.</p>
+            </div>
+
+            <div class="testimonials-container">
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">JM</div>
+                            <div class="testimonial-meta">
+                                <h4>Jennifer Mejia-Ponce</h4>
+                                <span>Senior Creative Producer @ Area 23/Omnicom Production</span>
+                            </div>
+                            <span class="testimonial-date">July 2020</span>
+                        </div>
+                        <p class="testimonial-text">I have worked with Mike Katz in all different capacities from being his Supervisor to him being mine. We have worked in this industry in tandem with clients from Grand Marnier to Pepsi Co. His drive and his no bars attitude to success is rare. He is a go getter, a salesman extraordinaire, a man with work ethic and someone who would walk with anyone he works with side by side to make any project successful. He gets his hands in there with the rest of us but will also lead everyone when we need it! He will always be a friend, a mentor, a colleague and talent. His experience is an infinity long and it will always show in any work he does!</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">MA</div>
+                            <div class="testimonial-meta">
+                                <h4>Maria K. Arriola (Nazareth)</h4>
+                                <span>Sales and Marketing</span>
+                            </div>
+                            <span class="testimonial-date">June 2019</span>
+                        </div>
+                        <p class="testimonial-text">It was a pleasure working with Mike during his tenure at Vino beverages. He is full of insight, initiative, experience, and well versed in the industry. I learned quite a bit from him during the time that we worked together. He is an asset to any organization and I was very lucky to have worked with him in the Vegas market.</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">AP</div>
+                            <div class="testimonial-meta">
+                                <h4>Angel Perez</h4>
+                                <span>Sales Associate</span>
+                            </div>
+                            <span class="testimonial-date">February 2017</span>
+                        </div>
+                        <p class="testimonial-text">Having worked under the leadership of Mike, I witnessed first hand the determination and focus he brought to the company. He was both the vision and the example that we could model in order to ensure success. Completely accessible and extremely competent in his role, I'd recommend Mike Katz to any team.</p>
+                    </div>
+
+                    <!-- Testimonial 4 - Initially Hidden -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">MM</div>
+                            <div class="testimonial-meta">
+                                <h4>Michelle McCunn</h4>
+                                <span>Community Content Creator | Storyteller | Sports & Events</span>
+                            </div>
+                            <span class="testimonial-date">August 2016</span>
+                        </div>
+                        <p class="testimonial-text">Mike is very thorough and great with communicating his expectations. Although he was managing the V8 program in multiple locations and from a different time zone, his management abilities were on point. He successfully assisted me as we worked through hiccups and finished meeting the program goals.</p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">SD</div>
+                            <div class="testimonial-meta">
+                                <h4>Samantha Diaz</h4>
+                                <span>CPG Marketer | Brand & Content Marketing Manager</span>
+                            </div>
+                            <span class="testimonial-date">August 2016</span>
+                        </div>
+                        <p class="testimonial-text">Mike offered great support for the V8 team in Phoenix - plenty of training materials and always in reach by phone or email. Mike even went out of his way to visit the team in Arizona and get to know the surrounding area. He continuously encouraged involvement and made sure the V8 team stayed on track through the summer to finish the campaign strong.</p>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">KV</div>
+                            <div class="testimonial-meta">
+                                <h4>Karol Villegas</h4>
+                                <span>Director of Operations | Arca Build + Modern Design Miami</span>
+                            </div>
+                            <span class="testimonial-date">August 2016</span>
+                        </div>
+                        <p class="testimonial-text">Mike was great to work with, he was always on top of everything making sure all Marketing Events would go smoothly and have an amazing outcome.</p>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">DC</div>
+                            <div class="testimonial-meta">
+                                <h4>Dustin Chalchinsky</h4>
+                                <span>Technology Professional</span>
+                            </div>
+                            <span class="testimonial-date">December 2015</span>
+                        </div>
+                        <p class="testimonial-text">Mike is a self-starter and all around great guy. Working for him really shows you why his staff hold him in such high regard. From the projects we've done, you're best off telling him what you want, and he will use his knowledge and experience to get it done in the most efficient, but more importantly, most effective manner possible. He knows his market and knows how best to reach it.</p>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">WS</div>
+                            <div class="testimonial-meta">
+                                <h4>Ward Sutherland</h4>
+                                <span>Cyber Intelligence Centre</span>
+                            </div>
+                            <span class="testimonial-date">December 2015</span>
+                        </div>
+                        <p class="testimonial-text">Mike is an outstanding Marketing coordinator. Always available and quick to show his BA's maximum appreciation for their efforts. I truly appreciated the opportunities Mike extended to me and would jump at any future chance to work with Mike in the future. He is always available to answer our questions and address any concerns we had before, during and after every activation.</p>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">MS</div>
+                            <div class="testimonial-meta">
+                                <h4>Megan Jade Stoner</h4>
+                                <span>Integrative Marketing Manager | Zales + Banter</span>
+                            </div>
+                            <span class="testimonial-date">December 2015</span>
+                        </div>
+                        <p class="testimonial-text">I worked with Mike on a new beverage launch, initially via conference call communication. He came across as focused, determined and steadfast in his visions. Upon meeting him months later and working alongside him live at a massive trade show, I saw his sweat and tears in person. If you are looking for a strong personality to guide your team, Mike is a solid bet.</p>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">HG</div>
+                            <div class="testimonial-meta">
+                                <h4>Howard Grene</h4>
+                                <span>Vice President, Royalties, Licensing, & Rights at MNRK Music Group</span>
+                            </div>
+                            <span class="testimonial-date">November 2015</span>
+                        </div>
+                        <p class="testimonial-text">I have worked with Mike Katz over the last decade in his different music events, most recently at his annual Stress Free Summer music festival. Mike is the epitome of professional. His vision and execution is shown in the event's annual success. I look forward to continuing to work with him in the future.</p>
+                    </div>
+
+                    <!-- Testimonial 11 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">GM</div>
+                            <div class="testimonial-meta">
+                                <h4>Gabrielle Macklin</h4>
+                                <span>Office Manager, Landscaper & Herbalist</span>
+                            </div>
+                            <span class="testimonial-date">November 2015</span>
+                        </div>
+                        <p class="testimonial-text">I started doing promotional work in 2014, and Mike offered me a position working a mobile event around Boston. The event was a success, we had a great team - props to Mike for coordinating the staff. This was one of the first events that I worked, and since I've been involved in 50+ events. I thank Mike for helping me get my foot in the door. He was a pleasure to work for, and I recommend him as someone that is detail oriented and cares about his work.</p>
+                    </div>
+
+                    <!-- Testimonial 12 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">RI</div>
+                            <div class="testimonial-meta">
+                                <h4>Raz Inserra</h4>
+                                <span>Director of Trade Marketing at KNOX Hydration</span>
+                            </div>
+                            <span class="testimonial-date">November 2015</span>
+                        </div>
+                        <p class="testimonial-text">I enjoyed working with Mike when he managed field marketing initiatives for the East at AQUAhydrate. He executed premium sampling engagements to top tier influencer events at all levels. I'm happy to make my recommendation of Mike!</p>
+                    </div>
+
+                    <!-- Testimonial 13 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">KM</div>
+                            <div class="testimonial-meta">
+                                <h4>Katherine Scarlet Martin</h4>
+                                <span>Actor at SAG</span>
+                            </div>
+                            <span class="testimonial-date">February 2013</span>
+                        </div>
+                        <p class="testimonial-text">Mike is always a pleasure to work with. He's a great leader, well organized, professional and extremely hard working. I've always admired the passion he has for the projects he takes on, which inevitably becomes contagious to the people he works around. I would highly recommend him for any of your future events.</p>
+                    </div>
+
+                    <!-- Testimonial 14 -->
+                    <div class="testimonial-card hidden">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">HH</div>
+                            <div class="testimonial-meta">
+                                <h4>Harry Hearon</h4>
+                                <span>SR. Customer Manager - Safeway/Albertson's at PepsiCo</span>
+                            </div>
+                            <span class="testimonial-date">January 2013</span>
+                        </div>
+                        <p class="testimonial-text">I have had the privilege of working with Mike for several years now. To get right to the point, Mike can do it all when it comes to Field/Experiential Marketing. He can conceive, build and manage a program soup to nuts. Also he is a great "on your feet" problem solver who can get things done in the field.</p>
+                    </div>
+                </div>
+
+                <div class="testimonials-toggle">
+                    <button class="btn-toggle" onclick="toggleTestimonials()">
+                        <span>View More</span>
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                </div>
+
+                <div class="linkedin-badge">
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span>Verified recommendations from</span>
+                    <a href="https://linkedin.com/in/MikeVertx" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact">
         <div class="container">
@@ -1206,6 +1573,32 @@
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Testimonials toggle
+        function toggleTestimonials() {
+            const hiddenCards = document.querySelectorAll('.testimonial-card.hidden');
+            const btn = document.querySelector('.btn-toggle');
+            const btnText = btn.querySelector('span');
+
+            if (hiddenCards.length > 0) {
+                // Show all hidden testimonials
+                document.querySelectorAll('.testimonial-card').forEach(card => {
+                    card.classList.remove('hidden');
+                });
+                btnText.textContent = 'Show Less';
+                btn.classList.add('expanded');
+            } else {
+                // Hide all but first 3
+                const allCards = document.querySelectorAll('.testimonial-card');
+                allCards.forEach((card, index) => {
+                    if (index >= 3) card.classList.add('hidden');
+                });
+                btnText.textContent = 'View More';
+                btn.classList.remove('expanded');
+                // Scroll back to testimonials section
+                document.getElementById('testimonials').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     </script>
 
 </body>
