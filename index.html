@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Katz | Experiential Marketing Executive | 25+ Years | Brand Activation Expert</title>
-    <meta name="description" content="Experiential marketing executive with 25+ years leading brand activations, field marketing campaigns, and consumer engagement programs for Fortune 500 clients including PepsiCo, Rémy Martin, Amazon, and Samsung.">
-    <meta name="keywords" content="experiential marketing, brand activation, field marketing, event production, consumer engagement, sampling programs, trade marketing, campaign management, brand ambassador, event marketing">
+    <title>Mike Katz | Experiential Marketing Executive | Brand Activation | Field Marketing | Event Production</title>
+    <meta name="description" content="Experiential marketing executive with 25+ years leading brand activations, field marketing campaigns, and consumer engagement programs for Fortune 500 clients including PepsiCo, Rémy Martin, Amazon, and Samsung. Available for consulting, remote roles, and agency partnerships.">
+    <meta name="keywords" content="experiential marketing, brand activation, field marketing, event production, consumer engagement, sampling programs, trade marketing, campaign management, brand ambassador, event marketing, brand awareness, consumer experience, promotional marketing">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,10 @@
             --red-dark: #7F0000;
             --red-light: #FFEBEE;
             --green: #2E7D32;
-            --gold: #C9A227;
+            --green-light: #E8F5E9;
+            --teal: #00838F;
+            --teal-light: #E0F7FA;
+            --blue: #1565C0;
             --white: #FFFFFF;
             --grey-50: #FAFAFA;
             --grey-100: #F5F5F5;
@@ -34,6 +37,8 @@
         body { font-family: var(--font-body); color: var(--grey-900); background: var(--white); line-height: 1.6; font-size: 16px; }
         section { padding: 5rem 0; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        a { color: var(--red); }
+        a:hover { color: var(--red-dark); }
 
         /* NAV */
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 2rem; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
@@ -45,86 +50,108 @@
         .nav-cta { background: var(--red); color: white !important; padding: 0.75rem 1.5rem; border-radius: 6px; }
         .nav-cta:hover { background: var(--red-dark); }
 
-        /* HERO */
-        #hero { background: linear-gradient(135deg, var(--grey-900) 0%, #1a1a1a 100%); color: white; padding: 10rem 0 6rem; position: relative; overflow: hidden; }
-        #hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%); clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); opacity: 0.15; }
-        .hero-grid { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-        .hero-content { max-width: 700px; }
+        /* HERO - LIGHT */
+        #hero { background: linear-gradient(180deg, var(--grey-50) 0%, var(--white) 100%); padding: 9rem 0 5rem; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: center; }
         .hero-label { display: inline-block; background: var(--red); color: white; padding: 0.5rem 1rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; margin-bottom: 1.5rem; }
-        .hero-content h1 { font-family: var(--font-display); font-size: 4rem; font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
-        .hero-content h1 span { color: var(--gold); }
-        .hero-headline { font-size: 1.5rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-weight: 400; line-height: 1.5; }
-        .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); }
+        .hero-content h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; line-height: 1.15; margin-bottom: 1rem; color: var(--grey-900); }
+        .hero-content h1 span { color: var(--red); }
+        .hero-headline { font-size: 1.25rem; color: var(--grey-700); margin-bottom: 2rem; font-weight: 400; line-height: 1.6; }
+        .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; padding: 1.5rem 0; border-top: 2px solid var(--grey-200); border-bottom: 2px solid var(--grey-200); }
         .hero-stat { text-align: left; }
-        .hero-stat-num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--gold); line-height: 1; }
-        .hero-stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; }
+        .hero-stat-num { font-family: var(--font-display); font-size: 2.75rem; font-weight: 700; color: var(--red); line-height: 1; }
+        .hero-stat-label { font-size: 0.875rem; color: var(--grey-600); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; }
         .hero-contact { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .hero-contact a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
-        .hero-contact a:hover { color: var(--gold); }
-        .hero-contact svg { width: 20px; height: 20px; fill: var(--gold); }
+        .hero-contact a { color: var(--grey-700); text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+        .hero-contact a:hover { color: var(--red); }
+        .hero-contact svg { width: 20px; height: 20px; fill: var(--red); }
         .hero-buttons { display: flex; gap: 1rem; }
         .btn { padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; }
-        .btn-gold { background: var(--gold); color: var(--grey-900); }
-        .btn-gold:hover { background: #D4B82E; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.4); }
-        .btn-outline-light { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.4); }
-        .btn-outline-light:hover { border-color: white; background: rgba(255,255,255,0.1); }
-        .hero-image-wrap { position: relative; }
-        .hero-image { width: 320px; height: 400px; object-fit: cover; object-position: top; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+        .btn-primary { background: var(--red); color: white; }
+        .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(183,28,28,0.3); }
+        .btn-outline { background: transparent; color: var(--grey-800); border: 2px solid var(--grey-400); }
+        .btn-outline:hover { border-color: var(--red); color: var(--red); }
+        .hero-image { width: 300px; height: 380px; object-fit: cover; object-position: top; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,0.15); }
 
         /* SECTION HEADERS */
         .section-header { text-align: center; margin-bottom: 3rem; }
         .section-label { font-size: 0.875rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
-        .section-title { font-family: var(--font-display); font-size: 2.75rem; font-weight: 600; color: var(--grey-900); }
+        .section-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--grey-900); }
         .section-subtitle { font-size: 1.125rem; color: var(--grey-600); max-width: 700px; margin: 1rem auto 0; line-height: 1.7; }
 
-        /* EXPERTISE */
-        #expertise { background: var(--white); }
-        .expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-        .expertise-card { background: var(--grey-50); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s; }
-        .expertise-card:hover { background: white; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transform: translateY(-5px); }
-        .expertise-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--red), var(--red-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
-        .expertise-icon svg { width: 28px; height: 28px; fill: white; }
-        .expertise-card h3 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--grey-900); }
-        .expertise-card p { font-size: 0.9375rem; color: var(--grey-600); line-height: 1.6; }
+        /* LOOKING FOR */
+        #looking-for { background: var(--teal-light); }
+        .looking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .looking-card { background: white; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .looking-icon { width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+        .looking-icon svg { width: 32px; height: 32px; fill: white; }
+        .looking-card h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 1rem; color: var(--grey-900); }
+        .looking-card p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
+
+        /* WHY HIRE ME */
+        #why-me { background: var(--white); }
+        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .why-card { background: var(--grey-50); border-radius: 16px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; }
+        .why-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--red); line-height: 1; min-width: 50px; }
+        .why-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900); }
+        .why-content p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
+
+        /* SKILLS CLOUD */
+        #skills { background: var(--grey-50); padding: 4rem 0; }
+        .skills-cloud { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 1000px; margin: 0 auto; }
+        .skill-tag { background: white; color: var(--grey-800); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 1rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: all 0.2s; }
+        .skill-tag:hover { background: var(--red); color: white; transform: translateY(-2px); }
+        .skill-tag.highlight { background: var(--red); color: white; }
 
         /* ABOUT */
-        #about { background: var(--grey-50); }
+        #about { background: var(--white); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .about-content h2 { font-family: var(--font-display); font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--grey-900); line-height: 1.3; }
         .about-content p { font-size: 1.0625rem; color: var(--grey-700); margin-bottom: 1.25rem; line-height: 1.8; }
-        .about-highlight { background: white; padding: 1.75rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); margin: 1.5rem 0; }
-        .about-highlight p { font-family: var(--font-display); font-style: italic; margin: 0; font-size: 1.25rem; color: var(--grey-800); line-height: 1.6; }
+        .about-highlight { background: var(--green-light); padding: 1.75rem; border-radius: 12px; margin: 1.5rem 0; }
+        .about-highlight p { font-family: var(--font-display); font-style: italic; margin: 0; font-size: 1.25rem; color: var(--green); line-height: 1.6; }
         .about-photo { width: 100%; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
 
         /* CAREER TIMELINE */
-        #career { background: var(--white); }
+        #career { background: var(--grey-50); }
         .career-intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
         .career-intro .tagline { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--grey-700); line-height: 1.6; margin-bottom: 1.5rem; }
         .career-intro p { font-size: 1.0625rem; color: var(--grey-600); line-height: 1.8; }
         .career-grid { display: grid; gap: 0; position: relative; max-width: 900px; margin: 0 auto; }
-        .career-grid::before { content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--gold), var(--green)); border-radius: 2px; }
+        .career-grid::before { content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
         .career-item { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; }
         .career-year { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--red); text-align: right; padding-top: 0.5rem; }
         .career-year small { display: block; font-size: 0.75rem; color: var(--grey-500); font-weight: 400; margin-top: 0.25rem; }
-        .career-dot { width: 20px; height: 20px; background: var(--red); border-radius: 50%; margin-top: 0.75rem; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--white), 0 0 0 7px var(--grey-200); }
-        .career-content { background: var(--grey-50); padding: 1.75rem; border-radius: 16px; transition: all 0.3s; }
-        .career-content:hover { background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .career-dot { width: 20px; height: 20px; background: var(--red); border-radius: 50%; margin-top: 0.75rem; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
+        .career-content { background: white; padding: 1.75rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
         .career-content h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--grey-900); }
         .career-company { font-size: 1rem; color: var(--green); font-weight: 600; margin-bottom: 0.75rem; }
+        .career-company a { color: var(--green); text-decoration: none; }
+        .career-company a:hover { text-decoration: underline; }
         .career-desc { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
         .career-metrics { display: flex; gap: 2rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--grey-200); flex-wrap: wrap; }
         .career-metric { display: flex; align-items: baseline; gap: 0.375rem; }
         .career-metric strong { font-family: var(--font-display); font-size: 1.25rem; color: var(--red); }
         .career-metric span { font-size: 0.8125rem; color: var(--grey-500); text-transform: uppercase; letter-spacing: 0.5px; }
 
+        /* LAUNCHED */
+        #launched { background: var(--white); }
+        .launched-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .launched-card { background: var(--grey-50); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s; }
+        .launched-card:hover { background: white; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .launched-card h3 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900); }
+        .launched-card p { font-size: 0.9375rem; color: var(--grey-600); margin-bottom: 1rem; line-height: 1.5; }
+        .launched-card a { font-size: 0.875rem; font-weight: 600; color: var(--red); text-decoration: none; }
+        .launched-card a:hover { text-decoration: underline; }
+
         /* CLIENTS */
         #clients { background: var(--grey-900); color: white; padding: 5rem 0; }
-        #clients .section-label { color: var(--gold); }
+        #clients .section-label { color: var(--teal); }
         #clients .section-title { color: white; }
         #clients .section-subtitle { color: var(--grey-400); }
         .clients-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; margin-top: 3rem; }
         .client-card { background: rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 110px; gap: 0.75rem; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.08); }
-        .client-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); border-color: rgba(255,255,255,0.15); }
+        .client-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
         .client-card img { max-width: 90px; max-height: 40px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.9; }
         .client-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
 
@@ -146,8 +173,11 @@
         .testimonial-card:hover { background: white; box-shadow: 0 15px 50px rgba(0,0,0,0.08); }
         .testimonial-card.hidden { display: none; }
         .testimonial-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
-        .testimonial-avatar { width: 56px; height: 56px; background: linear-gradient(135deg, var(--red), var(--red-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.125rem; font-weight: 700; }
+        .testimonial-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: var(--grey-300); }
+        .testimonial-avatar-placeholder { width: 56px; height: 56px; background: linear-gradient(135deg, var(--red), var(--red-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.125rem; font-weight: 700; }
         .testimonial-meta h4 { font-size: 1.0625rem; font-weight: 600; color: var(--grey-900); }
+        .testimonial-meta h4 a { color: var(--grey-900); text-decoration: none; }
+        .testimonial-meta h4 a:hover { color: var(--red); }
         .testimonial-meta span { font-size: 0.9375rem; color: var(--grey-600); }
         .testimonial-date { font-size: 0.875rem; color: var(--grey-400); margin-left: auto; }
         .testimonial-text { font-size: 1.0625rem; line-height: 1.8; color: var(--grey-700); font-style: italic; }
@@ -159,7 +189,7 @@
         .linkedin-badge a { color: #0077B5; text-decoration: none; font-weight: 600; }
 
         /* CONTACT */
-        #contact { background: linear-gradient(135deg, var(--grey-100) 0%, var(--white) 100%); padding: 5rem 0; }
+        #contact { background: linear-gradient(180deg, var(--grey-100) 0%, var(--white) 100%); padding: 5rem 0; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
         .contact-info h2 { font-family: var(--font-display); font-size: 2.25rem; margin-bottom: 1rem; color: var(--grey-900); }
         .contact-info > p { font-size: 1.125rem; color: var(--grey-600); margin-bottom: 2rem; line-height: 1.7; }
@@ -178,8 +208,6 @@
         .contact-form input, .contact-form textarea { padding: 1.125rem 1.5rem; border: 2px solid var(--grey-200); border-radius: 12px; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.2s; }
         .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--red); }
         .contact-form textarea { min-height: 140px; resize: vertical; }
-        .btn-primary { background: var(--red); color: white; }
-        .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(183,28,28,0.3); }
 
         /* FOOTER */
         footer { background: var(--grey-900); color: var(--grey-400); padding: 2.5rem; text-align: center; font-size: 1rem; }
@@ -187,23 +215,25 @@
         /* RESPONSIVE */
         @media (max-width: 1024px) {
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-image-wrap { display: none; }
+            .hero-image { display: none; }
             .hero-stats { grid-template-columns: repeat(2, 1fr); }
             .hero-contact { justify-content: center; }
             .hero-buttons { justify-content: center; }
-            .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+            .looking-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .launched-grid { grid-template-columns: repeat(2, 1fr); }
             .clients-grid { grid-template-columns: repeat(4, 1fr); }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             section { padding: 3.5rem 0; }
-            .hero-content h1 { font-size: 2.75rem; }
+            .hero-content h1 { font-size: 2.5rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .career-grid::before { left: 25px; }
             .career-item { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 60px; position: relative; }
             .career-year { text-align: left; }
             .career-dot { position: absolute; left: 15px; top: 1.5rem; }
-            .expertise-grid { grid-template-columns: 1fr; }
+            .launched-grid { grid-template-columns: 1fr; }
             .clients-grid { grid-template-columns: repeat(3, 1fr); }
             .portfolio-grid, .testimonials-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
@@ -216,7 +246,7 @@
     <nav>
         <a href="#" class="nav-logo">Mike<span>Katz</span></a>
         <ul class="nav-links">
-            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#looking-for">Opportunities</a></li>
             <li><a href="#career">Experience</a></li>
             <li><a href="#clients">Clients</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -231,8 +261,8 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <div class="hero-label">Experiential Marketing Executive</div>
-                    <h1>I Build Brands Through <span>Unforgettable Experiences</span></h1>
-                    <p class="hero-headline">Strategic leader who has driven consumer engagement, brand activations, and field marketing campaigns for Fortune 500 clients across spirits, beverage, CPG, tech, and entertainment.</p>
+                    <h1>I Build <span>Brand Loyalty</span> Through Unforgettable Experiences</h1>
+                    <p class="hero-headline">Strategic marketing leader with 25+ years driving consumer engagement, brand activations, and field marketing campaigns for Fortune 500 clients. Available for consulting, remote leadership roles, and agency partnerships.</p>
                     <div class="hero-stats">
                         <div class="hero-stat"><div class="hero-stat-num">25+</div><div class="hero-stat-label">Years Leading</div></div>
                         <div class="hero-stat"><div class="hero-stat-num">5,000+</div><div class="hero-stat-label">Events Produced</div></div>
@@ -245,46 +275,111 @@
                         <a href="https://linkedin.com/in/MikeVertx" target="_blank"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>LinkedIn</a>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-gold">Start a Conversation</a>
-                        <a href="files/RESUME_MICHAEL_KATZ_2026.pdf" class="btn btn-outline-light" download>Download Resume</a>
+                        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+                        <a href="files/RESUME_MICHAEL_KATZ_2026.pdf" class="btn btn-outline" download>Download Resume</a>
                     </div>
                 </div>
-                <div class="hero-image-wrap">
-                    <img src="images/profile.jpg" alt="Mike Katz - Experiential Marketing Executive" class="hero-image">
+                <img src="images/profile.jpg" alt="Mike Katz - Experiential Marketing Executive" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I'M LOOKING FOR -->
+    <section id="looking-for">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Opportunities</div>
+                <h2 class="section-title">How I Can Help</h2>
+                <p class="section-subtitle">I partner with brands and agencies who want to create meaningful consumer connections.</p>
+            </div>
+            <div class="looking-grid">
+                <div class="looking-card">
+                    <div class="looking-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                    <h3>Grow Emerging Brands</h3>
+                    <p>Strategic guidance and hands-on execution to help startups and challenger brands break through the noise with experiential campaigns that create real consumer advocates.</p>
+                </div>
+                <div class="looking-card">
+                    <div class="looking-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                    <h3>Keep Leaders at the Top</h3>
+                    <p>Help established brands maintain market dominance through innovative activations, flawless execution, and programs that keep consumers engaged and loyal.</p>
+                </div>
+                <div class="looking-card">
+                    <div class="looking-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Remote & Consulting Roles</h3>
+                    <p>Available for remote leadership positions, fractional CMO engagements, and consulting projects where my network and experience can drive immediate results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERTISE -->
-    <section id="expertise">
+    <!-- WHY HIRE ME -->
+    <section id="why-me">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Core Competencies</div>
-                <h2 class="section-title">What I Deliver</h2>
-                <p class="section-subtitle">Strategic experiential marketing leadership that drives measurable brand results and consumer engagement.</p>
+                <div class="section-label">Value Proposition</div>
+                <h2 class="section-title">Why Work With Me</h2>
             </div>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-                    <h3>Brand Activation</h3>
-                    <p>End-to-end campaign development from strategy through execution for premium and mass-market brands.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-num">01</div>
+                    <div class="why-content">
+                        <h3>I've Done Every Job in This Industry</h3>
+                        <p>From campus brand ambassador to agency owner, I've held every position in experiential marketing. I understand every role, every challenge, and how to make each one successful.</p>
+                    </div>
                 </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                    <h3>Field Marketing</h3>
-                    <p>National program management with 5,000+ brand ambassadors, sampling teams, and event staff deployed.</p>
+                <div class="why-card">
+                    <div class="why-num">02</div>
+                    <div class="why-content">
+                        <h3>Deep Rolodex, Real Relationships</h3>
+                        <p>25 years of building genuine industry relationships means I can assemble the right team, find the right venues, and solve problems others can't.</p>
+                    </div>
                 </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-                    <h3>Event Production</h3>
-                    <p>Large-scale festival activations, trade shows, and venue takeovers for audiences up to 100,000+.</p>
+                <div class="why-card">
+                    <div class="why-num">03</div>
+                    <div class="why-content">
+                        <h3>Sleeves Rolled Up, Always Ready</h3>
+                        <p>I'm not a "strategy only" executive. I'll be on-site at 5am, solve the problem no one else can, and stay until the job is done right.</p>
+                    </div>
                 </div>
-                <div class="expertise-card">
-                    <div class="expertise-icon"><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-                    <h3>P&L Leadership</h3>
-                    <p>Full budget ownership from $30K programs to $2M+ annual campaigns with ROI accountability.</p>
+                <div class="why-card">
+                    <div class="why-num">04</div>
+                    <div class="why-content">
+                        <h3>P&L Accountability, Not Just Ideas</h3>
+                        <p>I've managed budgets from $30K to $2M+ with full accountability. I understand ROI, efficiency, and delivering results that matter to the bottom line.</p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS CLOUD -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Areas of Specialization</h2>
+            </div>
+            <div class="skills-cloud">
+                <span class="skill-tag highlight">Experiential Marketing</span>
+                <span class="skill-tag highlight">Brand Activation</span>
+                <span class="skill-tag">Field Marketing</span>
+                <span class="skill-tag">Sampling Programs</span>
+                <span class="skill-tag highlight">Event Production</span>
+                <span class="skill-tag">Grand Scale Events</span>
+                <span class="skill-tag">Flagship Activations</span>
+                <span class="skill-tag">Brand Ambassador Programs</span>
+                <span class="skill-tag">Consumer Engagement</span>
+                <span class="skill-tag">Brand Awareness</span>
+                <span class="skill-tag">Brand Loyalty</span>
+                <span class="skill-tag">Trade Marketing</span>
+                <span class="skill-tag">Festival Marketing</span>
+                <span class="skill-tag">On-Premise Activations</span>
+                <span class="skill-tag">National Program Management</span>
+                <span class="skill-tag">Vendor Management</span>
+                <span class="skill-tag">P&L Leadership</span>
+                <span class="skill-tag">Team Building</span>
+                <span class="skill-tag">Positive Consumer Experiences</span>
+                <span class="skill-tag">Promotional Marketing</span>
             </div>
         </div>
     </section>
@@ -300,7 +395,7 @@
                     <div class="about-highlight">
                         <p>"It's the combination of passion, drive, and doing things the right way that leaves people with the WOW factor."</p>
                     </div>
-                    <p>I bring an established network of industry resources, vendor relationships, and operational expertise to solve complex brand marketing challenges — whether that's staffing, event production, national tours, or full-service campaign management.</p>
+                    <p>I bring an established network of industry resources, vendor relationships, and operational expertise to solve complex brand marketing challenges.</p>
                 </div>
                 <img src="images/mike-casual.jpg" alt="Mike Katz" class="about-photo">
             </div>
@@ -316,25 +411,25 @@
             </div>
             <div class="career-intro">
                 <p class="tagline">From campus rep, through each rung on the ladder,<br>I've held and done it, with my sleeves rolled up always ready.</p>
-                <p>My career spans the full spectrum of experiential marketing — from executing grassroots sampling programs as a college brand ambassador to founding and scaling my own agencies. Every role taught me something essential about connecting brands with consumers.</p>
+                <p>My career spans the full spectrum of experiential marketing — from executing grassroots sampling programs as a college brand ambassador to founding and scaling my own agencies.</p>
             </div>
             <div class="career-grid">
                 <div class="career-item">
                     <div class="career-year">2026<small>Present</small></div>
                     <div class="career-dot"></div>
                     <div class="career-content">
-                        <h3>Launched RVFMS Fleet Management Solutions</h3>
-                        <div class="career-company">Stress Free Group LLC — San Diego, CA</div>
-                        <div class="career-desc">Expanded business portfolio to include Stress Free Golf Carts and Stress Free Staffing & Events alongside the RV rental operation, applying experiential marketing expertise to event logistics and festival services.</div>
+                        <h3>Expanded Portfolio: Golf Carts, Staffing, RVFMS</h3>
+                        <div class="career-company"><a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
+                        <div class="career-desc">Launched <a href="https://stressfreegolfcarts.com" target="_blank">Stress Free Golf Carts</a> and <a href="https://stressfreestaffing.com" target="_blank">Stress Free Staffing & Events</a>, plus RVFMS fleet management technology platform.</div>
                     </div>
                 </div>
                 <div class="career-item">
                     <div class="career-year">2025</div>
                     <div class="career-dot"></div>
                     <div class="career-content">
-                        <h3>Expanded Stress Free Group Portfolio</h3>
-                        <div class="career-company">Stress Free Shield — San Diego, CA</div>
-                        <div class="career-desc">Added Stress Free Shield interior damage liability protection product, diversifying revenue streams and creating new B2B partnership opportunities.</div>
+                        <h3>Launched Stress Free Shield</h3>
+                        <div class="career-company"><a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
+                        <div class="career-desc">Created interior damage liability protection product, diversifying revenue streams and creating new B2B partnership opportunities.</div>
                     </div>
                 </div>
                 <div class="career-item">
@@ -342,8 +437,8 @@
                     <div class="career-dot"></div>
                     <div class="career-content">
                         <h3>Owner & President</h3>
-                        <div class="career-company">Stress Free Group LLC — San Diego, CA</div>
-                        <div class="career-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated operations with full P&L ownership, vendor management, and customer experience design.</div>
+                        <div class="career-company"><a href="https://stressfreervs.com" target="_blank">Stress Free RVs</a> / <a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
+                        <div class="career-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated operations with full P&L ownership.</div>
                         <div class="career-metrics">
                             <div class="career-metric"><strong>$5M+</strong><span>Revenue</span></div>
                             <div class="career-metric"><strong>118</strong><span>Vehicles</span></div>
@@ -356,8 +451,8 @@
                     <div class="career-dot"></div>
                     <div class="career-content">
                         <h3>Sr. National Director of Sales</h3>
-                        <div class="career-company">Look Media / The Sampling Agency — San Diego, CA</div>
-                        <div class="career-desc">Created The Sampling Agency division from scratch. Built proprietary Talent Portal software for contractor management. Led national business development and client relationships.</div>
+                        <div class="career-company"><a href="https://lookmg.com" target="_blank">Look Media</a> / The Sampling Agency — San Diego, CA</div>
+                        <div class="career-desc">Created The Sampling Agency division from scratch. Built proprietary Talent Portal software for contractor management.</div>
                         <div class="career-metrics">
                             <div class="career-metric"><strong>40</strong><span>Clients</span></div>
                             <div class="career-metric"><strong>$800K</strong><span>Revenue</span></div>
@@ -371,7 +466,7 @@
                     <div class="career-content">
                         <h3>Brand Manager</h3>
                         <div class="career-company">VINO Beverages — New York, NY</div>
-                        <div class="career-desc">Led all marketing efforts for innovative alcohol-removed wine startup. Managed budgets from $30K to $2M. Drove product launch achieving 12,000+ units sold in first 6 months.</div>
+                        <div class="career-desc">Led all marketing efforts for innovative alcohol-removed wine startup. Managed budgets from $30K to $2M. Drove 12,000+ units sold in first 6 months.</div>
                     </div>
                 </div>
                 <div class="career-item">
@@ -380,7 +475,7 @@
                     <div class="career-content">
                         <h3>Founder & Principal</h3>
                         <div class="career-company">Alternative Brand Marketing — New York, NY</div>
-                        <div class="career-desc">Founded full-service experiential marketing agency. Built and executed campaigns for PepsiCo, Rémy Martin, Evian, and 40+ other national brands. Managed cross-functional teams and vendor networks.</div>
+                        <div class="career-desc">Founded full-service experiential marketing agency. Clients included PepsiCo, Rémy Martin, Evian, and 40+ other national brands.</div>
                         <div class="career-metrics">
                             <div class="career-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
                             <div class="career-metric"><strong>50+</strong><span>Programs</span></div>
@@ -392,8 +487,8 @@
                     <div class="career-dot"></div>
                     <div class="career-content">
                         <h3>Regional Field Marketing Manager</h3>
-                        <div class="career-company">O.N.E Natural Experience (acquired by PepsiCo) — East Coast</div>
-                        <div class="career-desc">Promoted twice during tenure. Contributed to successful PepsiCo acquisition. Led major festival activations at Bonnaroo, Electric Zoo, and EDC with teams of 50+ staff.</div>
+                        <div class="career-company"><a href="https://pepsico.com" target="_blank">O.N.E Natural Experience (acquired by PepsiCo)</a> — East Coast</div>
+                        <div class="career-desc">Promoted twice during tenure. Contributed to successful PepsiCo acquisition. Led major festival activations at Bonnaroo, Electric Zoo, and EDC.</div>
                     </div>
                 </div>
                 <div class="career-item">
@@ -402,7 +497,7 @@
                     <div class="career-content">
                         <h3>Account Producer</h3>
                         <div class="career-company">SoHo Experiential — New York, NY</div>
-                        <div class="career-desc">Premium spirits activations for Rémy Martin, Grand Marnier, and Canei Wines. Managed 500+ on-premise events and 50+ staff members across multiple markets.</div>
+                        <div class="career-desc">Premium spirits activations for Rémy Martin, Grand Marnier, and Canei Wines. Managed 500+ on-premise events and 50+ staff members.</div>
                     </div>
                 </div>
                 <div class="career-item">
@@ -410,8 +505,8 @@
                     <div class="career-dot"></div>
                     <div class="career-content">
                         <h3>Market Manager</h3>
-                        <div class="career-company">Red Peg Marketing — Multiple Markets</div>
-                        <div class="career-desc">Managed programs for Breguet, Lavazza, Grand Marnier (U.S. Open), Twitter & Bud Light (Super Bowl), Coors Light, Toshiba, and SoBe. Oversaw multi-market activations and event logistics.</div>
+                        <div class="career-company"><a href="https://redpegmarketing.com" target="_blank">Red Peg Marketing</a> — Multiple Markets</div>
+                        <div class="career-desc">Managed programs for Breguet, Lavazza, Grand Marnier (U.S. Open), Twitter & Bud Light (Super Bowl), Coors Light, Toshiba, and SoBe.</div>
                     </div>
                 </div>
                 <div class="career-item">
@@ -419,9 +514,41 @@
                     <div class="career-dot"></div>
                     <div class="career-content">
                         <h3>B.S. Marketing / Campus Brand Ambassador</h3>
-                        <div class="career-company">Hofstra University — Long Island, NY</div>
-                        <div class="career-desc">Bachelor of Science in Marketing, Associate in Business Administration. Started career as Campus Brand Ambassador in 2002, executing grassroots campaigns that sparked a passion for experiential marketing.</div>
+                        <div class="career-company"><a href="https://hofstra.edu" target="_blank">Hofstra University</a> — Long Island, NY</div>
+                        <div class="career-desc">Bachelor of Science in Marketing, Associate in Business Administration. Started career as Campus Brand Ambassador in 2002, executing grassroots campaigns.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANIES I'VE LAUNCHED -->
+    <section id="launched">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Entrepreneurship</div>
+                <h2 class="section-title">Companies I've Built</h2>
+            </div>
+            <div class="launched-grid">
+                <div class="launched-card">
+                    <h3>Stress Free RVs</h3>
+                    <p>Premier RV rental and fleet management in San Diego</p>
+                    <a href="https://stressfreervs.com" target="_blank">Visit Site</a>
+                </div>
+                <div class="launched-card">
+                    <h3>Stress Free Golf Carts</h3>
+                    <p>Golf cart rentals for events, festivals, and venues</p>
+                    <a href="https://stressfreegolfcarts.com" target="_blank">Visit Site</a>
+                </div>
+                <div class="launched-card">
+                    <h3>Stress Free Staffing</h3>
+                    <p>Event staffing and brand ambassador services</p>
+                    <a href="https://stressfreestaffing.com" target="_blank">Visit Site</a>
+                </div>
+                <div class="launched-card">
+                    <h3>Alternative Brand Marketing</h3>
+                    <p>Full-service experiential marketing agency (2011-2021)</p>
+                    <a href="https://linkedin.com/in/MikeVertx" target="_blank">Learn More</a>
                 </div>
             </div>
         </div>
@@ -476,7 +603,6 @@
             <div class="section-header">
                 <div class="section-label">Portfolio</div>
                 <h2 class="section-title">Campaign Highlights</h2>
-                <p class="section-subtitle">A selection of brand activations and experiential marketing programs.</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
@@ -492,7 +618,7 @@
                     <div class="portfolio-tag">Spirits</div>
                     <div class="portfolio-overlay">
                         <h3>Grand Marnier</h3>
-                        <p>Premium on-premise activations and U.S. Open hospitality experiences at luxury venues.</p>
+                        <p>Premium on-premise activations and U.S. Open hospitality experiences.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
@@ -500,7 +626,7 @@
                     <div class="portfolio-tag">CPG</div>
                     <div class="portfolio-overlay">
                         <h3>Beanfields & Argo Tea</h3>
-                        <p>National sampling programs at outdoor events and festivals reaching 100K+ consumers.</p>
+                        <p>National sampling programs reaching 100K+ consumers.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
@@ -508,7 +634,7 @@
                     <div class="portfolio-tag">Beverage</div>
                     <div class="portfolio-overlay">
                         <h3>Evian Water</h3>
-                        <p>Premium sampling and brand activations at lifestyle and wellness events nationwide.</p>
+                        <p>Premium sampling at lifestyle and wellness events nationwide.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
@@ -516,7 +642,7 @@
                     <div class="portfolio-tag">Festivals</div>
                     <div class="portfolio-overlay">
                         <h3>Festival Marketing</h3>
-                        <p>Bonnaroo, Electric Zoo, EDC — immersive brand experiences for 100K+ attendees.</p>
+                        <p>Bonnaroo, Electric Zoo, EDC — 100K+ attendees.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
@@ -524,7 +650,7 @@
                     <div class="portfolio-tag">Entertainment</div>
                     <div class="portfolio-overlay">
                         <h3>Entertainment & Nightlife</h3>
-                        <p>20+ years combining DJ experience with premium brand activations and event production.</p>
+                        <p>20+ years DJ experience combined with brand activations.</p>
                     </div>
                 </div>
             </div>
@@ -541,64 +667,64 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">JM</div>
-                        <div class="testimonial-meta"><h4>Jennifer Mejia-Ponce</h4><span>Sr. Creative Producer @ Omnicom</span></div>
+                        <img src="images/testimonials/jennifer-mejia.jpg" alt="Jennifer Mejia-Ponce" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>JM</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com/in/jennifermejia" target="_blank">Jennifer Mejia-Ponce</a></h4><span>Sr. Creative Producer @ Omnicom</span></div>
                         <span class="testimonial-date">Jul 2020</span>
                     </div>
                     <p class="testimonial-text">"His drive and no bars attitude to success is rare. He is a go getter, a salesman extraordinaire. He gets his hands in there with the rest of us but will also lead everyone when we need it!"</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">HH</div>
-                        <div class="testimonial-meta"><h4>Harry Hearon</h4><span>SR. Customer Manager @ PepsiCo</span></div>
+                        <img src="images/testimonials/harry-hearon.jpg" alt="Harry Hearon" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>HH</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com/in/harryhearon" target="_blank">Harry Hearon</a></h4><span>SR. Customer Manager @ PepsiCo</span></div>
                         <span class="testimonial-date">Jan 2013</span>
                     </div>
                     <p class="testimonial-text">"Mike can do it all when it comes to Field/Experiential Marketing. He can conceive, build and manage a program soup to nuts."</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">MA</div>
-                        <div class="testimonial-meta"><h4>Maria K. Arriola</h4><span>Sales and Marketing Professional</span></div>
+                        <img src="images/testimonials/maria-arriola.jpg" alt="Maria K. Arriola" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>MA</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Maria K. Arriola</a></h4><span>Sales and Marketing Professional</span></div>
                         <span class="testimonial-date">Jun 2019</span>
                     </div>
                     <p class="testimonial-text">"He is full of insight, initiative, experience, and well versed in the industry. He is an asset to any organization."</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">AP</div>
-                        <div class="testimonial-meta"><h4>Angel Perez</h4><span>Sales Associate</span></div>
+                        <img src="images/testimonials/angel-perez.jpg" alt="Angel Perez" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>AP</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Angel Perez</a></h4><span>Sales Associate</span></div>
                         <span class="testimonial-date">Feb 2017</span>
                     </div>
                     <p class="testimonial-text">"He was both the vision and the example that we could model. Completely accessible and extremely competent in his role."</p>
                 </div>
                 <div class="testimonial-card hidden">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">HG</div>
-                        <div class="testimonial-meta"><h4>Howard Grene</h4><span>VP @ MNRK Music Group</span></div>
+                        <img src="images/testimonials/howard-grene.jpg" alt="Howard Grene" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>HG</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Howard Grene</a></h4><span>VP @ MNRK Music Group</span></div>
                         <span class="testimonial-date">Nov 2015</span>
                     </div>
                     <p class="testimonial-text">"Mike is the epitome of professional. His vision and execution is shown in the event's annual success."</p>
                 </div>
                 <div class="testimonial-card hidden">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">MS</div>
-                        <div class="testimonial-meta"><h4>Megan Jade Stoner</h4><span>Marketing Manager @ Zales</span></div>
+                        <img src="images/testimonials/megan-stoner.jpg" alt="Megan Jade Stoner" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>MS</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Megan Jade Stoner</a></h4><span>Marketing Manager @ Zales</span></div>
                         <span class="testimonial-date">Dec 2015</span>
                     </div>
                     <p class="testimonial-text">"Focused, determined and steadfast in his visions. If you're looking for a strong personality to guide your team, Mike is a solid bet."</p>
                 </div>
                 <div class="testimonial-card hidden">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">KM</div>
-                        <div class="testimonial-meta"><h4>Katherine Scarlet Martin</h4><span>Actor at SAG</span></div>
+                        <img src="images/testimonials/katherine-martin.jpg" alt="Katherine Scarlet Martin" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>KM</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Katherine Scarlet Martin</a></h4><span>Actor at SAG</span></div>
                         <span class="testimonial-date">Feb 2013</span>
                     </div>
                     <p class="testimonial-text">"A great leader, well organized, professional and extremely hard working. I've always admired his passion."</p>
                 </div>
                 <div class="testimonial-card hidden">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">SD</div>
-                        <div class="testimonial-meta"><h4>Samantha Diaz</h4><span>CPG Marketer</span></div>
+                        <img src="images/testimonials/samantha-diaz.jpg" alt="Samantha Diaz" class="testimonial-avatar" onerror="this.outerHTML='<div class=testimonial-avatar-placeholder>SD</div>'">
+                        <div class="testimonial-meta"><h4><a href="https://linkedin.com" target="_blank">Samantha Diaz</a></h4><span>CPG Marketer</span></div>
                         <span class="testimonial-date">Aug 2016</span>
                     </div>
                     <p class="testimonial-text">"Mike offered great support for the V8 team in Phoenix. He continuously encouraged involvement and made sure the team stayed on track."</p>
@@ -621,7 +747,7 @@
                 <div class="contact-info">
                     <div class="section-label">Let's Connect</div>
                     <h2>Ready to Create Something Memorable?</h2>
-                    <p>Whether you need a strategic campaign leader, someone to build and scale your experiential marketing program, or a partner who can hit the ground running — I'd love to hear about your goals.</p>
+                    <p>Whether you need a strategic campaign leader, someone to build and scale your experiential marketing program, or a partner who can hit the ground running — let's talk.</p>
                     <div class="contact-methods">
                         <a href="tel:917-477-9887" class="contact-method">
                             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
