@@ -12,9 +12,7 @@
         :root {
             --red: #B71C1C;
             --red-dark: #7F0000;
-            --red-light: #D32F2F;
             --green: #2E7D32;
-            --green-light: #4CAF50;
             --white: #FFFFFF;
             --grey-50: #FAFAFA;
             --grey-100: #F5F5F5;
@@ -26,755 +24,138 @@
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Inter', -apple-system, sans-serif;
         }
-
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--grey-900);
-            background: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        section {
-            position: relative;
-            padding: 3rem 0;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 clamp(1.5rem, 5vw, 4rem);
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--grey-900); background: var(--white); line-height: 1.5; }
+        section { padding: 1.5rem 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
         /* NAV */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo { height: 40px; }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--grey-800);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0.6rem 1.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { height: 32px; }
+        .nav-links { display: flex; gap: 1.25rem; list-style: none; }
+        .nav-links a { color: var(--grey-800); text-decoration: none; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
         .nav-links a:hover { color: var(--red); }
-
-        .nav-cta {
-            background: var(--red);
-            color: white !important;
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-        }
-
-        .nav-cta:hover { background: var(--red-dark) !important; }
+        .nav-cta { background: var(--red); color: white !important; padding: 0.4rem 1rem; border-radius: 4px; }
 
         /* HERO */
-        #hero {
-            background: linear-gradient(135deg, var(--grey-50) 0%, var(--white) 50%, var(--grey-100) 100%);
-            padding-top: 70px;
-            padding-bottom: 2rem;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .hero-image-wrap { position: relative; }
-
-        .hero-image {
-            width: 280px;
-            height: 340px;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 8px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
-
-        .hero-accent {
-            position: absolute;
-            bottom: -12px;
-            right: -12px;
-            width: 100px;
-            height: 100px;
-            background: var(--red);
-            border-radius: 8px;
-            z-index: -1;
-        }
-
-        .hero-content h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.2rem, 4vw, 3.2rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 0.25rem;
-        }
-
-        .hero-tagline {
-            font-size: 0.85rem;
-            color: var(--grey-600);
-            margin-bottom: 1rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-            padding: 0.75rem 0;
-            border-top: 1px solid var(--grey-200);
-            border-bottom: 1px solid var(--grey-200);
-        }
-
-        .hero-stat-num {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--red);
-            line-height: 1;
-        }
-
-        .hero-stat-label {
-            font-size: 0.65rem;
-            color: var(--grey-600);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 0.15rem;
-        }
-
-        .hero-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-contact a {
-            color: var(--grey-800);
-            text-decoration: none;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
+        #hero { background: var(--grey-50); padding-top: 55px; padding-bottom: 1.5rem; }
+        .hero-grid { display: grid; grid-template-columns: 200px 1fr; gap: 1.5rem; align-items: center; }
+        .hero-image { width: 200px; height: 260px; object-fit: cover; object-position: top; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .hero-content h1 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; line-height: 1.1; margin-bottom: 0.15rem; }
+        .hero-tagline { font-size: 0.7rem; color: var(--grey-600); margin-bottom: 0.6rem; letter-spacing: 1px; text-transform: uppercase; }
+        .hero-stats { display: flex; gap: 1.25rem; margin-bottom: 0.6rem; padding: 0.5rem 0; border-top: 1px solid var(--grey-200); border-bottom: 1px solid var(--grey-200); }
+        .hero-stat-num { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--red); line-height: 1; }
+        .hero-stat-label { font-size: 0.55rem; color: var(--grey-600); text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero-contact { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+        .hero-contact a { color: var(--grey-800); text-decoration: none; font-size: 0.75rem; display: flex; align-items: center; gap: 0.3rem; }
         .hero-contact a:hover { color: var(--red); }
-        .hero-contact svg { width: 16px; height: 16px; fill: var(--red); }
-
-        .hero-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.65rem 1.25rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 4px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
+        .hero-contact svg { width: 14px; height: 14px; fill: var(--red); }
+        .hero-buttons { display: flex; gap: 0.5rem; }
+        .btn { padding: 0.5rem 1rem; font-size: 0.7rem; font-weight: 600; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
         .btn-primary { background: var(--red); color: white; }
-        .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(183,28,28,0.25); }
-        .btn-outline { background: transparent; color: var(--grey-800); border: 2px solid var(--grey-300); }
-        .btn-outline:hover { border-color: var(--red); color: var(--red); }
+        .btn-outline { background: transparent; color: var(--grey-800); border: 1px solid var(--grey-400); }
 
         /* SECTION HEADERS */
-        .section-header { text-align: center; margin-bottom: 1.5rem; }
-        .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
-        .section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.2; }
-        .section-subtitle { font-size: 0.9rem; color: var(--grey-600); max-width: 550px; margin: 0.5rem auto 0; }
+        .section-header { text-align: center; margin-bottom: 1rem; }
+        .section-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 0.2rem; }
+        .section-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+        .section-subtitle { font-size: 0.8rem; color: var(--grey-600); max-width: 500px; margin: 0.3rem auto 0; }
 
         /* ABOUT */
         #about { background: var(--white); }
+        .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; align-items: center; }
+        .about-content h2 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .about-content p { font-size: 0.8rem; color: var(--grey-700); margin-bottom: 0.5rem; line-height: 1.6; }
+        .about-highlight { background: var(--grey-50); padding: 0.75rem; border-left: 3px solid var(--red); margin: 0.75rem 0; }
+        .about-highlight p { font-style: italic; margin: 0; font-size: 0.8rem; }
+        .about-photo { width: 100%; max-width: 260px; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .about-content h2 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.75rem; }
-        .about-content p { font-size: 0.9rem; color: var(--grey-700); margin-bottom: 0.75rem; line-height: 1.7; }
-
-        .about-highlight {
-            background: var(--grey-50);
-            padding: 1rem;
-            border-left: 3px solid var(--red);
-            margin: 1rem 0;
-        }
-
-        .about-highlight p { font-style: italic; margin: 0; color: var(--grey-800); font-size: 0.9rem; }
-        .about-photo { width: 100%; max-width: 320px; border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-
-        /* CAREER LADDER - CONDENSED */
-        #ladder {
-            background: var(--grey-50);
-            padding: 2rem 0;
-        }
-
-        .ladder-container { max-width: 900px; margin: 0 auto; }
-
-        .ladder-track {
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .ladder-line {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(to top, var(--red), var(--green));
-            border-radius: 2px;
-        }
-
-        .ladder-rung {
-            position: relative;
-            padding: 0.4rem 0 0.4rem 1.25rem;
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: fadeInRung 0.4s forwards;
-        }
-
-        .ladder-rung:nth-child(1) { animation-delay: 0.05s; }
-        .ladder-rung:nth-child(2) { animation-delay: 0.1s; }
-        .ladder-rung:nth-child(3) { animation-delay: 0.15s; }
-        .ladder-rung:nth-child(4) { animation-delay: 0.2s; }
-        .ladder-rung:nth-child(5) { animation-delay: 0.25s; }
-        .ladder-rung:nth-child(6) { animation-delay: 0.3s; }
-        .ladder-rung:nth-child(7) { animation-delay: 0.35s; }
-        .ladder-rung:nth-child(8) { animation-delay: 0.4s; }
-        .ladder-rung:nth-child(9) { animation-delay: 0.45s; }
-        .ladder-rung:nth-child(10) { animation-delay: 0.5s; }
-        .ladder-rung:nth-child(11) { animation-delay: 0.55s; }
-        .ladder-rung:nth-child(12) { animation-delay: 0.6s; }
-        .ladder-rung:nth-child(13) { animation-delay: 0.65s; }
-
-        @keyframes fadeInRung {
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .ladder-dot {
-            position: absolute;
-            left: -32px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background: var(--white);
-            border: 2px solid var(--red);
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .ladder-rung.highlight .ladder-dot {
-            background: var(--green);
-            border-color: var(--green);
-            width: 16px;
-            height: 16px;
-            left: -34px;
-        }
-
-        .ladder-rung.highlight .ladder-dot::after {
-            content: '★';
-            color: white;
-            font-size: 8px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .rung-title {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--grey-900);
-            display: inline;
-        }
-
-        .rung-meta {
-            font-size: 0.65rem;
-            color: var(--red);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline;
-            margin-left: 0.5rem;
-        }
-
-        .rung-desc {
-            font-size: 0.8rem;
-            color: var(--grey-600);
-            line-height: 1.4;
-            margin-top: 0.15rem;
-        }
-
-        /* TIMELINE - CONDENSED */
-        #timeline {
-            background: var(--white);
-            padding: 2rem 0;
-        }
-
-        .timeline-grid { display: grid; gap: 0; }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 1rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--grey-200);
-        }
-
-        .timeline-item:hover {
-            background: var(--grey-50);
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            margin: 0 -0.75rem;
-        }
-
-        .timeline-date { text-align: right; }
-
-        .timeline-year {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--red);
-            line-height: 1;
-        }
-
-        .timeline-range { font-size: 0.6rem; color: var(--grey-500); margin-top: 0.1rem; }
-
-        .timeline-content h3 {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 0.1rem;
-        }
-
-        .timeline-company { font-size: 0.8rem; color: var(--green); font-weight: 600; margin-bottom: 0.25rem; }
-        .timeline-desc { font-size: 0.75rem; color: var(--grey-600); margin-bottom: 0.35rem; line-height: 1.4; }
-
-        .timeline-metrics { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-        .timeline-metric { display: flex; align-items: baseline; gap: 0.25rem; }
-        .timeline-metric strong { font-family: var(--font-display); font-size: 0.85rem; color: var(--red); }
-        .timeline-metric span { font-size: 0.6rem; color: var(--grey-500); text-transform: uppercase; }
+        /* CAREER - UNIFIED */
+        #career { background: var(--grey-50); }
+        .career-grid { display: grid; gap: 0; }
+        .career-item { display: grid; grid-template-columns: 80px 1fr; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--grey-200); }
+        .career-item:last-child { border-bottom: none; }
+        .career-year { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--red); text-align: right; }
+        .career-range { font-size: 0.5rem; color: var(--grey-500); }
+        .career-content h3 { font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.1rem; }
+        .career-company { font-size: 0.7rem; color: var(--green); font-weight: 600; }
+        .career-desc { font-size: 0.7rem; color: var(--grey-600); line-height: 1.4; margin-top: 0.15rem; }
+        .career-metrics { display: flex; gap: 0.75rem; margin-top: 0.2rem; }
+        .career-metric strong { font-family: var(--font-display); font-size: 0.75rem; color: var(--red); }
+        .career-metric span { font-size: 0.5rem; color: var(--grey-500); text-transform: uppercase; margin-left: 0.15rem; }
 
         /* CLIENTS */
-        #clients {
-            background: var(--grey-900);
-            color: white;
-            padding: 2rem 0;
-        }
-
-        #clients .section-label { color: var(--green-light); }
-        #clients .section-title { color: white; }
-        #clients .section-subtitle { color: var(--grey-400); }
-
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .client-card {
-            background: rgba(255,255,255,0.08);
-            border-radius: 6px;
-            padding: 0.6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50px;
-            transition: all 0.3s;
-        }
-
-        .client-card:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-2px);
-        }
-
-        .client-card img {
-            max-width: 70%;
-            max-height: 28px;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .client-card:hover img { opacity: 1; }
-
-        .client-text {
-            font-size: 0.55rem;
-            font-weight: 600;
-            color: var(--grey-300);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
+        #clients { background: var(--grey-900); color: white; padding: 1.25rem 0; }
+        #clients .section-label { color: var(--green); }
+        #clients .section-title { color: white; font-size: 1.3rem; }
+        #clients .section-subtitle { color: var(--grey-400); font-size: 0.75rem; }
+        .clients-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.4rem; margin-top: 0.75rem; }
+        .client-card { background: rgba(255,255,255,0.06); border-radius: 4px; padding: 0.4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50px; gap: 0.2rem; }
+        .client-card img { max-width: 50px; max-height: 20px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.7; }
+        .client-text { font-size: 0.5rem; font-weight: 600; color: var(--grey-400); text-transform: uppercase; letter-spacing: 0.3px; text-align: center; }
 
         /* PORTFOLIO */
-        #portfolio {
-            background: var(--white);
-            padding: 2rem 0;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .portfolio-card {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .portfolio-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            color: white;
-        }
-
-        .portfolio-overlay h3 { font-family: var(--font-display); font-size: 0.9rem; margin-bottom: 0.2rem; }
-        .portfolio-overlay p { font-size: 0.7rem; color: rgba(255,255,255,0.8); line-height: 1.3; }
-
-        .portfolio-tag {
-            position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-            background: var(--red);
-            color: white;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.55rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 3px;
-        }
-
-        /* CONTACT */
-        #contact {
-            background: var(--grey-50);
-            padding: 2rem 0;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .contact-info h2 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 0.5rem; }
-        .contact-info p { font-size: 0.9rem; color: var(--grey-600); margin-bottom: 1rem; }
-
-        .contact-methods { display: flex; flex-direction: column; gap: 0.5rem; }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.6rem 1rem;
-            background: white;
-            border-radius: 6px;
-            text-decoration: none;
-            color: var(--grey-800);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: all 0.3s;
-            font-size: 0.85rem;
-        }
-
-        .contact-method:hover { transform: translateX(4px); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-        .contact-method svg { width: 18px; height: 18px; fill: var(--red); }
-        .contact-method span { font-weight: 500; }
-
-        .social-links { display: flex; gap: 0.5rem; margin-top: 1rem; }
-
-        .social-link {
-            width: 36px;
-            height: 36px;
-            background: var(--grey-200);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .social-link:hover { background: var(--red); }
-        .social-link:hover svg { fill: white; }
-        .social-link svg { width: 16px; height: 16px; fill: var(--grey-600); }
-
-        .contact-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-
-        .contact-card h3 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.75rem; }
-
-        .contact-form { display: flex; flex-direction: column; gap: 0.6rem; }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 0.6rem;
-            border: 2px solid var(--grey-200);
-            border-radius: 6px;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus { outline: none; border-color: var(--red); }
-
-        .contact-form textarea { min-height: 80px; resize: vertical; }
-
-        /* FOOTER */
-        footer {
-            background: var(--grey-900);
-            color: var(--grey-400);
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.75rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .hero-image-wrap { order: -1; text-align: center; }
-            .hero-image { width: 200px; height: 250px; }
-            .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
-            .timeline-date { text-align: left; }
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 2rem 0; }
-            .nav-links { display: none; }
-            .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
-            .clients-grid { grid-template-columns: repeat(4, 1fr); }
-            .portfolio-grid { grid-template-columns: 1fr; }
-        }
-
-        .scroll-indicator {
-            display: none;
-        }
+        #portfolio { background: var(--white); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+        .portfolio-card { position: relative; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .portfolio-card img { width: 100%; height: 120px; object-fit: cover; }
+        .portfolio-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem; background: linear-gradient(transparent, rgba(0,0,0,0.85)); color: white; }
+        .portfolio-overlay h3 { font-family: var(--font-display); font-size: 0.75rem; margin-bottom: 0.1rem; }
+        .portfolio-overlay p { font-size: 0.6rem; color: rgba(255,255,255,0.8); line-height: 1.3; }
+        .portfolio-tag { position: absolute; top: 0.4rem; left: 0.4rem; background: var(--red); color: white; padding: 0.15rem 0.4rem; font-size: 0.5rem; font-weight: 700; text-transform: uppercase; border-radius: 2px; }
 
         /* TESTIMONIALS */
-        #testimonials {
-            background: var(--grey-50);
-            padding: 2rem 0;
-        }
+        #testimonials { background: var(--grey-50); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+        .testimonial-card { background: white; border-radius: 6px; padding: 0.6rem 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border-left: 2px solid var(--red); }
+        .testimonial-card.hidden { display: none; }
+        .testimonial-header { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.3rem; }
+        .testimonial-avatar { width: 24px; height: 24px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.55rem; font-weight: 600; }
+        .testimonial-meta h4 { font-size: 0.7rem; font-weight: 600; }
+        .testimonial-meta span { font-size: 0.55rem; color: var(--grey-600); }
+        .testimonial-date { font-size: 0.5rem; color: var(--grey-400); margin-left: auto; }
+        .testimonial-text { font-size: 0.65rem; line-height: 1.4; color: var(--grey-700); font-style: italic; }
+        .testimonials-toggle { text-align: center; margin-top: 0.6rem; }
+        .btn-toggle { background: transparent; color: var(--red); border: 1px solid var(--red); padding: 0.35rem 1rem; border-radius: 4px; font-size: 0.65rem; font-weight: 600; cursor: pointer; }
+        .btn-toggle:hover { background: var(--red); color: white; }
+        .linkedin-badge { display: flex; align-items: center; justify-content: center; gap: 0.3rem; margin-top: 0.5rem; font-size: 0.6rem; color: var(--grey-500); }
+        .linkedin-badge svg { width: 12px; height: 12px; fill: #0077B5; }
+        .linkedin-badge a { color: #0077B5; text-decoration: none; font-weight: 500; }
 
-        .testimonials-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        /* CONTACT */
+        #contact { background: var(--grey-100); padding: 1.25rem 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+        .contact-info h2 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.3rem; }
+        .contact-info > p { font-size: 0.75rem; color: var(--grey-600); margin-bottom: 0.6rem; }
+        .contact-methods { display: flex; flex-direction: column; gap: 0.3rem; }
+        .contact-method { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; background: white; border-radius: 4px; text-decoration: none; color: var(--grey-800); font-size: 0.75rem; }
+        .contact-method svg { width: 14px; height: 14px; fill: var(--red); }
+        .social-links { display: flex; gap: 0.4rem; margin-top: 0.5rem; }
+        .social-link { width: 28px; height: 28px; background: var(--grey-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .social-link svg { width: 14px; height: 14px; fill: var(--grey-600); }
+        .contact-card { background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .contact-card h3 { font-family: var(--font-display); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .contact-form { display: flex; flex-direction: column; gap: 0.4rem; }
+        .contact-form input, .contact-form textarea { padding: 0.5rem; border: 1px solid var(--grey-200); border-radius: 4px; font-family: var(--font-body); font-size: 0.75rem; }
+        .contact-form textarea { min-height: 60px; resize: vertical; }
 
-        .testimonials-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
+        /* FOOTER */
+        footer { background: var(--grey-900); color: var(--grey-400); padding: 0.75rem; text-align: center; font-size: 0.65rem; }
 
-        .testimonial-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-            border-left: 3px solid var(--red);
-            transition: all 0.3s;
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .hero-image { width: 160px; height: 200px; margin: 0 auto; display: block; }
+            .career-item { grid-template-columns: 1fr; gap: 0.25rem; }
+            .career-year { text-align: left; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
         }
-
-        .testimonial-card:hover {
-            transform: translateX(2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .testimonial-card.hidden {
-            display: none;
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonial-avatar {
-            width: 36px;
-            height: 36px;
-            background: var(--red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .testimonial-meta h4 {
-            font-family: var(--font-display);
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--grey-900);
-            margin-bottom: 0.1rem;
-        }
-
-        .testimonial-meta span {
-            font-size: 0.7rem;
-            color: var(--grey-600);
-        }
-
-        .testimonial-date {
-            font-size: 0.65rem;
-            color: var(--grey-400);
-            margin-left: auto;
-        }
-
-        .testimonial-text {
-            font-size: 0.8rem;
-            line-height: 1.5;
-            color: var(--grey-700);
-            font-style: italic;
-        }
-
-        .testimonial-text::before {
-            content: '"';
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            color: var(--red);
-            opacity: 0.3;
-            line-height: 0;
-            vertical-align: -0.25em;
-            margin-right: 0.15rem;
-        }
-
-        .testimonials-toggle {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .btn-toggle {
-            background: transparent;
-            color: var(--red);
-            border: 2px solid var(--red);
-            padding: 0.5rem 1.5rem;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .btn-toggle:hover {
-            background: var(--red);
-            color: white;
-        }
-
-        .btn-toggle svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-            transition: transform 0.3s;
-        }
-
-        .btn-toggle.expanded svg {
-            transform: rotate(180deg);
-        }
-
-        .linkedin-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.4rem;
-            margin-top: 1rem;
-            font-size: 0.75rem;
-            color: var(--grey-500);
-        }
-
-        .linkedin-badge svg {
-            width: 14px;
-            height: 14px;
-            fill: #0077B5;
-        }
-
-        .linkedin-badge a {
-            color: #0077B5;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .linkedin-badge a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .clients-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -785,12 +166,11 @@
         <img src="images/logo.png" alt="Mike Vertx" class="nav-logo">
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#ladder">The Ladder</a></li>
-            <li><a href="#timeline">Experience</a></li>
+            <li><a href="#career">Experience</a></li>
             <li><a href="#clients">Clients</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+            <li><a href="#contact" class="nav-cta">Connect</a></li>
         </ul>
     </nav>
 
@@ -798,58 +178,27 @@
     <section id="hero">
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-image-wrap">
-                    <img src="images/profile.jpg" alt="Mike Katz" class="hero-image">
-                    <div class="hero-accent"></div>
-                </div>
+                <img src="images/profile.jpg" alt="Mike Katz" class="hero-image">
                 <div class="hero-content">
                     <h1>Mike Katz</h1>
                     <p class="hero-tagline">Leadership · Entertainment · Effectiveness · Results</p>
-
                     <div class="hero-stats">
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">25+</div>
-                            <div class="hero-stat-label">Years Experience</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">5,000+</div>
-                            <div class="hero-stat-label">Events Produced</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">50+</div>
-                            <div class="hero-stat-label">Brand Clients</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">1M+</div>
-                            <div class="hero-stat-label">Samples Distributed</div>
-                        </div>
+                        <div><div class="hero-stat-num">25+</div><div class="hero-stat-label">Years</div></div>
+                        <div><div class="hero-stat-num">5,000+</div><div class="hero-stat-label">Events</div></div>
+                        <div><div class="hero-stat-num">50+</div><div class="hero-stat-label">Clients</div></div>
+                        <div><div class="hero-stat-num">1M+</div><div class="hero-stat-label">Samples</div></div>
                     </div>
-
                     <div class="hero-contact">
-                        <a href="tel:917-477-9887">
-                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                            917.477.9887
-                        </a>
-                        <a href="mailto:Mike@MikeVertx.com">
-                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            Mike@MikeVertx.com
-                        </a>
-                        <a href="https://linkedin.com/in/MikeVertx" target="_blank">
-                            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                            linkedin.com/in/MikeVertx
-                        </a>
+                        <a href="tel:917-477-9887"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>917.477.9887</a>
+                        <a href="mailto:Mike@MikeVertx.com"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Mike@MikeVertx.com</a>
+                        <a href="https://linkedin.com/in/MikeVertx" target="_blank"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>LinkedIn</a>
                     </div>
-
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                        <a href="files/RESUME_MICHAEL_KATZ_2026.pdf" class="btn btn-outline" download>Download Resume</a>
+                        <a href="files/RESUME_MICHAEL_KATZ_2026.pdf" class="btn btn-outline" download>Resume</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
         </div>
     </section>
 
@@ -860,341 +209,169 @@
                 <div class="about-content">
                     <div class="section-label">About</div>
                     <h2>Creating Memorable Experiences Since 2002</h2>
-                    <p>I enjoy creating positive memorable experiences for people. Through 25 years of developing, customizing, and managing brand campaigns, the key learning that stands out is that everything is relationship oriented.</p>
-                    <p>Saying I've been involved with over 5,000 events and distributed over a million product samples is impressive quantitatively — but the qualitative aspects of brand building and networking establish long-term growth.</p>
-
+                    <p>I enjoy creating positive memorable experiences for people. Through 25 years of developing, customizing, and managing brand campaigns, the key learning is that everything is relationship oriented.</p>
                     <div class="about-highlight">
-                        <p>"It's the combination of passion, drive, and mentality in doing things the right way, having the right people involved, and making things happen that leave people with the WOW factor."</p>
+                        <p>"It's the combination of passion, drive, and mentality in doing things the right way that leave people with the WOW factor."</p>
                     </div>
-
-                    <p>I bring to the table an established network of resources and assets to solve your brand marketing requirements — whether that's staffing, events, production, tours, or full-service campaign management.</p>
+                    <p>I bring an established network of resources and assets to solve your brand marketing requirements — staffing, events, production, tours, or full-service campaign management.</p>
                 </div>
-                <div>
-                    <img src="images/mike-casual.jpg" alt="Mike Katz" class="about-photo">
-                </div>
+                <img src="images/mike-casual.jpg" alt="Mike Katz" class="about-photo">
             </div>
         </div>
     </section>
 
-    <!-- CAREER LADDER - CURRENT AT TOP, RETRO AT BOTTOM (Climbed UP) -->
-    <section id="ladder">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">The Journey</div>
-                <h2 class="section-title">Climbing Every Rung of the Ladder</h2>
-                <p class="section-subtitle">From campus brand ambassador to agency owner — I've held every position in experiential marketing.</p>
-            </div>
-
-            <div class="ladder-container">
-                <div class="ladder-track">
-                    <div class="ladder-line"></div>
-
-                    <!-- CURRENT / TOP -->
-                    <div class="ladder-rung highlight">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Agency Founder & Owner</div>
-                        <span class="rung-meta">Entrepreneur · 2011–Present</span>
-                        <div class="rung-desc">Founded Alternative Brand Marketing and Stress Free Group LLC. Built to $5M+ revenue, 118 vehicles, 17 staff at peak.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Launched RVFMS Fleet Management Solutions</div>
-                        <span class="rung-meta">2026</span>
-                        <div class="rung-desc">Expanded Stress Free Group to include Stress Free Golf Carts & Stress Free Staffing.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Expanded Stress Free Group</div>
-                        <span class="rung-meta">2025</span>
-                        <div class="rung-desc">Added Stress Free Shield Interior Damage Liability Protection* (not an insurance product, protection for common occurrences).</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Sr. National Director of Sales</div>
-                        <span class="rung-meta">Look Media · 2016–2019</span>
-                        <div class="rung-desc">Created The Sampling Agency. Brought in 40 new clients, $800K revenue. Built 5,000+ contractor database.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Brand Manager</div>
-                        <span class="rung-meta">VINO Beverages · 2014–2016</span>
-                        <div class="rung-desc">Led marketing for alcohol-removed wine startup. $30K–$2M budgets. 12,000+ units in first 6 months.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Regional Field Marketing Manager</div>
-                        <span class="rung-meta">O.N.E. / PepsiCo · 2011–2013</span>
-                        <div class="rung-desc">Promoted twice. Contributed to PepsiCo acquisition. Managed Bonnaroo, Electric Zoo, EDC activations.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Producer</div>
-                        <span class="rung-meta">SoHo Experiential · 2007–2010</span>
-                        <div class="rung-desc">Premium spirits activations for Rémy Martin, Grand Marnier. 500+ events, 50+ staff managed.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Market Manager</div>
-                        <span class="rung-meta">Red Peg Marketing · 2005–2014</span>
-                        <div class="rung-desc">Multiple client campaigns: Breguet, Lavazza, U.S. Open for Grand Marnier, Super Bowl for Twitter & Bud Light, Coors Light, Toshiba, SoBe, and more.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Director</div>
-                        <span class="rung-meta">Strategic Accounts</span>
-                        <div class="rung-desc">Led flagship relationships and multi-market programs. P&L management and strategic growth.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Executive</div>
-                        <span class="rung-meta">Program Management</span>
-                        <div class="rung-desc">Primary point of contact. End-to-end delivery, staffing, execution. Managed $50K–$500K budgets.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Coordinator</div>
-                        <span class="rung-meta">Client Services</span>
-                        <div class="rung-desc">Agency-side operations. Scheduling, reporting, budget tracking across concurrent programs.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Event Manager / Team Lead</div>
-                        <span class="rung-meta">Field Operations</span>
-                        <div class="rung-desc">Full event ownership. Union labor, vendors, equipment. Led teams of 5–15 brand ambassadors.</div>
-                    </div>
-
-                    <!-- BOTTOM / EARLIEST -->
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Campus Brand Ambassador</div>
-                        <span class="rung-meta">Entry Level · 2002</span>
-                        <div class="rung-desc">Started at Hofstra University. Consumer engagement, sampling, authentic brand representation.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TIMELINE - CURRENT AT TOP -->
-    <section id="timeline">
+    <!-- CAREER - UNIFIED TIMELINE -->
+    <section id="career">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Experience</div>
                 <h2 class="section-title">Career Timeline</h2>
+                <p class="section-subtitle">From campus brand ambassador to agency owner,<br>I've held each position in experiential marketing.</p>
             </div>
-
-            <div class="timeline-grid">
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2026</div>
-                    </div>
-                    <div class="timeline-content">
+            <div class="career-grid">
+                <div class="career-item">
+                    <div><div class="career-year">2026</div></div>
+                    <div class="career-content">
                         <h3>Launched RVFMS Fleet Management Solutions</h3>
-                        <div class="timeline-company">Stress Free Group LLC · San Diego, CA</div>
-                        <div class="timeline-desc">Expanded Stress Free Group to include Stress Free Golf Carts & Stress Free Staffing alongside RVs.</div>
+                        <div class="career-company">Stress Free Group LLC · San Diego</div>
+                        <div class="career-desc">Expanded to include Stress Free Golf Carts & Stress Free Staffing alongside RVs.</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2025</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2025</div></div>
+                    <div class="career-content">
                         <h3>Expanded Stress Free Group</h3>
-                        <div class="timeline-company">Stress Free Shield · San Diego, CA</div>
-                        <div class="timeline-desc">Added Stress Free Shield Interior Damage Liability Protection* (not an insurance product, protection for common occurrences).</div>
+                        <div class="career-company">Stress Free Shield · San Diego</div>
+                        <div class="career-desc">Added Stress Free Shield Interior Damage Liability Protection* (not insurance, protection for common occurrences).</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2020</div>
-                        <div class="timeline-range">Oct 2020 – Present</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2020</div><div class="career-range">Oct 2020 – Present</div></div>
+                    <div class="career-content">
                         <h3>Owner & President</h3>
-                        <div class="timeline-company">Stress Free Group LLC · San Diego, CA</div>
-                        <div class="timeline-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated operations with P&L ownership.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>$5M+</strong><span>Gross Revenue</span></div>
-                            <div class="timeline-metric"><strong>118</strong><span>Vehicles</span></div>
-                            <div class="timeline-metric"><strong>2,300+</strong><span>Reservations</span></div>
+                        <div class="career-company">Stress Free Group LLC · San Diego</div>
+                        <div class="career-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated with P&L ownership.</div>
+                        <div class="career-metrics">
+                            <div class="career-metric"><strong>$5M+</strong><span>Revenue</span></div>
+                            <div class="career-metric"><strong>118</strong><span>Vehicles</span></div>
+                            <div class="career-metric"><strong>2,300+</strong><span>Reservations</span></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2016</div>
-                        <div class="timeline-range">Feb 2016 – Dec 2019</div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Sr. National Director of Sales & Client Relations</h3>
-                        <div class="timeline-company">Look Media USA / The Sampling Agency · San Diego, CA</div>
-                        <div class="timeline-desc">Hired for 6-week project; converted to multi-year in 2 weeks. Created The Sampling Agency. Built Talent Portal software.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>40</strong><span>New Clients</span></div>
-                            <div class="timeline-metric"><strong>$800K</strong><span>Revenue</span></div>
-                            <div class="timeline-metric"><strong>5K+</strong><span>Contractors</span></div>
+                <div class="career-item">
+                    <div><div class="career-year">2016</div><div class="career-range">Feb 2016 – Dec 2019</div></div>
+                    <div class="career-content">
+                        <h3>Sr. National Director of Sales</h3>
+                        <div class="career-company">Look Media / The Sampling Agency · San Diego</div>
+                        <div class="career-desc">Created The Sampling Agency. Built Talent Portal software.</div>
+                        <div class="career-metrics">
+                            <div class="career-metric"><strong>40</strong><span>Clients</span></div>
+                            <div class="career-metric"><strong>$800K</strong><span>Revenue</span></div>
+                            <div class="career-metric"><strong>5K+</strong><span>Contractors</span></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2014</div>
-                        <div class="timeline-range">Nov 2014 – Jan 2016</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2014</div><div class="career-range">Nov 2014 – Jan 2016</div></div>
+                    <div class="career-content">
                         <h3>Brand Manager</h3>
-                        <div class="timeline-company">VINO Beverages · New York, NY</div>
-                        <div class="timeline-desc">Led marketing for alcohol-removed wine startup. $30K–$2M budgets. Convention calendar generating 1,500+ leads.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>12K</strong><span>Units Sold</span></div>
-                            <div class="timeline-metric"><strong>6 mos</strong><span>Timeframe</span></div>
-                        </div>
+                        <div class="career-company">VINO Beverages · New York</div>
+                        <div class="career-desc">Led marketing for alcohol-removed wine startup. $30K–$2M budgets. 12,000+ units in first 6 months.</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2011</div>
-                        <div class="timeline-range">Jan 2011 – Jan 2021</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2011</div><div class="career-range">Jan 2011 – Jan 2021</div></div>
+                    <div class="career-content">
                         <h3>Founder</h3>
-                        <div class="timeline-company">Alternative Brand Marketing · New York, NY</div>
-                        <div class="timeline-desc">Founded full-service experiential marketing agency. Multi-market activations for global clients including PepsiCo, Rémy Martin, Evian.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
-                            <div class="timeline-metric"><strong>50+</strong><span>Programs</span></div>
-                            <div class="timeline-metric"><strong>20K+</strong><span>Staff DB</span></div>
+                        <div class="career-company">Alternative Brand Marketing · New York</div>
+                        <div class="career-desc">Founded full-service experiential marketing agency. Clients: PepsiCo, Rémy Martin, Evian.</div>
+                        <div class="career-metrics">
+                            <div class="career-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
+                            <div class="career-metric"><strong>50+</strong><span>Programs</span></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2011</div>
-                        <div class="timeline-range">Jun 2011 – Apr 2013</div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Regional Field Marketing Manager – East</h3>
-                        <div class="timeline-company">O.N.E Natural Experience (PepsiCo) · East Coast</div>
-                        <div class="timeline-desc">Promoted twice. Contributed to PepsiCo acquisition. Major festivals: Bonnaroo, Electric Zoo, Winter Music Conference, EDC.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>50</strong><span>Reports</span></div>
-                            <div class="timeline-metric"><strong>600</strong><span>Events</span></div>
-                        </div>
+                <div class="career-item">
+                    <div><div class="career-year">2011</div><div class="career-range">Jun 2011 – Apr 2013</div></div>
+                    <div class="career-content">
+                        <h3>Regional Field Marketing Manager</h3>
+                        <div class="career-company">O.N.E Natural Experience (PepsiCo) · East Coast</div>
+                        <div class="career-desc">Promoted twice. Contributed to PepsiCo acquisition. Bonnaroo, Electric Zoo, EDC.</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2007</div>
-                        <div class="timeline-range">2007 – 2010</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2007</div><div class="career-range">2007 – 2010</div></div>
+                    <div class="career-content">
                         <h3>Account Producer</h3>
-                        <div class="timeline-company">SoHo Experiential · New York, NY</div>
-                        <div class="timeline-desc">Premium spirits activations for Rémy Martin VSOP, Rémy Martin V, Grand Marnier, Canei Wines. 20+ markets.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>500+</strong><span>Events</span></div>
-                            <div class="timeline-metric"><strong>50+</strong><span>Staff</span></div>
-                        </div>
+                        <div class="career-company">SoHo Experiential · New York</div>
+                        <div class="career-desc">Premium spirits activations: Rémy Martin, Grand Marnier, Canei Wines. 500+ events, 50+ staff.</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2005</div>
-                        <div class="timeline-range">2005 – 2014</div>
-                    </div>
-                    <div class="timeline-content">
+                <div class="career-item">
+                    <div><div class="career-year">2005</div><div class="career-range">2005 – 2014</div></div>
+                    <div class="career-content">
                         <h3>Market Manager</h3>
-                        <div class="timeline-company">Red Peg Marketing · Multiple Markets</div>
-                        <div class="timeline-desc">Multiple client campaigns: Breguet, Lavazza, U.S. Open for Grand Marnier, Super Bowl for Twitter & Bud Light, Coors Light, Toshiba, SoBe, and many more.</div>
+                        <div class="career-company">Red Peg Marketing · Multiple Markets</div>
+                        <div class="career-desc">Breguet, Lavazza, U.S. Open for Grand Marnier, Super Bowl for Twitter & Bud Light, Coors Light, Toshiba, SoBe.</div>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <div class="timeline-year">2002</div>
-                        <div class="timeline-range">2002 – 2006</div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Education</h3>
-                        <div class="timeline-company">Hofstra University · Long Island, NY</div>
-                        <div class="timeline-desc">Bachelor of Science in Marketing with Associate Degree in Business Administration. Started career as Campus Brand Ambassador while completing education.</div>
+                <div class="career-item">
+                    <div><div class="career-year">2002</div><div class="career-range">2002 – 2006</div></div>
+                    <div class="career-content">
+                        <h3>B.S. Marketing / Campus Brand Ambassador</h3>
+                        <div class="career-company">Hofstra University · Long Island</div>
+                        <div class="career-desc">Bachelor of Science in Marketing, Associate in Business Administration. Started as Campus Brand Ambassador.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CLIENTS WITH LOGOS -->
+    <!-- CLIENTS WITH LOGOS + NAMES -->
     <section id="clients">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Trusted By</div>
                 <h2 class="section-title">50+ Brand Clients</h2>
-                <p class="section-subtitle">From Fortune 500 giants to innovative startups across spirits, beverage, CPG, tech, and entertainment.</p>
+                <p class="section-subtitle">Fortune 500 to innovative startups across spirits, beverage, CPG, tech, and entertainment.</p>
             </div>
-
             <div class="clients-grid">
-                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" onerror="this.parentElement.innerHTML='<span class=client-text>PepsiCo</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/remymartin.com" alt="Rémy Martin" onerror="this.parentElement.innerHTML='<span class=client-text>Rémy Martin</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/grandmarnier.com" alt="Grand Marnier" onerror="this.parentElement.innerHTML='<span class=client-text>Grand Marnier</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/evian.com" alt="Evian" onerror="this.parentElement.innerHTML='<span class=client-text>Evian</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/danone.com" alt="Danone" onerror="this.parentElement.innerHTML='<span class=client-text>Danone</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.parentElement.innerHTML='<span class=client-text>Amazon</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/audible.com" alt="Audible" onerror="this.parentElement.innerHTML='<span class=client-text>Audible</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/directv.com" alt="DirecTV" onerror="this.parentElement.innerHTML='<span class=client-text>DirecTV</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.parentElement.innerHTML='<span class=client-text>Samsung</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/sony.com" alt="Sony" onerror="this.parentElement.innerHTML='<span class=client-text>Sony</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/hp.com" alt="HP" onerror="this.parentElement.innerHTML='<span class=client-text>HP</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/intel.com" alt="Intel" onerror="this.parentElement.innerHTML='<span class=client-text>Intel</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/qualcomm.com" alt="Qualcomm" onerror="this.parentElement.innerHTML='<span class=client-text>Qualcomm</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/redbull.com" alt="Red Bull" onerror="this.parentElement.innerHTML='<span class=client-text>Red Bull</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/monsterenergy.com" alt="Monster Energy" onerror="this.parentElement.innerHTML='<span class=client-text>Monster</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/anheuser-busch.com" alt="Anheuser-Busch" onerror="this.parentElement.innerHTML='<span class=client-text>AB InBev</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/molsoncoors.com" alt="MillerCoors" onerror="this.parentElement.innerHTML='<span class=client-text>Coors</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/bacardi.com" alt="Bacardi" onerror="this.parentElement.innerHTML='<span class=client-text>Bacardi</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/diageo.com" alt="Diageo" onerror="this.parentElement.innerHTML='<span class=client-text>Diageo</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/pernod-ricard.com" alt="Pernod Ricard" onerror="this.parentElement.innerHTML='<span class=client-text>Pernod Ricard</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/vitacoco.com" alt="Vita Coco" onerror="this.parentElement.innerHTML='<span class=client-text>Vita Coco</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/kindsnacks.com" alt="KIND Snacks" onerror="this.parentElement.innerHTML='<span class=client-text>KIND</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/nestle.com" alt="Nestlé" onerror="this.parentElement.innerHTML='<span class=client-text>Nestlé</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/coca-cola.com" alt="Coca-Cola" onerror="this.parentElement.innerHTML='<span class=client-text>Coca-Cola</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/unilever.com" alt="Unilever" onerror="this.parentElement.innerHTML='<span class=client-text>Unilever</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/pg.com" alt="P&G" onerror="this.parentElement.innerHTML='<span class=client-text>P&G</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/loreal.com" alt="L'Oréal" onerror="this.parentElement.innerHTML='<span class=client-text>L'Oréal</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.parentElement.innerHTML='<span class=client-text>Twitter</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/twitch.tv" alt="Twitch" onerror="this.parentElement.innerHTML='<span class=client-text>Twitch</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/uber.com" alt="Uber" onerror="this.parentElement.innerHTML='<span class=client-text>Uber</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/lyft.com" alt="Lyft" onerror="this.parentElement.innerHTML='<span class=client-text>Lyft</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/zipcar.com" alt="ZipCar" onerror="this.parentElement.innerHTML='<span class=client-text>ZipCar</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/toshiba.com" alt="Toshiba" onerror="this.parentElement.innerHTML='<span class=client-text>Toshiba</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/lavazza.com" alt="Lavazza" onerror="this.parentElement.innerHTML='<span class=client-text>Lavazza</span>'"></div>
-                <div class="client-card"><img src="https://logo.clearbit.com/breguet.com" alt="Breguet" onerror="this.parentElement.innerHTML='<span class=client-text>Breguet</span>'"></div>
-                <div class="client-card"><span class="client-text">Beanfields</span></div>
-                <div class="client-card"><span class="client-text">Argo Tea</span></div>
-                <div class="client-card"><span class="client-text">Hint Water</span></div>
-                <div class="client-card"><span class="client-text">PopChips</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo"><span class="client-text">PepsiCo</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/remymartin.com" alt="Rémy Martin"><span class="client-text">Rémy Martin</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/grandmarnier.com" alt="Grand Marnier"><span class="client-text">Grand Marnier</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/evian.com" alt="Evian"><span class="client-text">Evian</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/danone.com" alt="Danone"><span class="client-text">Danone</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon"><span class="client-text">Amazon</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/audible.com" alt="Audible"><span class="client-text">Audible</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/directv.com" alt="DirecTV"><span class="client-text">DirecTV</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung"><span class="client-text">Samsung</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/sony.com" alt="Sony"><span class="client-text">Sony</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/hp.com" alt="HP"><span class="client-text">HP</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/intel.com" alt="Intel"><span class="client-text">Intel</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/qualcomm.com" alt="Qualcomm"><span class="client-text">Qualcomm</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/redbull.com" alt="Red Bull"><span class="client-text">Red Bull</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/monsterenergy.com" alt="Monster"><span class="client-text">Monster</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/anheuser-busch.com" alt="AB InBev"><span class="client-text">AB InBev</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/molsoncoors.com" alt="Coors"><span class="client-text">Coors</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/bacardi.com" alt="Bacardi"><span class="client-text">Bacardi</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/diageo.com" alt="Diageo"><span class="client-text">Diageo</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pernod-ricard.com" alt="Pernod Ricard"><span class="client-text">Pernod Ricard</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/vitacoco.com" alt="Vita Coco"><span class="client-text">Vita Coco</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/kindsnacks.com" alt="KIND"><span class="client-text">KIND</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/nestle.com" alt="Nestlé"><span class="client-text">Nestlé</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/coca-cola.com" alt="Coca-Cola"><span class="client-text">Coca-Cola</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/unilever.com" alt="Unilever"><span class="client-text">Unilever</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pg.com" alt="P&G"><span class="client-text">P&G</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/loreal.com" alt="L'Oréal"><span class="client-text">L'Oréal</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter"><span class="client-text">Twitter</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitch.tv" alt="Twitch"><span class="client-text">Twitch</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/uber.com" alt="Uber"><span class="client-text">Uber</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/lyft.com" alt="Lyft"><span class="client-text">Lyft</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/toshiba.com" alt="Toshiba"><span class="client-text">Toshiba</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/lavazza.com" alt="Lavazza"><span class="client-text">Lavazza</span></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/breguet.com" alt="Breguet"><span class="client-text">Breguet</span></div>
                 <div class="client-card"><span class="client-text">SoBe</span></div>
                 <div class="client-card"><span class="client-text">Glaceau</span></div>
-                <div class="client-card"><span class="client-text">Hofstra</span></div>
             </div>
         </div>
     </section>
@@ -1205,62 +382,37 @@
             <div class="section-header">
                 <div class="section-label">Case Studies</div>
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A sampling of campaigns that delivered measurable results.</p>
             </div>
-
             <div class="portfolio-grid">
                 <div class="portfolio-card">
-                    <img src="images/portfolio/remy-vsop.jpg" alt="Rémy Martin VSOP">
+                    <img src="images/portfolio/remy-vsop.jpg" alt="Rémy Martin">
                     <div class="portfolio-tag">Spirits</div>
-                    <div class="portfolio-overlay">
-                        <h3>Rémy Martin VSOP</h3>
-                        <p>3-year engagement managing nightlife activations across 20+ markets. 500+ events.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Rémy Martin VSOP</h3><p>3-year engagement. 20+ markets. 500+ events.</p></div>
                 </div>
-
                 <div class="portfolio-card">
                     <img src="images/portfolio/grand-marnier.jpg" alt="Grand Marnier">
                     <div class="portfolio-tag">Spirits</div>
-                    <div class="portfolio-overlay">
-                        <h3>Grand Marnier</h3>
-                        <p>Premium on-premise activations at luxury nightlife venues. Signature cocktails and VIP experiences.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Grand Marnier</h3><p>Premium on-premise activations at luxury venues.</p></div>
                 </div>
-
                 <div class="portfolio-card">
-                    <img src="images/portfolio/beanfields.jpg" alt="Beanfields & Argo Tea">
+                    <img src="images/portfolio/beanfields.jpg" alt="Beanfields">
                     <div class="portfolio-tag">CPG</div>
-                    <div class="portfolio-overlay">
-                        <h3>Beanfields & Argo Tea</h3>
-                        <p>National sampling at outdoor events, festivals, and retail for health-conscious markets.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Beanfields & Argo Tea</h3><p>National sampling at outdoor events and festivals.</p></div>
                 </div>
-
                 <div class="portfolio-card">
-                    <img src="images/portfolio/evian.jpg" alt="Evian Water">
+                    <img src="images/portfolio/evian.jpg" alt="Evian">
                     <div class="portfolio-tag">Beverage</div>
-                    <div class="portfolio-overlay">
-                        <h3>Evian Water</h3>
-                        <p>Premium sampling at lifestyle and wellness events reinforcing brand positioning.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Evian Water</h3><p>Premium sampling at lifestyle and wellness events.</p></div>
                 </div>
-
                 <div class="portfolio-card">
-                    <img src="images/portfolio/outdoor.jpg" alt="Festival Marketing">
+                    <img src="images/portfolio/outdoor.jpg" alt="Festivals">
                     <div class="portfolio-tag">Festivals</div>
-                    <div class="portfolio-overlay">
-                        <h3>Festival Marketing</h3>
-                        <p>Bonnaroo, Electric Zoo, Winter Music Conference, EDC. 100K+ attendee activations.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Festival Marketing</h3><p>Bonnaroo, Electric Zoo, EDC. 100K+ attendees.</p></div>
                 </div>
-
                 <div class="portfolio-card">
-                    <img src="images/portfolio/dj-event.jpg" alt="Entertainment & Nightlife">
+                    <img src="images/portfolio/dj-event.jpg" alt="Nightlife">
                     <div class="portfolio-tag">Entertainment</div>
-                    <div class="portfolio-overlay">
-                        <h3>Entertainment & Nightlife</h3>
-                        <p>20+ years DJ experience at international venues combined with brand activations.</p>
-                    </div>
+                    <div class="portfolio-overlay"><h3>Entertainment & Nightlife</h3><p>20+ years DJ experience combined with brand activations.</p></div>
                 </div>
             </div>
         </div>
@@ -1272,206 +424,79 @@
             <div class="section-header">
                 <div class="section-label">Recommendations</div>
                 <h2 class="section-title">What Colleagues Say</h2>
-                <p class="section-subtitle">Real testimonials from LinkedIn connections spanning 25+ years of collaboration.</p>
             </div>
-
-            <div class="testimonials-container">
-                <div class="testimonials-grid">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">JM</div>
-                            <div class="testimonial-meta">
-                                <h4>Jennifer Mejia-Ponce</h4>
-                                <span>Senior Creative Producer @ Area 23/Omnicom Production</span>
-                            </div>
-                            <span class="testimonial-date">July 2020</span>
-                        </div>
-                        <p class="testimonial-text">I have worked with Mike Katz in all different capacities from being his Supervisor to him being mine. We have worked in this industry in tandem with clients from Grand Marnier to Pepsi Co. His drive and his no bars attitude to success is rare. He is a go getter, a salesman extraordinaire, a man with work ethic and someone who would walk with anyone he works with side by side to make any project successful. He gets his hands in there with the rest of us but will also lead everyone when we need it! He will always be a friend, a mentor, a colleague and talent. His experience is an infinity long and it will always show in any work he does!</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JM</div>
+                        <div class="testimonial-meta"><h4>Jennifer Mejia-Ponce</h4><span>Sr. Creative Producer @ Omnicom</span></div>
+                        <span class="testimonial-date">Jul 2020</span>
                     </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">MA</div>
-                            <div class="testimonial-meta">
-                                <h4>Maria K. Arriola (Nazareth)</h4>
-                                <span>Sales and Marketing</span>
-                            </div>
-                            <span class="testimonial-date">June 2019</span>
-                        </div>
-                        <p class="testimonial-text">It was a pleasure working with Mike during his tenure at Vino beverages. He is full of insight, initiative, experience, and well versed in the industry. I learned quite a bit from him during the time that we worked together. He is an asset to any organization and I was very lucky to have worked with him in the Vegas market.</p>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">AP</div>
-                            <div class="testimonial-meta">
-                                <h4>Angel Perez</h4>
-                                <span>Sales Associate</span>
-                            </div>
-                            <span class="testimonial-date">February 2017</span>
-                        </div>
-                        <p class="testimonial-text">Having worked under the leadership of Mike, I witnessed first hand the determination and focus he brought to the company. He was both the vision and the example that we could model in order to ensure success. Completely accessible and extremely competent in his role, I'd recommend Mike Katz to any team.</p>
-                    </div>
-
-                    <!-- Testimonial 4 - Initially Hidden -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">MM</div>
-                            <div class="testimonial-meta">
-                                <h4>Michelle McCunn</h4>
-                                <span>Community Content Creator | Storyteller | Sports & Events</span>
-                            </div>
-                            <span class="testimonial-date">August 2016</span>
-                        </div>
-                        <p class="testimonial-text">Mike is very thorough and great with communicating his expectations. Although he was managing the V8 program in multiple locations and from a different time zone, his management abilities were on point. He successfully assisted me as we worked through hiccups and finished meeting the program goals.</p>
-                    </div>
-
-                    <!-- Testimonial 5 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">SD</div>
-                            <div class="testimonial-meta">
-                                <h4>Samantha Diaz</h4>
-                                <span>CPG Marketer | Brand & Content Marketing Manager</span>
-                            </div>
-                            <span class="testimonial-date">August 2016</span>
-                        </div>
-                        <p class="testimonial-text">Mike offered great support for the V8 team in Phoenix - plenty of training materials and always in reach by phone or email. Mike even went out of his way to visit the team in Arizona and get to know the surrounding area. He continuously encouraged involvement and made sure the V8 team stayed on track through the summer to finish the campaign strong.</p>
-                    </div>
-
-                    <!-- Testimonial 6 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">KV</div>
-                            <div class="testimonial-meta">
-                                <h4>Karol Villegas</h4>
-                                <span>Director of Operations | Arca Build + Modern Design Miami</span>
-                            </div>
-                            <span class="testimonial-date">August 2016</span>
-                        </div>
-                        <p class="testimonial-text">Mike was great to work with, he was always on top of everything making sure all Marketing Events would go smoothly and have an amazing outcome.</p>
-                    </div>
-
-                    <!-- Testimonial 7 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">DC</div>
-                            <div class="testimonial-meta">
-                                <h4>Dustin Chalchinsky</h4>
-                                <span>Technology Professional</span>
-                            </div>
-                            <span class="testimonial-date">December 2015</span>
-                        </div>
-                        <p class="testimonial-text">Mike is a self-starter and all around great guy. Working for him really shows you why his staff hold him in such high regard. From the projects we've done, you're best off telling him what you want, and he will use his knowledge and experience to get it done in the most efficient, but more importantly, most effective manner possible. He knows his market and knows how best to reach it.</p>
-                    </div>
-
-                    <!-- Testimonial 8 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">WS</div>
-                            <div class="testimonial-meta">
-                                <h4>Ward Sutherland</h4>
-                                <span>Cyber Intelligence Centre</span>
-                            </div>
-                            <span class="testimonial-date">December 2015</span>
-                        </div>
-                        <p class="testimonial-text">Mike is an outstanding Marketing coordinator. Always available and quick to show his BA's maximum appreciation for their efforts. I truly appreciated the opportunities Mike extended to me and would jump at any future chance to work with Mike in the future. He is always available to answer our questions and address any concerns we had before, during and after every activation.</p>
-                    </div>
-
-                    <!-- Testimonial 9 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">MS</div>
-                            <div class="testimonial-meta">
-                                <h4>Megan Jade Stoner</h4>
-                                <span>Integrative Marketing Manager | Zales + Banter</span>
-                            </div>
-                            <span class="testimonial-date">December 2015</span>
-                        </div>
-                        <p class="testimonial-text">I worked with Mike on a new beverage launch, initially via conference call communication. He came across as focused, determined and steadfast in his visions. Upon meeting him months later and working alongside him live at a massive trade show, I saw his sweat and tears in person. If you are looking for a strong personality to guide your team, Mike is a solid bet.</p>
-                    </div>
-
-                    <!-- Testimonial 10 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">HG</div>
-                            <div class="testimonial-meta">
-                                <h4>Howard Grene</h4>
-                                <span>Vice President, Royalties, Licensing, & Rights at MNRK Music Group</span>
-                            </div>
-                            <span class="testimonial-date">November 2015</span>
-                        </div>
-                        <p class="testimonial-text">I have worked with Mike Katz over the last decade in his different music events, most recently at his annual Stress Free Summer music festival. Mike is the epitome of professional. His vision and execution is shown in the event's annual success. I look forward to continuing to work with him in the future.</p>
-                    </div>
-
-                    <!-- Testimonial 11 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">GM</div>
-                            <div class="testimonial-meta">
-                                <h4>Gabrielle Macklin</h4>
-                                <span>Office Manager, Landscaper & Herbalist</span>
-                            </div>
-                            <span class="testimonial-date">November 2015</span>
-                        </div>
-                        <p class="testimonial-text">I started doing promotional work in 2014, and Mike offered me a position working a mobile event around Boston. The event was a success, we had a great team - props to Mike for coordinating the staff. This was one of the first events that I worked, and since I've been involved in 50+ events. I thank Mike for helping me get my foot in the door. He was a pleasure to work for, and I recommend him as someone that is detail oriented and cares about his work.</p>
-                    </div>
-
-                    <!-- Testimonial 12 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">RI</div>
-                            <div class="testimonial-meta">
-                                <h4>Raz Inserra</h4>
-                                <span>Director of Trade Marketing at KNOX Hydration</span>
-                            </div>
-                            <span class="testimonial-date">November 2015</span>
-                        </div>
-                        <p class="testimonial-text">I enjoyed working with Mike when he managed field marketing initiatives for the East at AQUAhydrate. He executed premium sampling engagements to top tier influencer events at all levels. I'm happy to make my recommendation of Mike!</p>
-                    </div>
-
-                    <!-- Testimonial 13 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">KM</div>
-                            <div class="testimonial-meta">
-                                <h4>Katherine Scarlet Martin</h4>
-                                <span>Actor at SAG</span>
-                            </div>
-                            <span class="testimonial-date">February 2013</span>
-                        </div>
-                        <p class="testimonial-text">Mike is always a pleasure to work with. He's a great leader, well organized, professional and extremely hard working. I've always admired the passion he has for the projects he takes on, which inevitably becomes contagious to the people he works around. I would highly recommend him for any of your future events.</p>
-                    </div>
-
-                    <!-- Testimonial 14 -->
-                    <div class="testimonial-card hidden">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">HH</div>
-                            <div class="testimonial-meta">
-                                <h4>Harry Hearon</h4>
-                                <span>SR. Customer Manager - Safeway/Albertson's at PepsiCo</span>
-                            </div>
-                            <span class="testimonial-date">January 2013</span>
-                        </div>
-                        <p class="testimonial-text">I have had the privilege of working with Mike for several years now. To get right to the point, Mike can do it all when it comes to Field/Experiential Marketing. He can conceive, build and manage a program soup to nuts. Also he is a great "on your feet" problem solver who can get things done in the field.</p>
-                    </div>
+                    <p class="testimonial-text">His drive and no bars attitude to success is rare. He is a go getter, a salesman extraordinaire. He gets his hands in there with the rest of us but will also lead everyone when we need it!</p>
                 </div>
-
-                <div class="testimonials-toggle">
-                    <button class="btn-toggle" onclick="toggleTestimonials()">
-                        <span>View More</span>
-                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-                    </button>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MA</div>
+                        <div class="testimonial-meta"><h4>Maria K. Arriola</h4><span>Sales and Marketing</span></div>
+                        <span class="testimonial-date">Jun 2019</span>
+                    </div>
+                    <p class="testimonial-text">He is full of insight, initiative, experience, and well versed in the industry. He is an asset to any organization.</p>
                 </div>
-
-                <div class="linkedin-badge">
-                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                    <span>Verified recommendations from</span>
-                    <a href="https://linkedin.com/in/MikeVertx" target="_blank">LinkedIn</a>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AP</div>
+                        <div class="testimonial-meta"><h4>Angel Perez</h4><span>Sales Associate</span></div>
+                        <span class="testimonial-date">Feb 2017</span>
+                    </div>
+                    <p class="testimonial-text">He was both the vision and the example that we could model. Completely accessible and extremely competent in his role.</p>
                 </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">HH</div>
+                        <div class="testimonial-meta"><h4>Harry Hearon</h4><span>SR. Customer Manager @ PepsiCo</span></div>
+                        <span class="testimonial-date">Jan 2013</span>
+                    </div>
+                    <p class="testimonial-text">Mike can do it all when it comes to Field/Experiential Marketing. He can conceive, build and manage a program soup to nuts.</p>
+                </div>
+                <div class="testimonial-card hidden">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SD</div>
+                        <div class="testimonial-meta"><h4>Samantha Diaz</h4><span>CPG Marketer</span></div>
+                        <span class="testimonial-date">Aug 2016</span>
+                    </div>
+                    <p class="testimonial-text">Mike offered great support for the V8 team in Phoenix. He continuously encouraged involvement and made sure the team stayed on track.</p>
+                </div>
+                <div class="testimonial-card hidden">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">HG</div>
+                        <div class="testimonial-meta"><h4>Howard Grene</h4><span>VP @ MNRK Music Group</span></div>
+                        <span class="testimonial-date">Nov 2015</span>
+                    </div>
+                    <p class="testimonial-text">Mike is the epitome of professional. His vision and execution is shown in the event's annual success.</p>
+                </div>
+                <div class="testimonial-card hidden">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MS</div>
+                        <div class="testimonial-meta"><h4>Megan Jade Stoner</h4><span>Marketing Manager @ Zales</span></div>
+                        <span class="testimonial-date">Dec 2015</span>
+                    </div>
+                    <p class="testimonial-text">Focused, determined and steadfast in his visions. If you're looking for a strong personality to guide your team, Mike is a solid bet.</p>
+                </div>
+                <div class="testimonial-card hidden">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">KM</div>
+                        <div class="testimonial-meta"><h4>Katherine Scarlet Martin</h4><span>Actor at SAG</span></div>
+                        <span class="testimonial-date">Feb 2013</span>
+                    </div>
+                    <p class="testimonial-text">A great leader, well organized, professional and extremely hard working. I've always admired his passion.</p>
+                </div>
+            </div>
+            <div class="testimonials-toggle">
+                <button class="btn-toggle" onclick="toggleTestimonials()">View More</button>
+            </div>
+            <div class="linkedin-badge">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>Verified from</span><a href="https://linkedin.com/in/MikeVertx" target="_blank">LinkedIn</a>
             </div>
         </div>
     </section>
@@ -1484,32 +509,16 @@
                     <div class="section-label">Let's Connect</div>
                     <h2>Ready to Create Something Memorable?</h2>
                     <p>Whether you need a full-service campaign, strategic consulting, or someone who can hit the ground running — let's talk.</p>
-
                     <div class="contact-methods">
-                        <a href="tel:917-477-9887" class="contact-method">
-                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                            <span>917.477.9887</span>
-                        </a>
-                        <a href="mailto:Mike@MikeVertx.com" class="contact-method">
-                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            <span>Mike@MikeVertx.com</span>
-                        </a>
-                        <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="contact-method">
-                            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                            <span>linkedin.com/in/MikeVertx</span>
-                        </a>
+                        <a href="tel:917-477-9887" class="contact-method"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>917.477.9887</span></a>
+                        <a href="mailto:Mike@MikeVertx.com" class="contact-method"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>Mike@MikeVertx.com</span></a>
+                        <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="contact-method"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><span>LinkedIn</span></a>
                     </div>
-
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                        </a>
-                        <a href="https://instagram.com/mikevertx" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
-                        </a>
+                        <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="social-link"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                        <a href="https://instagram.com/mikevertx" target="_blank" class="social-link"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></a>
                     </div>
                 </div>
-
                 <div class="contact-card">
                     <h3>Send a Message</h3>
                     <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
@@ -1524,57 +533,22 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Mike Katz. All rights reserved. | San Diego, CA</p>
-    </footer>
+    <footer><p>© 2026 Mike Katz. All rights reserved. | San Diego, CA</p></footer>
 
     <script>
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, observerOptions);
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
-
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            nav.style.boxShadow = window.scrollY > 100 ? '0 4px 20px rgba(0,0,0,0.1)' : 'none';
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Testimonials toggle
         function toggleTestimonials() {
             const hiddenCards = document.querySelectorAll('.testimonial-card.hidden');
             const btn = document.querySelector('.btn-toggle');
-            const btnText = btn.querySelector('span');
-
             if (hiddenCards.length > 0) {
-                // Show all hidden testimonials
-                document.querySelectorAll('.testimonial-card').forEach(card => {
-                    card.classList.remove('hidden');
-                });
-                btnText.textContent = 'Show Less';
-                btn.classList.add('expanded');
+                document.querySelectorAll('.testimonial-card').forEach(card => card.classList.remove('hidden'));
+                btn.textContent = 'Show Less';
             } else {
-                // Hide all but first 3
                 const allCards = document.querySelectorAll('.testimonial-card');
-                allCards.forEach((card, index) => {
-                    if (index >= 3) card.classList.add('hidden');
-                });
-                btnText.textContent = 'View More';
-                btn.classList.remove('expanded');
-                // Scroll back to testimonials section
+                allCards.forEach((card, i) => { if (i >= 4) card.classList.add('hidden'); });
+                btn.textContent = 'View More';
                 document.getElementById('testimonials').scrollIntoView({ behavior: 'smooth' });
             }
         }
     </script>
-
 </body>
 </html>
