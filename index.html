@@ -17,6 +17,7 @@
             --green: #2E7D32;
             --green-light: #E8F5E9;
             --teal: #00838F;
+            --teal-dark: #006064;
             --teal-light: #E0F7FA;
             --blue: #1565C0;
             --white: #FFFFFF;
@@ -25,6 +26,7 @@
             --grey-200: #EEEEEE;
             --grey-300: #E0E0E0;
             --grey-400: #BDBDBD;
+            --grey-500: #9E9E9E;
             --grey-600: #757575;
             --grey-700: #616161;
             --grey-800: #424242;
@@ -79,28 +81,33 @@
         .section-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--grey-900); }
         .section-subtitle { font-size: 1.125rem; color: var(--grey-600); max-width: 700px; margin: 1rem auto 0; line-height: 1.7; }
 
-        /* LOOKING FOR */
+        /* LOOKING FOR - ELEVATED CARDS */
         #looking-for { background: var(--teal-light); }
         .looking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .looking-card { background: white; border-radius: 16px; padding: 2.5rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-        .looking-icon { width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
-        .looking-icon svg { width: 32px; height: 32px; fill: white; }
-        .looking-card h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 1rem; color: var(--grey-900); }
+        .looking-card { background: white; border-radius: 20px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 40px rgba(0,0,0,0.08); transition: all 0.4s ease; position: relative; overflow: hidden; }
+        .looking-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--teal), var(--teal-dark)); }
+        .looking-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,131,143,0.2); }
+        .looking-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--teal), var(--teal-dark)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; transform: rotate(-5deg); transition: transform 0.3s; }
+        .looking-card:hover .looking-icon { transform: rotate(0deg) scale(1.1); }
+        .looking-icon svg { width: 36px; height: 36px; fill: white; }
+        .looking-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: var(--grey-900); }
         .looking-card p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
 
-        /* WHY HIRE ME */
+        /* WHY HIRE ME - MAGAZINE STYLE */
         #why-me { background: var(--white); }
-        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .why-card { background: var(--grey-50); border-radius: 16px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; }
-        .why-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--red); line-height: 1; min-width: 50px; }
-        .why-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900); }
-        .why-content p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
+        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+        .why-card { background: linear-gradient(135deg, var(--grey-50) 0%, var(--white) 100%); border-radius: 24px; padding: 2.5rem; display: flex; gap: 2rem; align-items: flex-start; border: 1px solid var(--grey-200); transition: all 0.4s ease; position: relative; overflow: hidden; }
+        .why-card::after { content: ''; position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(183,28,28,0.05) 0%, transparent 70%); }
+        .why-card:hover { border-color: var(--red); box-shadow: 0 15px 50px rgba(183,28,28,0.1); transform: translateY(-5px); }
+        .why-num { font-family: var(--font-display); font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, var(--red), var(--red-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; min-width: 70px; }
+        .why-content h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--grey-900); }
+        .why-content p { font-size: 1rem; color: var(--grey-600); line-height: 1.8; }
 
         /* SKILLS CLOUD */
         #skills { background: var(--grey-50); padding: 4rem 0; }
         .skills-cloud { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 1000px; margin: 0 auto; }
-        .skill-tag { background: white; color: var(--grey-800); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 1rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: all 0.2s; }
-        .skill-tag:hover { background: var(--red); color: white; transform: translateY(-2px); }
+        .skill-tag { background: white; color: var(--grey-800); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 1rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: all 0.2s; border: 2px solid transparent; }
+        .skill-tag:hover { background: var(--red); color: white; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(183,28,28,0.25); }
         .skill-tag.highlight { background: var(--red); color: white; }
 
         /* ABOUT */
@@ -108,41 +115,63 @@
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .about-content h2 { font-family: var(--font-display); font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--grey-900); line-height: 1.3; }
         .about-content p { font-size: 1.0625rem; color: var(--grey-700); margin-bottom: 1.25rem; line-height: 1.8; }
-        .about-highlight { background: var(--green-light); padding: 1.75rem; border-radius: 12px; margin: 1.5rem 0; }
+        .about-highlight { background: linear-gradient(135deg, var(--green-light), #C8E6C9); padding: 1.75rem; border-radius: 16px; margin: 1.5rem 0; border-left: 5px solid var(--green); }
         .about-highlight p { font-family: var(--font-display); font-style: italic; margin: 0; font-size: 1.25rem; color: var(--green); line-height: 1.6; }
-        .about-photo { width: 100%; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
+        .about-photo { width: 100%; border-radius: 20px; box-shadow: 0 30px 80px rgba(0,0,0,0.15); }
 
-        /* CAREER TIMELINE */
+        /* CAREER TIMELINE - ENHANCED */
         #career { background: var(--grey-50); }
         .career-intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
         .career-intro .tagline { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--grey-700); line-height: 1.6; margin-bottom: 1.5rem; }
         .career-intro p { font-size: 1.0625rem; color: var(--grey-600); line-height: 1.8; }
         .career-grid { display: grid; gap: 0; position: relative; max-width: 900px; margin: 0 auto; }
         .career-grid::before { content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
-        .career-item { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; }
+
+        /* Year bracket for grouped entries */
+        .career-year-bracket { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; }
         .career-year { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--red); text-align: right; padding-top: 0.5rem; }
         .career-year small { display: block; font-size: 0.75rem; color: var(--grey-500); font-weight: 400; margin-top: 0.25rem; }
-        .career-dot { width: 20px; height: 20px; background: var(--red); border-radius: 50%; margin-top: 0.75rem; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
-        .career-content { background: white; padding: 1.75rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-        .career-content h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--grey-900); }
-        .career-company { font-size: 1rem; color: var(--green); font-weight: 600; margin-bottom: 0.75rem; }
-        .career-company a { color: var(--green); text-decoration: none; }
-        .career-company a:hover { text-decoration: underline; }
+
+        /* Timeline dots - now clickable links */
+        .career-dots { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.5rem; }
+        .career-dot { width: 24px; height: 24px; background: var(--red); border-radius: 50%; position: relative; z-index: 1; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); cursor: pointer; transition: all 0.3s ease; display: block; text-decoration: none; }
+        .career-dot:hover { background: var(--teal); transform: scale(1.3); box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--teal), 0 0 20px rgba(0,131,143,0.5); }
+        .career-dot.no-link { cursor: default; }
+        .career-dot.no-link:hover { background: var(--red); transform: none; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
+
+        .career-entries { display: flex; flex-direction: column; gap: 1rem; }
+        .career-content { background: white; padding: 1.75rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; }
+        .career-content:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .career-content h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--grey-900); }
+        .career-company { font-size: 1rem; color: var(--teal); font-weight: 600; margin-bottom: 0.75rem; }
+        .career-company a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
+        .career-company a:hover { color: var(--teal-dark); text-decoration: underline; }
         .career-desc { font-size: 1rem; color: var(--grey-600); line-height: 1.7; }
         .career-metrics { display: flex; gap: 2rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--grey-200); flex-wrap: wrap; }
         .career-metric { display: flex; align-items: baseline; gap: 0.375rem; }
         .career-metric strong { font-family: var(--font-display); font-size: 1.25rem; color: var(--red); }
         .career-metric span { font-size: 0.8125rem; color: var(--grey-500); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* LAUNCHED */
+        /* Single career item (for non-bracketed years) */
+        .career-item { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; }
+        .career-item .career-dot { margin-top: 0.75rem; }
+
+        /* COMPANIES I'VE BUILT - SFG CARD STYLE */
         #launched { background: var(--white); }
         .launched-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-        .launched-card { background: var(--grey-50); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s; }
-        .launched-card:hover { background: white; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transform: translateY(-5px); }
-        .launched-card h3 { font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900); }
+        .launched-card { background: var(--grey-50); border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.4s ease; position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
+        .launched-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 0%, rgba(183,28,28,0.03) 100%); opacity: 0; transition: opacity 0.3s; }
+        .launched-card:hover { background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.12); transform: translateY(-8px); }
+        .launched-card:hover::before { opacity: 1; }
+        .launched-logo { width: 80px; height: 80px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .launched-card:hover .launched-logo { transform: scale(1.1); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+        .launched-logo img { max-width: 60px; max-height: 60px; object-fit: contain; }
+        .launched-logo svg { width: 40px; height: 40px; fill: var(--red); }
+        .launched-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--grey-900); }
         .launched-card p { font-size: 0.9375rem; color: var(--grey-600); margin-bottom: 1rem; line-height: 1.5; }
-        .launched-card a { font-size: 0.875rem; font-weight: 600; color: var(--red); text-decoration: none; }
-        .launched-card a:hover { text-decoration: underline; }
+        .launched-link { font-size: 0.875rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .launched-link svg { width: 16px; height: 16px; fill: var(--red); transition: transform 0.2s; }
+        .launched-card:hover .launched-link svg { transform: translateX(4px); }
 
         /* CLIENTS */
         #clients { background: var(--grey-900); color: white; padding: 5rem 0; }
@@ -155,12 +184,12 @@
         .client-card img { max-width: 90px; max-height: 40px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.9; }
         .client-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
 
-        /* PORTFOLIO */
+        /* PORTFOLIO - FIXED IMAGE HANDLING */
         #portfolio { background: var(--grey-50); padding: 5rem 0; }
         .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .portfolio-card { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.12); transition: all 0.4s; }
+        .portfolio-card { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.12); transition: all 0.4s; display: block; text-decoration: none; aspect-ratio: 4/3; }
         .portfolio-card:hover { transform: translateY(-10px); box-shadow: 0 25px 70px rgba(0,0,0,0.18); }
-        .portfolio-card img { width: 100%; height: 280px; object-fit: cover; display: block; }
+        .portfolio-card img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
         .portfolio-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.95)); color: white; }
         .portfolio-overlay h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem; }
         .portfolio-overlay p { font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
@@ -169,8 +198,8 @@
         /* TESTIMONIALS */
         #testimonials { background: var(--white); padding: 5rem 0; }
         .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .testimonial-card { background: var(--grey-50); border-radius: 20px; padding: 2rem; transition: all 0.3s; }
-        .testimonial-card:hover { background: white; box-shadow: 0 15px 50px rgba(0,0,0,0.08); }
+        .testimonial-card { background: linear-gradient(135deg, var(--grey-50) 0%, var(--white) 100%); border-radius: 24px; padding: 2rem; transition: all 0.3s; border: 1px solid var(--grey-200); }
+        .testimonial-card:hover { background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.1); border-color: transparent; }
         .testimonial-card.hidden { display: none; }
         .testimonial-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
         .testimonial-avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: var(--grey-300); }
@@ -230,9 +259,9 @@
             .hero-content h1 { font-size: 2.5rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .career-grid::before { left: 25px; }
-            .career-item { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 60px; position: relative; }
+            .career-item, .career-year-bracket { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 60px; position: relative; }
             .career-year { text-align: left; }
-            .career-dot { position: absolute; left: 15px; top: 1.5rem; }
+            .career-dots, .career-item .career-dot { position: absolute; left: 15px; top: 1.5rem; }
             .launched-grid { grid-template-columns: 1fr; }
             .clients-grid { grid-template-columns: repeat(3, 1fr); }
             .portfolio-grid, .testimonials-grid { grid-template-columns: 1fr; }
@@ -414,27 +443,52 @@
                 <p>My career spans the full spectrum of experiential marketing — from executing grassroots sampling programs as a college brand ambassador to founding and scaling my own agencies.</p>
             </div>
             <div class="career-grid">
-                <div class="career-item">
+                <!-- 2026 BRACKET - Multiple entries -->
+                <div class="career-year-bracket">
                     <div class="career-year">2026<small>Present</small></div>
-                    <div class="career-dot"></div>
-                    <div class="career-content">
-                        <h3>Expanded Portfolio: Golf Carts, Staffing, RVFMS</h3>
-                        <div class="career-company"><a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
-                        <div class="career-desc">Launched <a href="https://stressfreegolfcarts.com" target="_blank">Stress Free Golf Carts</a> and <a href="https://stressfreestaffing.com" target="_blank">Stress Free Staffing & Events</a>, plus RVFMS fleet management technology platform.</div>
+                    <div class="career-dots">
+                        <a href="https://stressfreegolfcarts.com" target="_blank" class="career-dot" title="Stress Free Golf Carts"></a>
+                        <a href="https://stressfreestaffing.com" target="_blank" class="career-dot" title="Stress Free Staffing"></a>
+                        <a href="https://rvfms-stressfreervs.vercel.app" target="_blank" class="career-dot" title="RVFMS"></a>
+                    </div>
+                    <div class="career-entries">
+                        <div class="career-content">
+                            <h3>Stress Free Golf Carts</h3>
+                            <div class="career-company"><a href="https://stressfreegolfcarts.com" target="_blank">stressfreegolfcarts.com</a></div>
+                            <div class="career-desc">Golf cart rentals for festivals, events, corporate campuses, and venues. Expanding the Stress Free footprint into mobile transportation.</div>
+                        </div>
+                        <div class="career-content">
+                            <h3>Stress Free Staffing & Events</h3>
+                            <div class="career-company"><a href="https://stressfreestaffing.com" target="_blank">stressfreestaffing.com</a></div>
+                            <div class="career-desc">Event staffing and brand ambassador services. Leveraging 25+ years of experiential marketing connections.</div>
+                        </div>
+                        <div class="career-content">
+                            <h3>RVFMS Fleet Management</h3>
+                            <div class="career-company"><a href="https://rvfms-stressfreervs.vercel.app" target="_blank">RVFMS Platform</a></div>
+                            <div class="career-desc">Proprietary fleet management technology platform for RV rental operations.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="career-item">
+
+                <!-- 2025 BRACKET -->
+                <div class="career-year-bracket">
                     <div class="career-year">2025</div>
-                    <div class="career-dot"></div>
-                    <div class="career-content">
-                        <h3>Launched Stress Free Shield</h3>
-                        <div class="career-company"><a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
-                        <div class="career-desc">Created interior damage liability protection product, diversifying revenue streams and creating new B2B partnership opportunities.</div>
+                    <div class="career-dots">
+                        <a href="https://stressfreegroup.com" target="_blank" class="career-dot" title="Stress Free Shield"></a>
+                    </div>
+                    <div class="career-entries">
+                        <div class="career-content">
+                            <h3>Launched Stress Free Shield</h3>
+                            <div class="career-company"><a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
+                            <div class="career-desc">Created interior damage liability protection product, diversifying revenue streams and creating new B2B partnership opportunities.</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- 2020-Present -->
                 <div class="career-item">
                     <div class="career-year">2020<small>Present</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://stressfreervs.com" target="_blank" class="career-dot" title="Stress Free RVs"></a>
                     <div class="career-content">
                         <h3>Owner & President</h3>
                         <div class="career-company"><a href="https://stressfreervs.com" target="_blank">Stress Free RVs</a> / <a href="https://stressfreegroup.com" target="_blank">Stress Free Group LLC</a> — San Diego, CA</div>
@@ -446,9 +500,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 2016-2019 -->
                 <div class="career-item">
                     <div class="career-year">2016<small>2019</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://lookmg.com" target="_blank" class="career-dot" title="Look Media"></a>
                     <div class="career-content">
                         <h3>Sr. National Director of Sales</h3>
                         <div class="career-company"><a href="https://lookmg.com" target="_blank">Look Media</a> / The Sampling Agency — San Diego, CA</div>
@@ -460,58 +516,71 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 2014-2016 VINO - NO LINK (Shuttered) -->
                 <div class="career-item">
                     <div class="career-year">2014<small>2016</small></div>
-                    <div class="career-dot"></div>
+                    <div class="career-dot no-link" title="VINO Beverages (Shuttered)"></div>
                     <div class="career-content">
                         <h3>Brand Manager</h3>
-                        <div class="career-company">VINO Beverages — New York, NY</div>
+                        <div class="career-company">VINO Beverages — New York, NY <em style="color: var(--grey-500); font-weight: 400;">(Company shuttered)</em></div>
                         <div class="career-desc">Led all marketing efforts for innovative alcohol-removed wine startup. Managed budgets from $30K to $2M. Drove 12,000+ units sold in first 6 months.</div>
                     </div>
                 </div>
+
+                <!-- 2011-2021 ABM -->
                 <div class="career-item">
                     <div class="career-year">2011<small>2021</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="career-dot" title="Alternative Brand Marketing"></a>
                     <div class="career-content">
                         <h3>Founder & Principal</h3>
-                        <div class="career-company">Alternative Brand Marketing — New York, NY</div>
+                        <div class="career-company"><a href="https://linkedin.com/in/MikeVertx" target="_blank">Alternative Brand Marketing</a> — New York, NY</div>
                         <div class="career-desc">Founded full-service experiential marketing agency. Clients included PepsiCo, Rémy Martin, Evian, and 40+ other national brands.</div>
                         <div class="career-metrics">
                             <div class="career-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
+                            <div class="career-metric"><strong>20K+</strong><span>Staff Database</span></div>
                             <div class="career-metric"><strong>50+</strong><span>Programs</span></div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 2011-2013 O.N.E. -->
                 <div class="career-item">
                     <div class="career-year">2011<small>2013</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://pepsico.com" target="_blank" class="career-dot" title="PepsiCo / O.N.E."></a>
                     <div class="career-content">
                         <h3>Regional Field Marketing Manager</h3>
                         <div class="career-company"><a href="https://pepsico.com" target="_blank">O.N.E Natural Experience (acquired by PepsiCo)</a> — East Coast</div>
                         <div class="career-desc">Promoted twice during tenure. Contributed to successful PepsiCo acquisition. Led major festival activations at Bonnaroo, Electric Zoo, and EDC.</div>
                     </div>
                 </div>
+
+                <!-- 2007-2010 SoHo -->
                 <div class="career-item">
                     <div class="career-year">2007<small>2010</small></div>
-                    <div class="career-dot"></div>
+                    <div class="career-dot no-link" title="SoHo Experiential"></div>
                     <div class="career-content">
                         <h3>Account Producer</h3>
                         <div class="career-company">SoHo Experiential — New York, NY</div>
                         <div class="career-desc">Premium spirits activations for Rémy Martin, Grand Marnier, and Canei Wines. Managed 500+ on-premise events and 50+ staff members.</div>
                     </div>
                 </div>
+
+                <!-- 2005-2014 Red Peg -->
                 <div class="career-item">
                     <div class="career-year">2005<small>2014</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://redpegmarketing.com" target="_blank" class="career-dot" title="Red Peg Marketing"></a>
                     <div class="career-content">
                         <h3>Market Manager</h3>
                         <div class="career-company"><a href="https://redpegmarketing.com" target="_blank">Red Peg Marketing</a> — Multiple Markets</div>
                         <div class="career-desc">Managed programs for Breguet, Lavazza, Grand Marnier (U.S. Open), Twitter & Bud Light (Super Bowl), Coors Light, Toshiba, and SoBe.</div>
                     </div>
                 </div>
+
+                <!-- 2002-2006 Hofstra -->
                 <div class="career-item">
                     <div class="career-year">2002<small>2006</small></div>
-                    <div class="career-dot"></div>
+                    <a href="https://hofstra.edu" target="_blank" class="career-dot" title="Hofstra University"></a>
                     <div class="career-content">
                         <h3>B.S. Marketing / Campus Brand Ambassador</h3>
                         <div class="career-company"><a href="https://hofstra.edu" target="_blank">Hofstra University</a> — Long Island, NY</div>
@@ -522,7 +591,7 @@
         </div>
     </section>
 
-    <!-- COMPANIES I'VE LAUNCHED -->
+    <!-- COMPANIES I'VE BUILT - SFG STYLE CARDS -->
     <section id="launched">
         <div class="container">
             <div class="section-header">
@@ -530,26 +599,38 @@
                 <h2 class="section-title">Companies I've Built</h2>
             </div>
             <div class="launched-grid">
-                <div class="launched-card">
+                <a href="https://stressfreervs.com" target="_blank" class="launched-card">
+                    <div class="launched-logo">
+                        <img src="https://logo.clearbit.com/stressfreervs.com" alt="Stress Free RVs" onerror="this.outerHTML='<svg viewBox=&quot;0 0 24 24&quot;><path d=&quot;M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z&quot;/></svg>'">
+                    </div>
                     <h3>Stress Free RVs</h3>
                     <p>Premier RV rental and fleet management in San Diego</p>
-                    <a href="https://stressfreervs.com" target="_blank">Visit Site</a>
-                </div>
-                <div class="launched-card">
+                    <span class="launched-link">Visit Site <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                <a href="https://stressfreegolfcarts.com" target="_blank" class="launched-card">
+                    <div class="launched-logo">
+                        <img src="https://logo.clearbit.com/stressfreegolfcarts.com" alt="Stress Free Golf Carts" onerror="this.outerHTML='<svg viewBox=&quot;0 0 24 24&quot;><path d=&quot;M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z&quot;/></svg>'">
+                    </div>
                     <h3>Stress Free Golf Carts</h3>
                     <p>Golf cart rentals for events, festivals, and venues</p>
-                    <a href="https://stressfreegolfcarts.com" target="_blank">Visit Site</a>
-                </div>
-                <div class="launched-card">
+                    <span class="launched-link">Visit Site <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                <a href="https://stressfreestaffing.com" target="_blank" class="launched-card">
+                    <div class="launched-logo">
+                        <img src="https://logo.clearbit.com/stressfreestaffing.com" alt="Stress Free Staffing" onerror="this.outerHTML='<svg viewBox=&quot;0 0 24 24&quot;><path d=&quot;M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z&quot;/></svg>'">
+                    </div>
                     <h3>Stress Free Staffing</h3>
                     <p>Event staffing and brand ambassador services</p>
-                    <a href="https://stressfreestaffing.com" target="_blank">Visit Site</a>
-                </div>
-                <div class="launched-card">
+                    <span class="launched-link">Visit Site <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="launched-card">
+                    <div class="launched-logo">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
                     <h3>Alternative Brand Marketing</h3>
-                    <p>Full-service experiential marketing agency (2011-2021)</p>
-                    <a href="https://linkedin.com/in/MikeVertx" target="_blank">Learn More</a>
-                </div>
+                    <p>Full-service experiential agency (2011-2021)</p>
+                    <span class="launched-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
             </div>
         </div>
     </section>
@@ -597,62 +678,63 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
+    <!-- PORTFOLIO - BETTER IMAGE HANDLING -->
     <section id="portfolio">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Portfolio</div>
                 <h2 class="section-title">Campaign Highlights</h2>
+                <p class="section-subtitle">Click any campaign to learn more about my work.</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <img src="images/portfolio/remy-vsop.jpg" alt="Rémy Martin VSOP National Campaign">
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/remy-vsop.jpg" alt="Rémy Martin VSOP National Campaign" onerror="this.src='https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Spirits</div>
                     <div class="portfolio-overlay">
                         <h3>Rémy Martin VSOP</h3>
                         <p>3-year national engagement across 20+ markets with 500+ premium on-premise consumer events.</p>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <img src="images/portfolio/grand-marnier.jpg" alt="Grand Marnier Premium Activations">
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/grand-marnier.jpg" alt="Grand Marnier Premium Activations" onerror="this.src='https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Spirits</div>
                     <div class="portfolio-overlay">
                         <h3>Grand Marnier</h3>
                         <p>Premium on-premise activations and U.S. Open hospitality experiences.</p>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <img src="images/portfolio/beanfields.jpg" alt="CPG Sampling Programs">
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/cpg-sampling.jpg" alt="CPG Sampling Programs" onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">CPG</div>
                     <div class="portfolio-overlay">
-                        <h3>Beanfields & Argo Tea</h3>
-                        <p>National sampling programs reaching 100K+ consumers.</p>
+                        <h3>National Sampling</h3>
+                        <p>Beanfields, Argo Tea, and 30+ CPG brands — reaching 100K+ consumers.</p>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <img src="images/portfolio/evian.jpg" alt="Evian Water Brand Activation">
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/evian.jpg" alt="Evian Water Brand Activation" onerror="this.src='https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Beverage</div>
                     <div class="portfolio-overlay">
                         <h3>Evian Water</h3>
                         <p>Premium sampling at lifestyle and wellness events nationwide.</p>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <img src="images/portfolio/outdoor.jpg" alt="Festival Marketing Programs">
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/festival.jpg" alt="Festival Marketing Programs" onerror="this.src='https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Festivals</div>
                     <div class="portfolio-overlay">
                         <h3>Festival Marketing</h3>
                         <p>Bonnaroo, Electric Zoo, EDC — 100K+ attendees.</p>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <img src="images/portfolio/dj-event.jpg" alt="Entertainment and Nightlife Marketing">
+                </a>
+                <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
+                    <img src="images/portfolio/entertainment.jpg" alt="Entertainment and Nightlife Marketing" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Entertainment</div>
                     <div class="portfolio-overlay">
                         <h3>Entertainment & Nightlife</h3>
                         <p>20+ years DJ experience combined with brand activations.</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
