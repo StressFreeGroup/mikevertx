@@ -127,9 +127,22 @@
         .career-grid { display: grid; gap: 0; position: relative; max-width: 900px; margin: 0 auto; }
         .career-grid::before { content: ''; position: absolute; left: 140px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
 
-        /* Year bracket for grouped entries */
-        .career-year-bracket { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; }
-        .career-year { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--red); text-align: right; padding-top: 0.5rem; }
+        /* Year bracket for grouped entries - with visual { bracket */
+        .career-year-bracket { display: grid; grid-template-columns: 120px 50px 1fr; gap: 1rem; padding: 1.5rem 0; align-items: start; position: relative; }
+        .career-year-wrap { position: relative; text-align: right; padding-top: 0.5rem; padding-right: 0.5rem; }
+        /* The bracket shape - left curly brace */
+        .career-year-wrap::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            border: 3px solid var(--grey-400);
+            border-right: none;
+            border-radius: 12px 0 0 12px;
+        }
+        .career-year { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--red); text-align: right; padding-top: 0; }
         .career-year small { display: block; font-size: 0.75rem; color: var(--grey-500); font-weight: 400; margin-top: 0.25rem; }
 
         /* Timeline dots - now clickable links */
@@ -445,7 +458,9 @@
             <div class="career-grid">
                 <!-- 2026 BRACKET - Multiple entries -->
                 <div class="career-year-bracket">
-                    <div class="career-year">2026<small>Present</small></div>
+                    <div class="career-year-wrap">
+                        <div class="career-year">2026<small>Present</small></div>
+                    </div>
                     <div class="career-dots">
                         <a href="https://stressfreegolfcarts.com" target="_blank" class="career-dot" title="Stress Free Golf Carts"></a>
                         <a href="https://stressfreestaffing.com" target="_blank" class="career-dot" title="Stress Free Staffing"></a>
@@ -472,7 +487,9 @@
 
                 <!-- 2025 BRACKET -->
                 <div class="career-year-bracket">
-                    <div class="career-year">2025</div>
+                    <div class="career-year-wrap">
+                        <div class="career-year">2025</div>
+                    </div>
                     <div class="career-dots">
                         <a href="https://stressfreegroup.com" target="_blank" class="career-dot" title="Stress Free Shield"></a>
                     </div>
