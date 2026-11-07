@@ -59,7 +59,7 @@
         .hero-content h1 { font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; line-height: 1.15; margin-bottom: 1rem; color: var(--grey-900); }
         .hero-content h1 span { color: var(--red); }
         .hero-headline { font-size: 1.25rem; color: var(--grey-700); margin-bottom: 1rem; font-weight: 400; line-height: 1.6; }
-        .hero-backstory { font-size: 1rem; color: var(--grey-600); margin-bottom: 2rem; font-style: italic; line-height: 1.7; padding-left: 1rem; border-left: 3px solid var(--teal); }
+        .hero-backstory { font-size: 1rem; color: var(--grey-700); margin-bottom: 2rem; font-style: italic; line-height: 1.7; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, var(--teal-light), #E0F7FA); border-radius: 12px; position: relative; }
         .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 2rem; padding: 1.5rem 0; border-top: 2px solid var(--grey-200); border-bottom: 2px solid var(--grey-200); }
         .hero-stat { text-align: left; }
         .hero-stat-num { font-family: var(--font-display); font-size: 2.75rem; font-weight: 700; color: var(--red); line-height: 1; }
@@ -94,21 +94,30 @@
         .looking-card p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; margin: 0; }
         .looking-card-tag { display: inline-block; background: var(--teal); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; }
 
-        /* WHY HIRE ME - NUMBERED CIRCLES LIKE INSPIRATION */
+        /* WHY WORK WITH ME - VALUE-BASED ICONS */
         #why-me { background: var(--white); }
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
         .why-card { background: var(--grey-50); border-radius: 20px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; transition: all 0.3s ease; border: 2px solid transparent; }
-        .why-card:hover { background: white; border-color: var(--red-light); box-shadow: 0 15px 50px rgba(183,28,28,0.08); }
-        .why-num-circle { width: 56px; height: 56px; min-width: 56px; background: linear-gradient(135deg, var(--red), var(--red-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: white; box-shadow: 0 4px 15px rgba(183,28,28,0.3); }
+        .why-card:hover { background: white; border-color: var(--teal-light); box-shadow: 0 15px 50px rgba(0,131,143,0.12); transform: translateY(-4px); }
+        .why-icon { width: 56px; height: 56px; min-width: 56px; background: linear-gradient(135deg, var(--teal-light), #B2EBF2); border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+        .why-icon svg { width: 28px; height: 28px; fill: var(--teal); }
         .why-content h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--grey-900); }
         .why-content p { font-size: 0.9375rem; color: var(--grey-600); line-height: 1.7; margin: 0; }
 
-        /* SKILLS CLOUD */
+        /* SKILLS CLOUD - ACTIVE VS PAST */
         #skills { background: var(--grey-50); padding: 4rem 0; }
-        .skills-cloud { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 1000px; margin: 0 auto; }
+        .skills-section { max-width: 1000px; margin: 0 auto 2rem; }
+        .skills-section:last-child { margin-bottom: 0; }
+        .skills-label { font-size: 0.8125rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; text-align: center; }
+        .skills-label.active { color: var(--red); }
+        .skills-label.past { color: var(--grey-500); }
+        .skills-cloud { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
         .skill-tag { background: white; color: var(--grey-800); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 1rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: all 0.2s; border: 2px solid transparent; }
-        .skill-tag:hover { background: var(--red); color: white; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(183,28,28,0.25); }
-        .skill-tag.highlight { background: var(--red); color: white; }
+        .skill-tag:hover { background: var(--teal); color: white; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,131,143,0.25); }
+        .skill-tag.active { background: var(--red); color: white; border-color: var(--red); }
+        .skill-tag.active:hover { background: var(--red-dark); }
+        .skill-tag.past { background: var(--grey-100); color: var(--grey-600); border-color: var(--grey-200); }
+        .skill-tag.past:hover { background: var(--grey-200); color: var(--grey-800); }
 
         /* ABOUT */
         #about { background: var(--white); }
@@ -119,29 +128,35 @@
         .about-highlight p { font-family: var(--font-display); font-style: italic; margin: 0; font-size: 1.25rem; color: var(--green); line-height: 1.6; }
         .about-photo { width: 100%; border-radius: 20px; box-shadow: 0 30px 80px rgba(0,0,0,0.15); }
 
-        /* CAREER TIMELINE - HIERARCHICAL */
+        /* CAREER TIMELINE - HIERARCHICAL WITH CONNECTORS */
         #career { background: var(--grey-50); }
         .career-intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
         .career-intro .tagline { font-family: var(--font-display); font-size: 1.5rem; font-style: italic; color: var(--grey-700); line-height: 1.6; margin-bottom: 1.5rem; }
         .career-intro p { font-size: 1.0625rem; color: var(--grey-600); line-height: 1.8; }
-        .career-grid { display: flex; flex-direction: column; gap: 0; position: relative; max-width: 950px; margin: 0 auto; padding-left: 60px; }
+        .career-grid { display: flex; flex-direction: column; gap: 0; position: relative; max-width: 950px; margin: 0 auto; padding-left: 80px; }
         .career-grid::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, var(--red), var(--teal), var(--green)); border-radius: 2px; }
 
         /* PRIMARY YEAR ENTRY */
         .career-year-block { position: relative; padding: 1.5rem 0; }
-        .career-year-header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; padding-left: 1.5rem; }
-        .career-year-dot { width: 28px; height: 28px; min-width: 28px; background: var(--red); border-radius: 50%; position: absolute; left: 2px; z-index: 2; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
+        .career-year-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; position: relative; }
+        .career-year-dot { width: 28px; height: 28px; min-width: 28px; background: var(--red); border-radius: 50%; position: absolute; left: -66px; z-index: 2; box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--grey-300); }
         .career-year-dot.clickable { cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: block; }
         .career-year-dot.clickable:hover { background: var(--teal); transform: scale(1.2); box-shadow: 0 0 0 5px var(--grey-50), 0 0 0 7px var(--teal), 0 0 20px rgba(0,131,143,0.5); }
+        /* Horizontal connector line from dot to year */
+        .career-year-header::before { content: ''; position: absolute; left: -38px; top: 50%; width: 38px; height: 3px; background: var(--grey-300); transform: translateY(-50%); }
         .career-year-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--red); }
         .career-year-text small { font-size: 0.875rem; color: var(--grey-500); font-weight: 400; margin-left: 0.5rem; }
         .career-year-label { font-size: 1rem; color: var(--grey-700); font-weight: 500; margin-left: 0.5rem; }
 
-        /* SUB-ITEMS under a year - smaller dots, indented */
-        .career-sub-items { margin-left: 0; padding-left: 2rem; border-left: 3px solid var(--grey-300); margin-top: -0.5rem; }
+        /* SUB-ITEMS under a year - L-shaped connector */
+        .career-sub-items { margin-left: 0; padding-left: 2.5rem; position: relative; margin-top: 0.5rem; }
+        /* Vertical part of L */
+        .career-sub-items::before { content: ''; position: absolute; left: 0; top: 0; bottom: 1rem; width: 3px; background: var(--grey-300); border-radius: 2px; }
         .career-sub-item { position: relative; padding: 0.75rem 0; display: flex; align-items: flex-start; gap: 1rem; }
-        .career-sub-item::before { content: ''; position: absolute; left: -2.1rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); }
-        .career-sub-item a.sub-dot { position: absolute; left: -2.1rem; top: 1.25rem; width: 16px; height: 16px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); z-index: 2; transition: all 0.3s; text-decoration: none; }
+        /* Horizontal part of L to each sub-item */
+        .career-sub-item::before { content: ''; position: absolute; left: -2.5rem; top: 1.5rem; width: 2rem; height: 3px; background: var(--grey-300); }
+        .career-sub-item::after { content: ''; position: absolute; left: -0.625rem; top: 1.25rem; width: 14px; height: 14px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); z-index: 1; }
+        .career-sub-item a.sub-dot { position: absolute; left: -0.625rem; top: 1.25rem; width: 14px; height: 14px; background: var(--teal); border-radius: 50%; border: 3px solid var(--grey-50); z-index: 2; transition: all 0.3s; text-decoration: none; }
         .career-sub-item a.sub-dot:hover { background: var(--red); transform: scale(1.3); box-shadow: 0 0 15px rgba(183,28,28,0.4); }
         .career-sub-card { flex: 1; background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; position: relative; }
         .career-sub-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); transform: translateX(4px); }
@@ -275,12 +290,14 @@
             section { padding: 3.5rem 0; }
             .hero-content h1 { font-size: 2.5rem; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .career-grid { padding-left: 0; }
+            .career-grid { padding-left: 50px; }
             .career-grid::before { left: 12px; }
             .career-year-header { flex-wrap: wrap; }
-            .career-year-label { width: 100%; margin-left: 42px; margin-top: 0.25rem; font-size: 0.875rem; }
-            .career-sub-items { margin-left: 0; }
-            .career-main-card { margin-left: 42px; }
+            .career-year-header::before { left: -30px; width: 30px; }
+            .career-year-dot { left: -38px; }
+            .career-year-label { width: 100%; margin-left: 0; margin-top: 0.25rem; font-size: 0.875rem; }
+            .career-sub-items { padding-left: 1.5rem; }
+            .career-main-card { margin-left: 0; }
             .career-sub-logo, .career-main-logo { width: 40px; height: 40px; }
             .launched-grid { grid-template-columns: repeat(2, 1fr) !important; }
             .clients-grid { grid-template-columns: repeat(3, 1fr); }
@@ -371,7 +388,7 @@
         </div>
     </section>
 
-    <!-- WHY HIRE ME -->
+    <!-- WHY WORK WITH ME - VALUES-BASED -->
     <section id="why-me">
         <div class="container">
             <div class="section-header">
@@ -380,65 +397,73 @@
             </div>
             <div class="why-grid">
                 <div class="why-card">
-                    <div class="why-num-circle">1</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
                     <div class="why-content">
-                        <h3>I've Done Every Job in This Industry</h3>
-                        <p>From campus brand ambassador to agency owner, I've held every position in experiential marketing. I understand every role, every challenge, and how to make each one successful.</p>
+                        <h3>Industry Awareness</h3>
+                        <p>I've held every position from campus rep to agency owner. I understand the challenges at every level and how to make each role successful.</p>
                     </div>
                 </div>
                 <div class="why-card">
-                    <div class="why-num-circle">2</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
                     <div class="why-content">
-                        <h3>Deep Rolodex, Real Relationships</h3>
-                        <p>25 years of building genuine industry relationships means I can assemble the right team, find the right venues, and solve problems others can't.</p>
+                        <h3>Real Relationships</h3>
+                        <p>25 years building genuine industry connections means I can assemble the right team, find the right venues, and open doors others can't.</p>
                     </div>
                 </div>
                 <div class="why-card">
-                    <div class="why-num-circle">3</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.92 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.94 2.55 2 6.81 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.92 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg></div>
                     <div class="why-content">
-                        <h3>Sleeves Rolled Up, Always Ready</h3>
+                        <h3>Perseverance & Grit</h3>
                         <p>I'm not a "strategy only" executive. I'll be on-site at 5am, solve the problem no one else can, and stay until the job is done right.</p>
                     </div>
                 </div>
                 <div class="why-card">
-                    <div class="why-num-circle">4</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
                     <div class="why-content">
-                        <h3>P&L Accountability, Not Just Ideas</h3>
-                        <p>I've managed budgets from $30K to $2M+ with full accountability. I understand ROI, efficiency, and delivering results that matter to the bottom line.</p>
+                        <h3>Results & Accountability</h3>
+                        <p>I've managed budgets from $30K to $2M+ with full P&L accountability. I understand ROI, efficiency, and delivering results that matter.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS CLOUD -->
+    <!-- SKILLS - ACTIVE VS PAST EXPERIENCE -->
     <section id="skills">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Expertise</div>
                 <h2 class="section-title">Areas of Specialization</h2>
             </div>
-            <div class="skills-cloud">
-                <span class="skill-tag highlight">Experiential Marketing</span>
-                <span class="skill-tag highlight">Brand Activation</span>
-                <span class="skill-tag">Field Marketing</span>
-                <span class="skill-tag">Sampling Programs</span>
-                <span class="skill-tag highlight">Event Production</span>
-                <span class="skill-tag">Grand Scale Events</span>
-                <span class="skill-tag">Flagship Activations</span>
-                <span class="skill-tag">Brand Ambassador Programs</span>
-                <span class="skill-tag">Consumer Engagement</span>
-                <span class="skill-tag">Brand Awareness</span>
-                <span class="skill-tag">Brand Loyalty</span>
-                <span class="skill-tag">Trade Marketing</span>
-                <span class="skill-tag">Festival Marketing</span>
-                <span class="skill-tag">On-Premise Activations</span>
-                <span class="skill-tag">National Program Management</span>
-                <span class="skill-tag">Vendor Management</span>
-                <span class="skill-tag">P&L Leadership</span>
-                <span class="skill-tag">Team Building</span>
-                <span class="skill-tag">Positive Consumer Experiences</span>
-                <span class="skill-tag">Promotional Marketing</span>
+            <div class="skills-section">
+                <div class="skills-label active">Active Focus</div>
+                <div class="skills-cloud">
+                    <span class="skill-tag active">Experiential Marketing</span>
+                    <span class="skill-tag active">Brand Activation</span>
+                    <span class="skill-tag active">Event Production</span>
+                    <span class="skill-tag active">Festival Marketing</span>
+                    <span class="skill-tag active">Fleet Management</span>
+                    <span class="skill-tag active">P&L Leadership</span>
+                    <span class="skill-tag active">Team Building</span>
+                    <span class="skill-tag active">Vendor Management</span>
+                </div>
+            </div>
+            <div class="skills-section">
+                <div class="skills-label past">Past Experience</div>
+                <div class="skills-cloud">
+                    <span class="skill-tag past">Field Marketing</span>
+                    <span class="skill-tag past">Sampling Programs</span>
+                    <span class="skill-tag past">Grand Scale Events</span>
+                    <span class="skill-tag past">Flagship Activations</span>
+                    <span class="skill-tag past">Brand Ambassador Programs</span>
+                    <span class="skill-tag past">Consumer Engagement</span>
+                    <span class="skill-tag past">Brand Awareness</span>
+                    <span class="skill-tag past">Brand Loyalty</span>
+                    <span class="skill-tag past">Trade Marketing</span>
+                    <span class="skill-tag past">On-Premise Activations</span>
+                    <span class="skill-tag past">National Program Management</span>
+                    <span class="skill-tag past">Promotional Marketing</span>
+                </div>
             </div>
         </div>
     </section>
@@ -826,6 +851,7 @@
                 <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.style.display='none'"><span class="client-text">Twitter</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/v8.com" alt="V8" onerror="this.style.display='none'"><span class="client-text">V8</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/verizon.com" alt="Verizon" onerror="this.style.display='none'"><span class="client-text">Verizon</span></div>
+                <div class="client-card" style="background: linear-gradient(135deg, rgba(183,28,28,0.2), rgba(183,28,28,0.1)); border: 2px dashed rgba(255,255,255,0.3);"><span class="client-text" style="color: rgba(255,255,255,0.9); font-size: 0.8125rem;">Your Brand Here</span></div>
             </div>
             </div>
         </div>
@@ -857,9 +883,9 @@
                     </div>
                 </a>
                 <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
-                    <img src="images/v8-sampling-campaign.png" alt="V8 National Sampling Campaign">
+                    <img src="images/v8-sampling-campaign.png" alt="V8 National Sampling Campaign" style="filter: brightness(0.85);">
                     <div class="portfolio-tag">CPG</div>
-                    <div class="portfolio-overlay">
+                    <div class="portfolio-overlay" style="background: linear-gradient(transparent 20%, rgba(0,0,0,0.95));">
                         <h3>V8 National Sampling</h3>
                         <p>The Mars Agency / Look Media — Multi-city sampling across Miami, DC, Philly, NYC, Phoenix, Minneapolis & Cincinnati.</p>
                     </div>
@@ -873,15 +899,15 @@
                     </div>
                 </a>
                 <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
-                    <img src="images/portfolio/festival.jpg" alt="Festival Marketing Programs" onerror="this.src='https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=450&fit=crop'">
+                    <img src="images/portfolio/bayfest.jpg" alt="Bayfest Festival Marketing" onerror="this.src='https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Festivals</div>
                     <div class="portfolio-overlay">
                         <h3>Festival Marketing</h3>
-                        <p>Bonnaroo, Electric Zoo, EDC — 100K+ attendees.</p>
+                        <p>Bayfest, Bonnaroo, Electric Zoo, EDC — 100K+ combined attendees.</p>
                     </div>
                 </a>
                 <a href="https://linkedin.com/in/MikeVertx" target="_blank" class="portfolio-card">
-                    <img src="images/portfolio/entertainment.jpg" alt="Entertainment and Nightlife Marketing" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=450&fit=crop'">
+                    <img src="images/portfolio/dj-mike.jpg" alt="Mike Katz DJing" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=450&fit=crop'">
                     <div class="portfolio-tag">Entertainment</div>
                     <div class="portfolio-overlay">
                         <h3>Entertainment & Nightlife</h3>
