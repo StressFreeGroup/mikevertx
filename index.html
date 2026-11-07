@@ -42,7 +42,6 @@
             overflow-x: hidden;
         }
 
-        /* ========== SCROLL SNAP SECTIONS ========== */
         section {
             min-height: 100vh;
             scroll-snap-align: start;
@@ -60,7 +59,7 @@
             padding: 0 clamp(1.5rem, 5vw, 4rem);
         }
 
-        /* ========== NAVIGATION ========== */
+        /* NAV */
         nav {
             position: fixed;
             top: 0;
@@ -74,13 +73,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s;
         }
 
-        .nav-logo {
-            height: 40px;
-            width: auto;
-        }
+        .nav-logo { height: 40px; }
 
         .nav-links {
             display: flex;
@@ -105,12 +100,11 @@
             color: white !important;
             padding: 0.6rem 1.5rem;
             border-radius: 4px;
-            transition: background 0.3s !important;
         }
 
         .nav-cta:hover { background: var(--red-dark) !important; }
 
-        /* ========== HERO SECTION ========== */
+        /* HERO */
         #hero {
             background: linear-gradient(135deg, var(--grey-50) 0%, var(--white) 50%, var(--grey-100) 100%);
             padding-top: 80px;
@@ -124,9 +118,7 @@
             min-height: calc(100vh - 80px);
         }
 
-        .hero-image-wrap {
-            position: relative;
-        }
+        .hero-image-wrap { position: relative; }
 
         .hero-image {
             width: 100%;
@@ -155,14 +147,12 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 0.5rem;
-            color: var(--grey-900);
         }
 
         .hero-tagline {
             font-size: 1.1rem;
             color: var(--grey-600);
             margin-bottom: 2rem;
-            font-weight: 400;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -174,10 +164,6 @@
             padding: 1.5rem 0;
             border-top: 1px solid var(--grey-200);
             border-bottom: 1px solid var(--grey-200);
-        }
-
-        .hero-stat {
-            text-align: left;
         }
 
         .hero-stat-num {
@@ -210,22 +196,12 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            transition: color 0.3s;
         }
 
         .hero-contact a:hover { color: var(--red); }
+        .hero-contact svg { width: 18px; height: 18px; fill: var(--red); }
 
-        .hero-contact svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--red);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 
         .btn {
             display: inline-flex;
@@ -236,67 +212,24 @@
             font-weight: 600;
             text-decoration: none;
             border-radius: 4px;
-            transition: all 0.3s;
-            cursor: pointer;
             border: none;
+            cursor: pointer;
+            transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: var(--red);
-            color: white;
-        }
+        .btn-primary { background: var(--red); color: white; }
+        .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(183,28,28,0.3); }
+        .btn-outline { background: transparent; color: var(--grey-800); border: 2px solid var(--grey-300); }
+        .btn-outline:hover { border-color: var(--red); color: var(--red); }
 
-        .btn-primary:hover {
-            background: var(--red-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(183,28,28,0.3);
-        }
+        /* SECTION HEADERS */
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
+        .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; line-height: 1.2; }
+        .section-subtitle { font-size: 1rem; color: var(--grey-600); max-width: 600px; margin: 0.75rem auto 0; }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--grey-800);
-            border: 2px solid var(--grey-300);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--red);
-            color: var(--red);
-        }
-
-        /* ========== SECTION HEADERS ========== */
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--red);
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 600;
-            color: var(--grey-900);
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--grey-600);
-            max-width: 600px;
-            margin: 1rem auto 0;
-        }
-
-        /* ========== ABOUT SECTION ========== */
-        #about {
-            background: var(--white);
-        }
+        /* ABOUT */
+        #about { background: var(--white); }
 
         .about-grid {
             display: grid;
@@ -305,19 +238,8 @@
             align-items: center;
         }
 
-        .about-content h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--grey-900);
-        }
-
-        .about-content p {
-            font-size: 1.05rem;
-            color: var(--grey-700);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
+        .about-content h2 { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .about-content p { font-size: 1.05rem; color: var(--grey-700); margin-bottom: 1.5rem; line-height: 1.8; }
 
         .about-highlight {
             background: var(--grey-50);
@@ -326,79 +248,67 @@
             margin: 2rem 0;
         }
 
-        .about-highlight p {
-            font-style: italic;
-            margin: 0;
-            color: var(--grey-800);
-        }
+        .about-highlight p { font-style: italic; margin: 0; color: var(--grey-800); }
+        .about-photo { width: 100%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
 
-        .about-photo {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-
-        /* ========== CAREER LADDER SECTION ========== */
+        /* CAREER LADDER - CONDENSED */
         #ladder {
             background: var(--grey-50);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
-        .ladder-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .ladder-container { max-width: 900px; margin: 0 auto; }
 
         .ladder-track {
             position: relative;
-            padding-left: 60px;
+            padding-left: 50px;
         }
 
         .ladder-line {
             position: absolute;
-            left: 24px;
+            left: 20px;
             top: 0;
             bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, var(--red), var(--green));
+            width: 3px;
+            background: linear-gradient(to top, var(--red), var(--green));
             border-radius: 2px;
         }
 
         .ladder-rung {
             position: relative;
-            padding: 1.5rem 0 1.5rem 2rem;
+            padding: 0.75rem 0 0.75rem 1.5rem;
             opacity: 0;
             transform: translateX(-20px);
-            animation: fadeInRung 0.5s forwards;
+            animation: fadeInRung 0.4s forwards;
         }
 
-        .ladder-rung:nth-child(1) { animation-delay: 0.1s; }
-        .ladder-rung:nth-child(2) { animation-delay: 0.2s; }
-        .ladder-rung:nth-child(3) { animation-delay: 0.3s; }
-        .ladder-rung:nth-child(4) { animation-delay: 0.4s; }
-        .ladder-rung:nth-child(5) { animation-delay: 0.5s; }
-        .ladder-rung:nth-child(6) { animation-delay: 0.6s; }
-        .ladder-rung:nth-child(7) { animation-delay: 0.7s; }
-        .ladder-rung:nth-child(8) { animation-delay: 0.8s; }
-        .ladder-rung:nth-child(9) { animation-delay: 0.9s; }
-        .ladder-rung:nth-child(10) { animation-delay: 1.0s; }
+        .ladder-rung:nth-child(1) { animation-delay: 0.05s; }
+        .ladder-rung:nth-child(2) { animation-delay: 0.1s; }
+        .ladder-rung:nth-child(3) { animation-delay: 0.15s; }
+        .ladder-rung:nth-child(4) { animation-delay: 0.2s; }
+        .ladder-rung:nth-child(5) { animation-delay: 0.25s; }
+        .ladder-rung:nth-child(6) { animation-delay: 0.3s; }
+        .ladder-rung:nth-child(7) { animation-delay: 0.35s; }
+        .ladder-rung:nth-child(8) { animation-delay: 0.4s; }
+        .ladder-rung:nth-child(9) { animation-delay: 0.45s; }
+        .ladder-rung:nth-child(10) { animation-delay: 0.5s; }
+        .ladder-rung:nth-child(11) { animation-delay: 0.55s; }
+        .ladder-rung:nth-child(12) { animation-delay: 0.6s; }
+        .ladder-rung:nth-child(13) { animation-delay: 0.65s; }
 
         @keyframes fadeInRung {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         .ladder-dot {
             position: absolute;
-            left: -47px;
+            left: -38px;
             top: 50%;
             transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             background: var(--white);
-            border: 4px solid var(--red);
+            border: 3px solid var(--red);
             border-radius: 50%;
             z-index: 1;
         }
@@ -406,15 +316,15 @@
         .ladder-rung.highlight .ladder-dot {
             background: var(--green);
             border-color: var(--green);
-            width: 28px;
-            height: 28px;
-            left: -51px;
+            width: 22px;
+            height: 22px;
+            left: -41px;
         }
 
         .ladder-rung.highlight .ladder-dot::after {
             content: '★';
             color: white;
-            font-size: 12px;
+            font-size: 10px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -423,123 +333,85 @@
 
         .rung-title {
             font-family: var(--font-display);
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: var(--grey-900);
-            margin-bottom: 0.25rem;
+            display: inline;
         }
 
         .rung-meta {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--red);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+            display: inline;
+            margin-left: 0.75rem;
         }
 
         .rung-desc {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: var(--grey-600);
-            line-height: 1.6;
+            line-height: 1.5;
+            margin-top: 0.25rem;
         }
 
-        /* ========== TIMELINE SECTION ========== */
+        /* TIMELINE - CONDENSED */
         #timeline {
             background: var(--white);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
-        .timeline-grid {
-            display: grid;
-            gap: 0;
-        }
+        .timeline-grid { display: grid; gap: 0; }
 
         .timeline-item {
             display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 3rem;
-            padding: 2.5rem 0;
+            grid-template-columns: 140px 1fr;
+            gap: 2rem;
+            padding: 1.25rem 0;
             border-bottom: 1px solid var(--grey-200);
-            transition: all 0.3s;
         }
 
         .timeline-item:hover {
             background: var(--grey-50);
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            margin: 0 -1.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 0 -1rem;
         }
 
-        .timeline-date {
-            text-align: right;
-        }
+        .timeline-date { text-align: right; }
 
         .timeline-year {
             font-family: var(--font-display);
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--red);
             line-height: 1;
         }
 
-        .timeline-range {
-            font-size: 0.8rem;
-            color: var(--grey-500);
-            margin-top: 0.25rem;
-        }
+        .timeline-range { font-size: 0.7rem; color: var(--grey-500); margin-top: 0.15rem; }
 
         .timeline-content h3 {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: var(--grey-900);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.15rem;
         }
 
-        .timeline-company {
-            font-size: 1rem;
-            color: var(--green);
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
+        .timeline-company { font-size: 0.9rem; color: var(--green); font-weight: 600; margin-bottom: 0.5rem; }
+        .timeline-desc { font-size: 0.85rem; color: var(--grey-600); margin-bottom: 0.5rem; line-height: 1.5; }
 
-        .timeline-desc {
-            font-size: 0.95rem;
-            color: var(--grey-600);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
+        .timeline-metrics { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
-        .timeline-metrics {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
+        .timeline-metric { display: flex; align-items: baseline; gap: 0.35rem; }
+        .timeline-metric strong { font-family: var(--font-display); font-size: 1rem; color: var(--red); }
+        .timeline-metric span { font-size: 0.7rem; color: var(--grey-500); text-transform: uppercase; }
 
-        .timeline-metric {
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
-        }
-
-        .timeline-metric strong {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            color: var(--red);
-        }
-
-        .timeline-metric span {
-            font-size: 0.8rem;
-            color: var(--grey-500);
-            text-transform: uppercase;
-        }
-
-        /* ========== CLIENTS SECTION ========== */
+        /* CLIENTS */
         #clients {
             background: var(--grey-900);
             color: white;
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         #clients .section-label { color: var(--green-light); }
@@ -548,40 +420,57 @@
 
         .clients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 1rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
         .client-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.08);
             border-radius: 8px;
-            padding: 1.25rem 1rem;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--grey-300);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
             transition: all 0.3s;
         }
 
         .client-card:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--red);
-            transform: translateY(-3px);
-            color: white;
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
         }
 
-        /* ========== PORTFOLIO SECTION ========== */
+        .client-card img {
+            max-width: 80%;
+            max-height: 40px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .client-card:hover img { opacity: 1; }
+
+        .client-text {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--grey-300);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* PORTFOLIO */
         #portfolio {
             background: var(--white);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .portfolio-card {
@@ -593,15 +482,14 @@
         }
 
         .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
         }
 
         .portfolio-card img {
             width: 100%;
-            height: 280px;
+            height: 240px;
             object-fit: cover;
-            display: block;
         }
 
         .portfolio-overlay {
@@ -609,112 +497,32 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1.25rem;
             background: linear-gradient(transparent, rgba(0,0,0,0.9));
             color: white;
         }
 
-        .portfolio-overlay h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-overlay p {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.8);
-            line-height: 1.5;
-        }
+        .portfolio-overlay h3 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.35rem; }
+        .portfolio-overlay p { font-size: 0.8rem; color: rgba(255,255,255,0.8); line-height: 1.4; }
 
         .portfolio-tag {
             position: absolute;
-            top: 1rem;
-            left: 1rem;
+            top: 0.75rem;
+            left: 0.75rem;
             background: var(--red);
             color: white;
-            padding: 0.4rem 0.8rem;
-            font-size: 0.7rem;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             border-radius: 4px;
         }
 
-        /* ========== TESTIMONIALS SECTION ========== */
-        #testimonials {
-            background: var(--red);
-            color: white;
-            padding: 6rem 0;
-        }
-
-        #testimonials .section-label { color: rgba(255,255,255,0.7); }
-        #testimonials .section-title { color: white; }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial-card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-family: var(--font-display);
-            font-size: 5rem;
-            color: rgba(255,255,255,0.2);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-name {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .testimonial-title {
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-
-        /* ========== CONTACT SECTION ========== */
+        /* CONTACT */
         #contact {
             background: var(--grey-50);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         .contact-grid {
@@ -724,61 +532,33 @@
             align-items: center;
         }
 
-        .contact-info h2 {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+        .contact-info h2 { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
+        .contact-info p { font-size: 1.1rem; color: var(--grey-600); margin-bottom: 2rem; }
 
-        .contact-info p {
-            font-size: 1.1rem;
-            color: var(--grey-600);
-            margin-bottom: 2rem;
-        }
-
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+        .contact-methods { display: flex; flex-direction: column; gap: 0.75rem; }
 
         .contact-method {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem 1.5rem;
+            padding: 0.875rem 1.25rem;
             background: white;
             border-radius: 8px;
             text-decoration: none;
             color: var(--grey-800);
-            transition: all 0.3s;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
         }
 
-        .contact-method:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+        .contact-method:hover { transform: translateX(8px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .contact-method svg { width: 22px; height: 22px; fill: var(--red); }
+        .contact-method span { font-weight: 500; }
 
-        .contact-method svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--red);
-        }
-
-        .contact-method span {
-            font-weight: 500;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
+        .social-links { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
 
         .social-link {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             background: var(--grey-200);
             border-radius: 50%;
             display: flex;
@@ -787,147 +567,62 @@
             transition: all 0.3s;
         }
 
-        .social-link:hover {
-            background: var(--red);
-        }
-
-        .social-link:hover svg {
-            fill: white;
-        }
-
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--grey-600);
-            transition: fill 0.3s;
-        }
+        .social-link:hover { background: var(--red); }
+        .social-link:hover svg { fill: white; }
+        .social-link svg { width: 18px; height: 18px; fill: var(--grey-600); }
 
         .contact-card {
             background: white;
             border-radius: 16px;
-            padding: 3rem;
+            padding: 2.5rem;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
 
-        .contact-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+        .contact-card h3 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 1.25rem; }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+        .contact-form { display: flex; flex-direction: column; gap: 0.875rem; }
 
         .contact-form input,
         .contact-form textarea {
-            padding: 1rem;
+            padding: 0.875rem;
             border: 2px solid var(--grey-200);
             border-radius: 8px;
             font-family: var(--font-body);
-            font-size: 1rem;
-            transition: border-color 0.3s;
+            font-size: 0.95rem;
         }
 
         .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--red);
-        }
+        .contact-form textarea:focus { outline: none; border-color: var(--red); }
 
-        .contact-form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
+        .contact-form textarea { min-height: 100px; resize: vertical; }
 
-        /* ========== FOOTER ========== */
+        /* FOOTER */
         footer {
             background: var(--grey-900);
             color: var(--grey-400);
-            padding: 3rem 2rem;
+            padding: 2rem;
             text-align: center;
+            font-size: 0.85rem;
         }
 
-        footer p {
-            font-size: 0.9rem;
-        }
-
-        /* ========== RESPONSIVE ========== */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .hero-grid,
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-image-wrap {
-                order: -1;
-                text-align: center;
-            }
-
-            .hero-image {
-                max-width: 300px;
-            }
-
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-
-            .timeline-date {
-                text-align: left;
-            }
-
-            .portfolio-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-image-wrap { order: -1; text-align: center; }
+            .hero-image { max-width: 300px; }
+            .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            .timeline-date { text-align: left; }
+            .portfolio-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            html {
-                scroll-snap-type: none;
-            }
-
-            section {
-                min-height: auto;
-                padding: 4rem 0;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .clients-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .ladder-track {
-                padding-left: 40px;
-            }
-
-            .ladder-line {
-                left: 12px;
-            }
-
-            .ladder-dot {
-                left: -35px;
-            }
-
-            .ladder-rung.highlight .ladder-dot {
-                left: -39px;
-            }
+            html { scroll-snap-type: none; }
+            section { min-height: auto; padding: 3rem 0; }
+            .nav-links { display: none; }
+            .hero-stats { flex-direction: column; gap: 1rem; }
+            .clients-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        /* ========== SCROLL INDICATOR ========== */
         .scroll-indicator {
             position: absolute;
             bottom: 2rem;
@@ -938,7 +633,7 @@
             align-items: center;
             gap: 0.5rem;
             color: var(--grey-400);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             animation: bounce 2s infinite;
@@ -946,20 +641,15 @@
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
+            40% { transform: translateX(-50%) translateY(-8px); }
         }
 
-        .scroll-indicator svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--grey-400);
-        }
+        .scroll-indicator svg { width: 20px; height: 20px; fill: var(--grey-400); }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav>
         <img src="images/logo.png" alt="Mike Vertx" class="nav-logo">
         <ul class="nav-links">
@@ -1054,94 +744,117 @@
         </div>
     </section>
 
-    <!-- CAREER LADDER -->
+    <!-- CAREER LADDER - CURRENT AT TOP, RETRO AT BOTTOM (Climbed UP) -->
     <section id="ladder">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">The Journey</div>
                 <h2 class="section-title">Climbing Every Rung of the Ladder</h2>
-                <p class="section-subtitle">From campus brand ambassador to agency owner — I've held every position in experiential marketing, giving me unique insight into what makes campaigns succeed at every level.</p>
+                <p class="section-subtitle">From campus brand ambassador to agency owner — I've held every position in experiential marketing.</p>
             </div>
 
             <div class="ladder-container">
                 <div class="ladder-track">
                     <div class="ladder-line"></div>
 
-                    <div class="ladder-rung">
+                    <!-- CURRENT / TOP -->
+                    <div class="ladder-rung highlight">
                         <div class="ladder-dot"></div>
-                        <div class="rung-title">Campus Brand Ambassador</div>
-                        <div class="rung-meta">Entry Level · 2002</div>
-                        <div class="rung-desc">Started on-campus at Hofstra University promoting brands to fellow students. Learned the fundamentals of consumer engagement, sampling, and representing a brand with authenticity.</div>
+                        <div class="rung-title">Agency Founder & Owner</div>
+                        <span class="rung-meta">Entrepreneur · 2011–Present</span>
+                        <div class="rung-desc">Founded Alternative Brand Marketing and Stress Free Group LLC. Built to $5M+ revenue, 118 vehicles, 17 staff at peak.</div>
                     </div>
 
                     <div class="ladder-rung">
                         <div class="ladder-dot"></div>
-                        <div class="rung-title">Team Lead</div>
-                        <div class="rung-meta">Field Operations</div>
-                        <div class="rung-desc">Promoted to lead groups of 5-15 brand ambassadors at events. Responsible for team coordination, on-site logistics, inventory management, and real-time problem solving.</div>
+                        <div class="rung-title">Launched RVFMS Fleet Management Solutions</div>
+                        <span class="rung-meta">2026</span>
+                        <div class="rung-desc">Expanded Stress Free Group to include Stress Free Golf Carts & Stress Free Staffing.</div>
                     </div>
 
                     <div class="ladder-rung">
                         <div class="ladder-dot"></div>
-                        <div class="rung-title">Event Manager</div>
-                        <div class="rung-meta">On-Site Production</div>
-                        <div class="rung-desc">Full ownership of event execution from load-in to tear-down. Managed union labor, vendor coordination, equipment logistics, and client communications in high-pressure environments.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Coordinator</div>
-                        <div class="rung-meta">Client Services</div>
-                        <div class="rung-desc">Transitioned to agency-side operations. Supported account teams with scheduling, reporting, budget tracking, and client communication across multiple concurrent programs.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Executive</div>
-                        <div class="rung-meta">Program Management</div>
-                        <div class="rung-desc">Primary point of contact for client accounts. Owned end-to-end program delivery including strategy, staffing, execution, and performance reporting. Managed budgets from $50K to $500K.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Market Manager</div>
-                        <div class="rung-meta">Regional Leadership</div>
-                        <div class="rung-desc">Regional ownership of multi-market activations. Built and managed local staff databases, vendor relationships, and market-specific strategies across the Northeast and East Coast.</div>
-                    </div>
-
-                    <div class="ladder-rung">
-                        <div class="ladder-dot"></div>
-                        <div class="rung-title">Account Director</div>
-                        <div class="rung-meta">Strategic Accounts</div>
-                        <div class="rung-desc">Led flagship client relationships and complex multi-market programs. Responsible for P&L management, team leadership, and strategic growth initiatives.</div>
+                        <div class="rung-title">Expanded Stress Free Group</div>
+                        <span class="rung-meta">2025</span>
+                        <div class="rung-desc">Added Stress Free Shield Interior Damage Liability Protection* (not an insurance product, protection for common occurrences).</div>
                     </div>
 
                     <div class="ladder-rung">
                         <div class="ladder-dot"></div>
                         <div class="rung-title">Sr. National Director of Sales</div>
-                        <div class="rung-meta">Executive Leadership · Look Media</div>
-                        <div class="rung-desc">Created The Sampling Agency under Look Media umbrella. Brought in 40 new clients and $800K revenue increase. Built 5,000+ contractor database and proprietary talent management systems.</div>
+                        <span class="rung-meta">Look Media · 2016–2019</span>
+                        <div class="rung-desc">Created The Sampling Agency. Brought in 40 new clients, $800K revenue. Built 5,000+ contractor database.</div>
                     </div>
 
                     <div class="ladder-rung">
                         <div class="ladder-dot"></div>
-                        <div class="rung-title">Brand Marketing Manager</div>
-                        <div class="rung-meta">Internal Marketing · Vino Beverages</div>
-                        <div class="rung-desc">Led all marketing for an alcohol-removed wine startup. Managed $30K-$2M budgets, convention calendars, and digital campaigns. Moved 12,000+ units in first 6 months.</div>
+                        <div class="rung-title">Brand Manager</div>
+                        <span class="rung-meta">VINO Beverages · 2014–2016</span>
+                        <div class="rung-desc">Led marketing for alcohol-removed wine startup. $30K–$2M budgets. 12,000+ units in first 6 months.</div>
                     </div>
 
-                    <div class="ladder-rung highlight">
+                    <div class="ladder-rung">
                         <div class="ladder-dot"></div>
-                        <div class="rung-title">Agency Founder & Owner</div>
-                        <div class="rung-meta">Entrepreneur · 2011-Present</div>
-                        <div class="rung-desc">Founded Alternative Brand Marketing and Stress Free Group LLC. Built from 1 client to 50+ programs, generating $1.5M+ in agency revenue. Scaled Stress Free Group to $5M+ gross revenue with 118 vehicles and 17 staff at peak.</div>
+                        <div class="rung-title">Regional Field Marketing Manager</div>
+                        <span class="rung-meta">O.N.E. / PepsiCo · 2011–2013</span>
+                        <div class="rung-desc">Promoted twice. Contributed to PepsiCo acquisition. Managed Bonnaroo, Electric Zoo, EDC activations.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Account Producer</div>
+                        <span class="rung-meta">SoHo Experiential · 2007–2010</span>
+                        <div class="rung-desc">Premium spirits activations for Rémy Martin, Grand Marnier. 500+ events, 50+ staff managed.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Market Manager</div>
+                        <span class="rung-meta">Red Peg Marketing · 2005–2014</span>
+                        <div class="rung-desc">Multiple client campaigns: Breguet, Lavazza, U.S. Open for Grand Marnier, Super Bowl for Twitter & Bud Light, Coors Light, Toshiba, SoBe, and more.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Account Director</div>
+                        <span class="rung-meta">Strategic Accounts</span>
+                        <div class="rung-desc">Led flagship relationships and multi-market programs. P&L management and strategic growth.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Account Executive</div>
+                        <span class="rung-meta">Program Management</span>
+                        <div class="rung-desc">Primary point of contact. End-to-end delivery, staffing, execution. Managed $50K–$500K budgets.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Account Coordinator</div>
+                        <span class="rung-meta">Client Services</span>
+                        <div class="rung-desc">Agency-side operations. Scheduling, reporting, budget tracking across concurrent programs.</div>
+                    </div>
+
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Event Manager / Team Lead</div>
+                        <span class="rung-meta">Field Operations</span>
+                        <div class="rung-desc">Full event ownership. Union labor, vendors, equipment. Led teams of 5–15 brand ambassadors.</div>
+                    </div>
+
+                    <!-- BOTTOM / EARLIEST -->
+                    <div class="ladder-rung">
+                        <div class="ladder-dot"></div>
+                        <div class="rung-title">Campus Brand Ambassador</div>
+                        <span class="rung-meta">Entry Level · 2002</span>
+                        <div class="rung-desc">Started at Hofstra University. Consumer engagement, sampling, authentic brand representation.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TIMELINE -->
+    <!-- TIMELINE - CURRENT AT TOP -->
     <section id="timeline">
         <div class="container">
             <div class="section-header">
@@ -1152,16 +865,38 @@
             <div class="timeline-grid">
                 <div class="timeline-item">
                     <div class="timeline-date">
+                        <div class="timeline-year">2026</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Launched RVFMS Fleet Management Solutions</h3>
+                        <div class="timeline-company">Stress Free Group LLC · San Diego, CA</div>
+                        <div class="timeline-desc">Expanded Stress Free Group to include Stress Free Golf Carts & Stress Free Staffing alongside RVs.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <div class="timeline-year">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Expanded Stress Free Group</h3>
+                        <div class="timeline-company">Stress Free Shield · San Diego, CA</div>
+                        <div class="timeline-desc">Added Stress Free Shield Interior Damage Liability Protection* (not an insurance product, protection for common occurrences).</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
                         <div class="timeline-year">2020</div>
                         <div class="timeline-range">Oct 2020 – Present</div>
                     </div>
                     <div class="timeline-content">
                         <h3>Owner & President</h3>
                         <div class="timeline-company">Stress Free Group LLC · San Diego, CA</div>
-                        <div class="timeline-desc">Founded and scaled an independent RV rental and fleet-management business spanning rentals, repairs, sales, logistics, and large-scale event support. Built vertically integrated operations with direct ownership across P&L, compliance, and customer experience.</div>
+                        <div class="timeline-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated operations with P&L ownership.</div>
                         <div class="timeline-metrics">
                             <div class="timeline-metric"><strong>$5M+</strong><span>Gross Revenue</span></div>
-                            <div class="timeline-metric"><strong>118</strong><span>Vehicles at Peak</span></div>
+                            <div class="timeline-metric"><strong>118</strong><span>Vehicles</span></div>
                             <div class="timeline-metric"><strong>2,300+</strong><span>Reservations</span></div>
                         </div>
                     </div>
@@ -1175,11 +910,11 @@
                     <div class="timeline-content">
                         <h3>Sr. National Director of Sales & Client Relations</h3>
                         <div class="timeline-company">Look Media USA / The Sampling Agency · San Diego, CA</div>
-                        <div class="timeline-desc">Hired for 6-week project; converted to multi-year contract in 2 weeks. Created The Sampling Agency under Look Media umbrella. Built Talent Portal software for scheduling, assignments, reporting, and photo uploads.</div>
+                        <div class="timeline-desc">Hired for 6-week project; converted to multi-year in 2 weeks. Created The Sampling Agency. Built Talent Portal software.</div>
                         <div class="timeline-metrics">
                             <div class="timeline-metric"><strong>40</strong><span>New Clients</span></div>
-                            <div class="timeline-metric"><strong>$800K</strong><span>Revenue Increase</span></div>
-                            <div class="timeline-metric"><strong>1M+</strong><span>Samples</span></div>
+                            <div class="timeline-metric"><strong>$800K</strong><span>Revenue</span></div>
+                            <div class="timeline-metric"><strong>5K+</strong><span>Contractors</span></div>
                         </div>
                     </div>
                 </div>
@@ -1190,9 +925,9 @@
                         <div class="timeline-range">Nov 2014 – Jan 2016</div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Brand Marketing Manager</h3>
-                        <div class="timeline-company">Vino Beverages · New York, NY</div>
-                        <div class="timeline-desc">Led marketing for alcohol-removed wine startup. Managed quarterly marketing plans with $30K-$2MM budgets. Built full convention calendar strategy generating 1,500 qualified leads.</div>
+                        <h3>Brand Manager</h3>
+                        <div class="timeline-company">VINO Beverages · New York, NY</div>
+                        <div class="timeline-desc">Led marketing for alcohol-removed wine startup. $30K–$2M budgets. Convention calendar generating 1,500+ leads.</div>
                         <div class="timeline-metrics">
                             <div class="timeline-metric"><strong>12K</strong><span>Units Sold</span></div>
                             <div class="timeline-metric"><strong>6 mos</strong><span>Timeframe</span></div>
@@ -1208,11 +943,11 @@
                     <div class="timeline-content">
                         <h3>Founder</h3>
                         <div class="timeline-company">Alternative Brand Marketing · New York, NY</div>
-                        <div class="timeline-desc">Founded full-service experiential marketing agency. Led campaign strategy, national sales programming, staffing, execution, and performance reporting across multi-market activations for global clients.</div>
+                        <div class="timeline-desc">Founded full-service experiential marketing agency. Multi-market activations for global clients including PepsiCo, Rémy Martin, Evian.</div>
                         <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>$1.5M+</strong><span>Agency Revenue</span></div>
+                            <div class="timeline-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
                             <div class="timeline-metric"><strong>50+</strong><span>Programs</span></div>
-                            <div class="timeline-metric"><strong>20K+</strong><span>Staff Database</span></div>
+                            <div class="timeline-metric"><strong>20K+</strong><span>Staff DB</span></div>
                         </div>
                     </div>
                 </div>
@@ -1224,102 +959,110 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Regional Field Marketing Manager – East</h3>
-                        <div class="timeline-company">O.N.E Natural Experience (PepsiCo) · Los Angeles / East Coast</div>
-                        <div class="timeline-desc">Promoted twice from Northeast to full East region. Contributed directly to PepsiCo acquisition through strategic field marketing execution. Managed major festival activations including Bonnaroo, Electric Zoo, and Winter Music Conference.</div>
+                        <div class="timeline-company">O.N.E Natural Experience (PepsiCo) · East Coast</div>
+                        <div class="timeline-desc">Promoted twice. Contributed to PepsiCo acquisition. Major festivals: Bonnaroo, Electric Zoo, Winter Music Conference, EDC.</div>
                         <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>50</strong><span>Direct Reports</span></div>
+                            <div class="timeline-metric"><strong>50</strong><span>Reports</span></div>
                             <div class="timeline-metric"><strong>600</strong><span>Events</span></div>
-                            <div class="timeline-metric"><strong>$100K+</strong><span>Vendor Savings</span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">
-                        <div class="timeline-year">2010</div>
-                        <div class="timeline-range">Jul 2010 – Jan 2013</div>
+                        <div class="timeline-year">2007</div>
+                        <div class="timeline-range">2007 – 2010</div>
                     </div>
                     <div class="timeline-content">
                         <h3>Account Producer</h3>
                         <div class="timeline-company">SoHo Experiential · New York, NY</div>
-                        <div class="timeline-desc">Managed premium spirits activations for Remy Martin VSOP, Remy Martin V, Grand Marnier, and Canei Wines across major markets. Oversaw 50+ staff and 500+ events over 3-year engagement.</div>
+                        <div class="timeline-desc">Premium spirits activations for Rémy Martin VSOP, Rémy Martin V, Grand Marnier, Canei Wines. 20+ markets.</div>
                         <div class="timeline-metrics">
                             <div class="timeline-metric"><strong>500+</strong><span>Events</span></div>
-                            <div class="timeline-metric"><strong>50+</strong><span>Staff Managed</span></div>
+                            <div class="timeline-metric"><strong>50+</strong><span>Staff</span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">
-                        <div class="timeline-year">2006</div>
-                        <div class="timeline-range">Feb 2006 – Jul 2010</div>
+                        <div class="timeline-year">2005</div>
+                        <div class="timeline-range">2005 – 2014</div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Sales & Marketing</h3>
-                        <div class="timeline-company">Hofstra University Athletics · Long Island, NY</div>
-                        <div class="timeline-desc">Started career managing premium ticketing, merchandise, and corporate partnerships while completing education. Built foundation in sales, relationship management, and event production.</div>
-                        <div class="timeline-metrics">
-                            <div class="timeline-metric"><strong>BA</strong><span>Speech Communications</span></div>
-                        </div>
+                        <h3>Market Manager</h3>
+                        <div class="timeline-company">Red Peg Marketing · Multiple Markets</div>
+                        <div class="timeline-desc">Multiple client campaigns: Breguet, Lavazza, U.S. Open for Grand Marnier, Super Bowl for Twitter & Bud Light, Coors Light, Toshiba, SoBe, and many more.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <div class="timeline-year">2002</div>
+                        <div class="timeline-range">2002 – 2006</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Education</h3>
+                        <div class="timeline-company">Hofstra University · Long Island, NY</div>
+                        <div class="timeline-desc">Bachelor of Science in Marketing with Associate Degree in Business Administration. Started career as Campus Brand Ambassador while completing education.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CLIENTS -->
+    <!-- CLIENTS WITH LOGOS -->
     <section id="clients">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Trusted By</div>
                 <h2 class="section-title">50+ Brand Clients</h2>
-                <p class="section-subtitle">From Fortune 500 giants to innovative startups, I've delivered results across spirits, beverage, CPG, tech, and entertainment.</p>
+                <p class="section-subtitle">From Fortune 500 giants to innovative startups across spirits, beverage, CPG, tech, and entertainment.</p>
             </div>
 
             <div class="clients-grid">
-                <div class="client-card">Rémy Martin</div>
-                <div class="client-card">Grand Marnier</div>
-                <div class="client-card">PepsiCo</div>
-                <div class="client-card">O.N.E. Coconut Water</div>
-                <div class="client-card">Evian</div>
-                <div class="client-card">Danone</div>
-                <div class="client-card">Beanfields</div>
-                <div class="client-card">Argo Tea</div>
-                <div class="client-card">DirecTV</div>
-                <div class="client-card">Amazon</div>
-                <div class="client-card">Audible</div>
-                <div class="client-card">ZipCar</div>
-                <div class="client-card">Pernod Ricard</div>
-                <div class="client-card">Vitamin Water</div>
-                <div class="client-card">Glaceau</div>
-                <div class="client-card">HP</div>
-                <div class="client-card">Intel</div>
-                <div class="client-card">Qualcomm</div>
-                <div class="client-card">Twitch</div>
-                <div class="client-card">Anheuser-Busch</div>
-                <div class="client-card">MillerCoors</div>
-                <div class="client-card">Bacardi</div>
-                <div class="client-card">Diageo</div>
-                <div class="client-card">Samsung</div>
-                <div class="client-card">Sony</div>
-                <div class="client-card">Red Bull</div>
-                <div class="client-card">Monster Energy</div>
-                <div class="client-card">Vita Coco</div>
-                <div class="client-card">KIND Snacks</div>
-                <div class="client-card">PopChips</div>
-                <div class="client-card">Hint Water</div>
-                <div class="client-card">Nestlé</div>
-                <div class="client-card">Coca-Cola</div>
-                <div class="client-card">Unilever</div>
-                <div class="client-card">P&G</div>
-                <div class="client-card">L'Oréal</div>
-                <div class="client-card">Uber</div>
-                <div class="client-card">Lyft</div>
-                <div class="client-card">Square</div>
-                <div class="client-card">Venmo</div>
-                <div class="client-card">Cash App</div>
-                <div class="client-card">Hofstra Athletics</div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" onerror="this.parentElement.innerHTML='<span class=client-text>PepsiCo</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/remymartin.com" alt="Rémy Martin" onerror="this.parentElement.innerHTML='<span class=client-text>Rémy Martin</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/grandmarnier.com" alt="Grand Marnier" onerror="this.parentElement.innerHTML='<span class=client-text>Grand Marnier</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/evian.com" alt="Evian" onerror="this.parentElement.innerHTML='<span class=client-text>Evian</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/danone.com" alt="Danone" onerror="this.parentElement.innerHTML='<span class=client-text>Danone</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.parentElement.innerHTML='<span class=client-text>Amazon</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/audible.com" alt="Audible" onerror="this.parentElement.innerHTML='<span class=client-text>Audible</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/directv.com" alt="DirecTV" onerror="this.parentElement.innerHTML='<span class=client-text>DirecTV</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.parentElement.innerHTML='<span class=client-text>Samsung</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/sony.com" alt="Sony" onerror="this.parentElement.innerHTML='<span class=client-text>Sony</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/hp.com" alt="HP" onerror="this.parentElement.innerHTML='<span class=client-text>HP</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/intel.com" alt="Intel" onerror="this.parentElement.innerHTML='<span class=client-text>Intel</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/qualcomm.com" alt="Qualcomm" onerror="this.parentElement.innerHTML='<span class=client-text>Qualcomm</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/redbull.com" alt="Red Bull" onerror="this.parentElement.innerHTML='<span class=client-text>Red Bull</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/monsterenergy.com" alt="Monster Energy" onerror="this.parentElement.innerHTML='<span class=client-text>Monster</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/anheuser-busch.com" alt="Anheuser-Busch" onerror="this.parentElement.innerHTML='<span class=client-text>AB InBev</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/molsoncoors.com" alt="MillerCoors" onerror="this.parentElement.innerHTML='<span class=client-text>Coors</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/bacardi.com" alt="Bacardi" onerror="this.parentElement.innerHTML='<span class=client-text>Bacardi</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/diageo.com" alt="Diageo" onerror="this.parentElement.innerHTML='<span class=client-text>Diageo</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pernod-ricard.com" alt="Pernod Ricard" onerror="this.parentElement.innerHTML='<span class=client-text>Pernod Ricard</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/vitacoco.com" alt="Vita Coco" onerror="this.parentElement.innerHTML='<span class=client-text>Vita Coco</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/kindsnacks.com" alt="KIND Snacks" onerror="this.parentElement.innerHTML='<span class=client-text>KIND</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/nestle.com" alt="Nestlé" onerror="this.parentElement.innerHTML='<span class=client-text>Nestlé</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/coca-cola.com" alt="Coca-Cola" onerror="this.parentElement.innerHTML='<span class=client-text>Coca-Cola</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/unilever.com" alt="Unilever" onerror="this.parentElement.innerHTML='<span class=client-text>Unilever</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/pg.com" alt="P&G" onerror="this.parentElement.innerHTML='<span class=client-text>P&G</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/loreal.com" alt="L'Oréal" onerror="this.parentElement.innerHTML='<span class=client-text>L'Oréal</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.parentElement.innerHTML='<span class=client-text>Twitter</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/twitch.tv" alt="Twitch" onerror="this.parentElement.innerHTML='<span class=client-text>Twitch</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/uber.com" alt="Uber" onerror="this.parentElement.innerHTML='<span class=client-text>Uber</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/lyft.com" alt="Lyft" onerror="this.parentElement.innerHTML='<span class=client-text>Lyft</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/zipcar.com" alt="ZipCar" onerror="this.parentElement.innerHTML='<span class=client-text>ZipCar</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/toshiba.com" alt="Toshiba" onerror="this.parentElement.innerHTML='<span class=client-text>Toshiba</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/lavazza.com" alt="Lavazza" onerror="this.parentElement.innerHTML='<span class=client-text>Lavazza</span>'"></div>
+                <div class="client-card"><img src="https://logo.clearbit.com/breguet.com" alt="Breguet" onerror="this.parentElement.innerHTML='<span class=client-text>Breguet</span>'"></div>
+                <div class="client-card"><span class="client-text">Beanfields</span></div>
+                <div class="client-card"><span class="client-text">Argo Tea</span></div>
+                <div class="client-card"><span class="client-text">Hint Water</span></div>
+                <div class="client-card"><span class="client-text">PopChips</span></div>
+                <div class="client-card"><span class="client-text">SoBe</span></div>
+                <div class="client-card"><span class="client-text">Glaceau</span></div>
+                <div class="client-card"><span class="client-text">Hofstra</span></div>
             </div>
         </div>
     </section>
@@ -1339,7 +1082,7 @@
                     <div class="portfolio-tag">Spirits</div>
                     <div class="portfolio-overlay">
                         <h3>Rémy Martin VSOP</h3>
-                        <p>3-year engagement managing nightlife and event activations across 20+ markets. 500+ events, 50+ brand ambassadors.</p>
+                        <p>3-year engagement managing nightlife activations across 20+ markets. 500+ events.</p>
                     </div>
                 </div>
 
@@ -1348,7 +1091,7 @@
                     <div class="portfolio-tag">Spirits</div>
                     <div class="portfolio-overlay">
                         <h3>Grand Marnier</h3>
-                        <p>Premium on-premise activations targeting luxury nightlife venues. Signature cocktail programs and VIP experiences.</p>
+                        <p>Premium on-premise activations at luxury nightlife venues. Signature cocktails and VIP experiences.</p>
                     </div>
                 </div>
 
@@ -1357,7 +1100,7 @@
                     <div class="portfolio-tag">CPG</div>
                     <div class="portfolio-overlay">
                         <h3>Beanfields & Argo Tea</h3>
-                        <p>National sampling campaigns at outdoor events, festivals, and retail. Built brand awareness in health-conscious markets.</p>
+                        <p>National sampling at outdoor events, festivals, and retail for health-conscious markets.</p>
                     </div>
                 </div>
 
@@ -1366,7 +1109,7 @@
                     <div class="portfolio-tag">Beverage</div>
                     <div class="portfolio-overlay">
                         <h3>Evian Water</h3>
-                        <p>Premium sampling activations targeting lifestyle and wellness events. Reinforced premium positioning through strategic venue selection.</p>
+                        <p>Premium sampling at lifestyle and wellness events reinforcing brand positioning.</p>
                     </div>
                 </div>
 
@@ -1375,7 +1118,7 @@
                     <div class="portfolio-tag">Festivals</div>
                     <div class="portfolio-overlay">
                         <h3>Festival Marketing</h3>
-                        <p>Bonnaroo, Electric Zoo, Winter Music Conference, Electric Daisy Carnival. Large-scale activations with 100K+ attendees.</p>
+                        <p>Bonnaroo, Electric Zoo, Winter Music Conference, EDC. 100K+ attendee activations.</p>
                     </div>
                 </div>
 
@@ -1384,63 +1127,7 @@
                     <div class="portfolio-tag">Entertainment</div>
                     <div class="portfolio-overlay">
                         <h3>Entertainment & Nightlife</h3>
-                        <p>20+ years of DJ experience at international venues. Combined entertainment with brand activations for maximum impact.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Testimonials</div>
-                <h2 class="section-title">What Clients Say</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Mike's ability to manage complex multi-market activations while maintaining quality at every touchpoint is exceptional. He doesn't just execute — he elevates every program he touches.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JR</div>
-                        <div>
-                            <div class="testimonial-name">Jamie Rodriguez</div>
-                            <div class="testimonial-title">VP Marketing, Premium Spirits Brand</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">In 20 years of working with agencies, Mike stands out. He brings the rare combination of strategic thinking and flawless execution. Our brand was in great hands.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SC</div>
-                        <div>
-                            <div class="testimonial-name">Sarah Chen</div>
-                            <div class="testimonial-title">Director of Brand Activation, Beverage Company</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Mike took our sampling program from 500 events to 2,000+ in under two years. More importantly, he built systems that made it sustainable and scalable.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MK</div>
-                        <div>
-                            <div class="testimonial-name">Marcus Kim</div>
-                            <div class="testimonial-title">CMO, CPG Startup</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Working with Mike means working with someone who gets it. From strategy to staffing to execution, he understands every piece of the experiential puzzle.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">LT</div>
-                        <div>
-                            <div class="testimonial-name">Lisa Thompson</div>
-                            <div class="testimonial-title">Agency Partner</div>
-                        </div>
+                        <p>20+ years DJ experience at international venues combined with brand activations.</p>
                     </div>
                 </div>
             </div>
@@ -1497,50 +1184,26 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <p>© 2026 Mike Katz. All rights reserved. | San Diego, CA</p>
-        </div>
+        <p>© 2026 Mike Katz. All rights reserved. | San Diego, CA</p>
     </footer>
 
-    <!-- SCROLL SNAP OBSERVER -->
     <script>
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px'
-        };
-
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, observerOptions);
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Nav background on scroll
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
+            nav.style.boxShadow = window.scrollY > 100 ? '0 4px 20px rgba(0,0,0,0.1)' : 'none';
         });
 
-        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
