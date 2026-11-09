@@ -175,6 +175,13 @@
         .career-main-card { background: white; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; margin-left: 0; position: relative; }
         .career-main-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         /* Sub-items nested INSIDE main card - indented with horizontal dashes */
+        /* Standalone sub-items (outside main card) with horizontal dashes */
+        .career-sub-items-standalone { margin-top: 1rem; margin-left: 1.5rem; }
+        .career-sub-items-standalone .career-sub-item { position: relative; padding-left: 2rem; margin-bottom: 1rem; }
+        .career-sub-items-standalone .career-sub-item::before { content: ''; position: absolute; left: 0; top: 2rem; width: 1.25rem; height: 3px; background: var(--grey-300); border-radius: 2px; }
+        .career-sub-items-standalone .career-sub-card { padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); background: white; border-radius: 16px; }
+        .career-sub-items-standalone .career-sub-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); transform: translateY(-4px); }
+        /* Legacy nested sub-items inside main card */
         .career-main-card .career-sub-items { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--grey-200); margin-left: 0; padding-left: 0; }
         .career-main-card .career-sub-item { position: relative; padding-left: 2rem; }
         .career-main-card .career-sub-item::before { content: ''; position: absolute; left: 0; top: 50%; width: 1.25rem; height: 3px; background: var(--grey-300); border-radius: 2px; }
@@ -507,51 +514,51 @@
                     <div class="career-main-card">
                         <h3>Expanded Stress Free Group's Services</h3>
                         <p class="career-desc">Diversified the Stress Free Group portfolio with strategic new service lines, each leveraging our core competencies in logistics, staffing, fleet management, and technology. Each division operates independently while benefiting from shared infrastructure and operational expertise.</p>
-                        <!-- Indented sub-milestones -->
-                        <div class="career-sub-items">
-                            <div class="career-sub-item">
-                                <div class="career-sub-card">
-                                    <div class="career-sub-card-header">
-                                        <h4>Stress Free Staffing & Events</h4>
-                                        <img src="https://www.stressfreegroup.com/assets/staffing-Bis7d4Vj.webp" alt="Stress Free Staffing" class="career-sub-logo">
-                                    </div>
-                                    <p>Full-service event staffing and brand ambassador division providing trained promotional staff, event coordinators, and field teams for festivals, activations, and corporate events nationwide.</p>
-                                    <a href="https://stressfreestaffing.com" target="_blank" class="career-link">stressfreestaffing.com →</a>
+                    </div>
+                    <!-- Sub-milestones outside main card with horizontal dashes -->
+                    <div class="career-sub-items career-sub-items-standalone">
+                        <div class="career-sub-item">
+                            <div class="career-sub-card">
+                                <div class="career-sub-card-header">
+                                    <h4>Stress Free Staffing & Events</h4>
+                                    <img src="https://www.stressfreegroup.com/assets/staffing-Bis7d4Vj.webp" alt="Stress Free Staffing" class="career-sub-logo">
                                 </div>
+                                <p>Full-service event staffing and brand ambassador division providing trained promotional staff, event coordinators, and field teams for festivals, activations, and corporate events nationwide.</p>
+                                <a href="https://stressfreestaffing.com" target="_blank" class="career-link">stressfreestaffing.com →</a>
                             </div>
-                            <div class="career-sub-item">
-                                <div class="career-sub-card">
-                                    <div class="career-sub-card-header">
-                                        <h4>Stress Free Golf Carts</h4>
-                                        <img src="images/stress-free-golf-carts-logo.png" alt="Stress Free Golf Carts" class="career-sub-logo">
-                                    </div>
-                                    <p>Premium golf cart rental fleet servicing festivals, special events, resorts, and large venues throughout Southern California with delivery, setup, and on-site support.</p>
-                                    <a href="https://stressfreegolfcarts.com" target="_blank" class="career-link">stressfreegolfcarts.com →</a>
+                        </div>
+                        <div class="career-sub-item">
+                            <div class="career-sub-card">
+                                <div class="career-sub-card-header">
+                                    <h4>Stress Free Golf Carts</h4>
+                                    <img src="images/stress-free-golf-carts-logo.png" alt="Stress Free Golf Carts" class="career-sub-logo">
                                 </div>
+                                <p>Premium golf cart rental fleet servicing festivals, special events, resorts, and large venues throughout Southern California with delivery, setup, and on-site support.</p>
+                                <a href="https://stressfreegolfcarts.com" target="_blank" class="career-link">stressfreegolfcarts.com →</a>
                             </div>
-                            <div class="career-sub-item">
-                                <div class="career-sub-card">
-                                    <div class="career-sub-card-header">
-                                        <h4>RVFMS Fleet Management</h4>
-                                        <img src="https://www.stressfreegroup.com/assets/rvfms-B5MPrwF5.webp" alt="RVFMS" class="career-sub-logo">
-                                    </div>
-                                    <p>Proprietary SaaS fleet management platform built to streamline RV rental operations, owner statements, maintenance tracking, and reservation management at scale.</p>
-                                    <a href="https://rvfms.stressfreervs.com" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
+                        </div>
+                        <div class="career-sub-item">
+                            <div class="career-sub-card">
+                                <div class="career-sub-card-header">
+                                    <h4>RVFMS Fleet Management</h4>
+                                    <img src="https://www.stressfreegroup.com/assets/rvfms-B5MPrwF5.webp" alt="RVFMS" class="career-sub-logo">
                                 </div>
+                                <p>Proprietary SaaS fleet management platform built to streamline RV rental operations, owner statements, maintenance tracking, and reservation management at scale.</p>
+                                <a href="https://rvfms.stressfreervs.com" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
                             </div>
-                            <div class="career-sub-item">
-                                <div class="career-sub-card">
-                                    <div class="career-sub-card-header">
-                                        <h4>Stress Free Shield</h4>
-                                        <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
-                                            <defs><linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00838F"/></linearGradient></defs>
-                                            <path d="M50 8 L85 22 L85 48 C85 68 68 85 50 92 C32 85 15 68 15 48 L15 22 Z" fill="url(#shieldGrad2)"/>
-                                            <polyline points="35,50 45,60 65,40" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                        </svg>
-                                    </div>
-                                    <p>Interior damage liability protection product offering peace of mind coverage for RV renters, protecting against accidental interior damage during their trip.</p>
-                                    <a href="https://www.stressfreeshield.com" target="_blank" class="career-link">www.stressfreeshield.com →</a>
+                        </div>
+                        <div class="career-sub-item">
+                            <div class="career-sub-card">
+                                <div class="career-sub-card-header">
+                                    <h4>Stress Free Shield</h4>
+                                    <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
+                                        <defs><linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00838F"/></linearGradient></defs>
+                                        <path d="M50 8 L85 22 L85 48 C85 68 68 85 50 92 C32 85 15 68 15 48 L15 22 Z" fill="url(#shieldGrad2)"/>
+                                        <polyline points="35,50 45,60 65,40" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    </svg>
                                 </div>
+                                <p>Interior damage liability protection product offering peace of mind coverage for RV renters, protecting against accidental interior damage during their trip.</p>
+                                <a href="https://www.stressfreeshield.com" target="_blank" class="career-link">www.stressfreeshield.com →</a>
                             </div>
                         </div>
                     </div>
