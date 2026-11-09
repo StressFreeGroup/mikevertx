@@ -156,7 +156,7 @@
         .career-sub-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); transform: translateY(-4px); }
         .career-sub-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
         .career-sub-card h4 { font-family: var(--font-display); font-size: 1.125rem; font-weight: 600; color: var(--grey-900); margin: 0; }
-        .career-sub-logo { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; }
+        .career-sub-logo { width: 64px; height: 64px; object-fit: contain; border-radius: 8px; }
         .career-sub-card p { font-size: 0.9375rem; color: var(--grey-600); line-height: 1.6; margin: 0 0 0.75rem; }
         .career-sub-card .career-link { font-size: 0.8125rem; color: var(--teal); text-decoration: none; font-weight: 600; }
         .career-sub-card .career-link:hover { text-decoration: underline; }
@@ -172,13 +172,15 @@
         /* MAIN CAREER CARD with logo */
         .career-main-card { background: white; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; margin-left: 0; position: relative; }
         .career-main-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        /* Sub-items nested INSIDE main card - indented like bullet points */
-        .career-main-card .career-sub-items { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--grey-200); margin-left: 1.5rem; padding-left: 1.5rem; border-left: 3px solid var(--grey-200); }
-        .career-main-card .career-sub-card { padding: 1rem; box-shadow: none; background: var(--grey-50); }
+        /* Sub-items nested INSIDE main card - indented with horizontal dashes */
+        .career-main-card .career-sub-items { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--grey-200); margin-left: 0; padding-left: 0; }
+        .career-main-card .career-sub-item { position: relative; padding-left: 2rem; }
+        .career-main-card .career-sub-item::before { content: ''; position: absolute; left: 0; top: 50%; width: 1.25rem; height: 3px; background: var(--grey-300); border-radius: 2px; }
+        .career-main-card .career-sub-card { padding: 1.25rem; box-shadow: none; background: var(--grey-50); }
         .career-main-card .career-sub-card:hover { background: var(--grey-100); box-shadow: none; transform: none; }
         .career-main-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
         .career-main-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--grey-900); margin: 0; }
-        .career-main-logo { width: 56px; height: 56px; object-fit: contain; border-radius: 10px; }
+        .career-main-logo { width: 72px; height: 72px; object-fit: contain; border-radius: 10px; }
         .career-company { font-size: 1rem; color: var(--teal); font-weight: 600; margin-bottom: 0.75rem; }
         .career-company a { color: var(--teal); text-decoration: none; transition: color 0.2s; }
         .career-company a:hover { color: var(--teal-dark); text-decoration: underline; }
@@ -502,7 +504,7 @@
                     </div>
                     <div class="career-main-card">
                         <h3>Expanded Stress Free Group's Services</h3>
-                        <p class="career-desc">Diversified the portfolio with new service lines, each leveraging our core competencies in logistics, staffing, and fleet management.</p>
+                        <p class="career-desc">Diversified the Stress Free Group portfolio with strategic new service lines, each leveraging our core competencies in logistics, staffing, fleet management, and technology. Each division operates independently while benefiting from shared infrastructure and operational expertise.</p>
                         <!-- Indented sub-milestones -->
                         <div class="career-sub-items">
                             <div class="career-sub-item">
@@ -511,7 +513,7 @@
                                         <h4>Stress Free Staffing & Events</h4>
                                         <img src="https://www.stressfreegroup.com/assets/staffing-Bis7d4Vj.webp" alt="Stress Free Staffing" class="career-sub-logo">
                                     </div>
-                                    <p>Event staffing and brand ambassador services.</p>
+                                    <p>Full-service event staffing and brand ambassador division providing trained promotional staff, event coordinators, and field teams for festivals, activations, and corporate events nationwide.</p>
                                     <a href="https://stressfreestaffing.com" target="_blank" class="career-link">stressfreestaffing.com →</a>
                                 </div>
                             </div>
@@ -519,9 +521,9 @@
                                 <div class="career-sub-card">
                                     <div class="career-sub-card-header">
                                         <h4>Stress Free Golf Carts</h4>
-                                        <img src="https://www.stressfreegroup.com/assets/golf-CVlDeo6m.webp" alt="Stress Free Golf Carts" class="career-sub-logo">
+                                        <img src="images/stress-free-golf-carts-logo.png" alt="Stress Free Golf Carts" class="career-sub-logo">
                                     </div>
-                                    <p>Golf cart rentals for festivals, events, and venues.</p>
+                                    <p>Premium golf cart rental fleet servicing festivals, special events, resorts, and large venues throughout Southern California with delivery, setup, and on-site support.</p>
                                     <a href="https://stressfreegolfcarts.com" target="_blank" class="career-link">stressfreegolfcarts.com →</a>
                                 </div>
                             </div>
@@ -531,22 +533,22 @@
                                         <h4>RVFMS Fleet Management</h4>
                                         <img src="https://www.stressfreegroup.com/assets/rvfms-B5MPrwF5.webp" alt="RVFMS" class="career-sub-logo">
                                     </div>
-                                    <p>Proprietary fleet management technology platform.</p>
-                                    <a href="https://rvfms-stressfreervs.vercel.app" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
+                                    <p>Proprietary SaaS fleet management platform built to streamline RV rental operations, owner statements, maintenance tracking, and reservation management at scale.</p>
+                                    <a href="https://rvfms.stressfreervs.com" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
                                 </div>
                             </div>
                             <div class="career-sub-item">
                                 <div class="career-sub-card">
                                     <div class="career-sub-card-header">
                                         <h4>Stress Free Shield</h4>
-                                        <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
+                                        <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
                                             <defs><linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00838F"/></linearGradient></defs>
                                             <path d="M50 8 L85 22 L85 48 C85 68 68 85 50 92 C32 85 15 68 15 48 L15 22 Z" fill="url(#shieldGrad2)"/>
                                             <polyline points="35,50 45,60 65,40" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                                         </svg>
                                     </div>
-                                    <p>Interior damage liability protection product.</p>
-                                    <a href="https://stressfreegroup.com" target="_blank" class="career-link">stressfreegroup.com →</a>
+                                    <p>Interior damage liability protection product offering peace of mind coverage for RV renters, protecting against accidental interior damage during their trip.</p>
+                                    <a href="https://www.stressfreeshield.com" target="_blank" class="career-link">www.stressfreeshield.com →</a>
                                 </div>
                             </div>
                         </div>
@@ -568,7 +570,7 @@
                             </div>
                             <img src="https://www.stressfreegroup.com/assets/rvplusyou-CU2o0F0t.webp" alt="RVPlusYou" class="career-main-logo">
                         </div>
-                        <div class="career-desc">Acquired peer-to-peer RV rental marketplace platform, expanding the Stress Free Group ecosystem.</div>
+                        <div class="career-desc">Acquired peer-to-peer RV rental marketplace platform, expanding the Stress Free Group ecosystem with an established booking engine and owner network. Platform serves as foundation for P2PRVS development.</div>
                         <div class="career-websites">
                             <a href="https://rvplusyou.com" target="_blank">www.rvplusyou.com</a>
                         </div>
@@ -589,7 +591,7 @@
                             </div>
                             <img src="https://www.stressfreegroup.com/assets/sfr-BeM-KDxP.webp" alt="Stress Free RVs" class="career-main-logo">
                         </div>
-                        <div class="career-desc">Founded and scaled independent RV rental and fleet-management business. Vertically integrated operations with full P&L ownership.</div>
+                        <div class="career-desc">Founded and scaled independent RV rental and fleet-management business from scratch. Built vertically integrated operations with full P&L ownership, managing a fleet of 100+ vehicles, developing proprietary technology, and delivering exceptional guest experiences for festivals, events, and leisure travel.</div>
                         <div class="career-websites">
                             <a href="https://stressfreervs.com" target="_blank">www.stressfreervs.com</a>
                             <a href="https://stressfreegroup.com" target="_blank">www.stressfreegroup.com</a>
@@ -616,7 +618,7 @@
                             </div>
                             <img src="https://logo.clearbit.com/lookmg.com" alt="Look Media" class="career-main-logo" onerror="this.style.display='none'">
                         </div>
-                        <div class="career-desc">Created The Sampling Agency division from scratch. Built proprietary Talent Portal software for contractor management.</div>
+                        <div class="career-desc">Spearheaded creation of The Sampling Agency division from the ground up. Developed and launched proprietary Talent Portal software to manage thousands of field contractors across the country. Grew client roster and revenue substantially while managing large-scale national sampling programs.</div>
                         <div class="career-websites">
                             <a href="https://lookmg.com" target="_blank">www.lookmg.com</a>
                         </div>
@@ -635,9 +637,14 @@
                         <div class="career-year-text">2014 <small>2016</small></div>
                     </div>
                     <div class="career-main-card">
-                        <h3>Brand Manager</h3>
-                        <div class="career-company">VINO Beverages — New York, NY <em style="color: var(--grey-500); font-weight: 400;">(Company shuttered)</em></div>
-                        <div class="career-desc">Led all marketing efforts for innovative alcohol-removed wine startup. Managed budgets from $30K to $2M. Drove 12,000+ units sold in first 6 months.</div>
+                        <div class="career-main-card-header">
+                            <div>
+                                <h3>Brand Manager</h3>
+                                <div class="career-company">VINO Beverages — New York, NY <em style="color: var(--grey-500); font-weight: 400;">(Company shuttered)</em></div>
+                            </div>
+                            <img src="images/vino-logo.png" alt="VINO Beverages" class="career-main-logo">
+                        </div>
+                        <div class="career-desc">Led all brand marketing efforts for innovative alcohol-removed wine startup targeting health-conscious consumers. Managed marketing budgets ranging from $30K to $2M, executing national retail placement and experiential campaigns that drove 12,000+ units sold in the first 6 months of launch.</div>
                     </div>
                 </div>
 
@@ -648,9 +655,14 @@
                         <div class="career-year-text">2011 <small>2021</small></div>
                     </div>
                     <div class="career-main-card">
-                        <h3>Founder & Principal</h3>
-                        <div class="career-company"><a href="https://linkedin.com/in/MikeVertx" target="_blank">Alternative Brand Marketing</a> — New York, NY</div>
-                        <div class="career-desc">Founded full-service experiential marketing agency. Clients included PepsiCo, Rémy Martin, Evian, and 40+ other national brands.</div>
+                        <div class="career-main-card-header">
+                            <div>
+                                <h3>Founder & Principal</h3>
+                                <div class="career-company"><a href="https://linkedin.com/in/MikeVertx" target="_blank">Alternative Brand Marketing</a> — New York, NY</div>
+                            </div>
+                            <img src="images/abm-logo.png" alt="Alternative Brand Marketing" class="career-main-logo">
+                        </div>
+                        <div class="career-desc">Founded and operated full-service experiential marketing agency for a decade. Built and managed a nationwide database of 20,000+ promotional staff. Delivered end-to-end campaign execution for clients including PepsiCo, Rémy Martin, Evian, and 40+ other national brands across spirits, beverage, CPG, and technology sectors.</div>
                         <div class="career-metrics">
                             <div class="career-metric"><strong>$1.5M+</strong><span>Revenue</span></div>
                             <div class="career-metric"><strong>20K+</strong><span>Staff Database</span></div>
@@ -669,24 +681,32 @@
                         <div class="career-main-card-header">
                             <div>
                                 <h3>Regional Field Marketing Manager</h3>
-                                <div class="career-company"><a href="https://pepsico.com" target="_blank">O.N.E Natural Experience (acquired by PepsiCo)</a> — East Coast</div>
+                                <div class="career-company"><a href="https://pepsico.com" target="_blank">O.N.E Coconut Water (acquired by PepsiCo)</a> — East Coast</div>
                             </div>
-                            <img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" class="career-main-logo" onerror="this.style.display='none'">
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <img src="images/one-coconut-water-logo.png" alt="O.N.E Coconut Water" class="career-main-logo">
+                                <img src="https://logo.clearbit.com/pepsico.com" alt="PepsiCo" style="width: 48px; height: 48px; object-fit: contain;" onerror="this.style.display='none'">
+                            </div>
                         </div>
-                        <div class="career-desc">Promoted twice during tenure. Contributed to successful PepsiCo acquisition. Led major festival activations at Bonnaroo, Electric Zoo, and EDC.</div>
+                        <div class="career-desc">Promoted twice during tenure at fast-growing coconut water brand. Played key role in field marketing strategy that contributed to successful PepsiCo acquisition. Led high-profile festival activations at Bonnaroo, Electric Zoo, EDC, and other major music events, building brand awareness with target demographics.</div>
                     </div>
                 </div>
 
                 <!-- 2007-2010 SoHo -->
                 <div class="career-year-block">
                     <div class="career-year-header">
-                        <div class="career-year-dot"></div>
+                        <a href="https://sohoexp.com" target="_blank" class="career-year-dot clickable" title="SoHo Experiential"></a>
                         <div class="career-year-text">2007 <small>2010</small></div>
                     </div>
                     <div class="career-main-card">
-                        <h3>Account Producer</h3>
-                        <div class="career-company">SoHo Experiential — New York, NY</div>
-                        <div class="career-desc">Premium spirits activations for Rémy Martin, Grand Marnier, and Canei Wines. Managed 500+ on-premise events and 50+ staff members.</div>
+                        <div class="career-main-card-header">
+                            <div>
+                                <h3>Account Producer</h3>
+                                <div class="career-company"><a href="https://sohoexp.com" target="_blank">SoHo Experiential</a> — New York, NY</div>
+                            </div>
+                            <img src="https://logo.clearbit.com/sohoexp.com" alt="SoHo Experiential" class="career-main-logo" onerror="this.style.display='none'">
+                        </div>
+                        <div class="career-desc">Executed premium spirits activations and on-premise marketing programs for luxury brands including Rémy Martin, Grand Marnier, and Canei Wines. Managed 500+ consumer engagement events and supervised 50+ promotional staff members across the tri-state market.</div>
                     </div>
                 </div>
 
@@ -704,7 +724,7 @@
                             </div>
                             <img src="https://logo.clearbit.com/redpegmarketing.com" alt="Red Peg Marketing" class="career-main-logo" onerror="this.style.display='none'">
                         </div>
-                        <div class="career-desc">Managed programs for Breguet, Lavazza, Grand Marnier (U.S. Open), Twitter & Bud Light (Super Bowl), Coors Light, Toshiba, and SoBe.</div>
+                        <div class="career-desc">Managed high-profile experiential programs for world-class brands including Breguet, Lavazza, Grand Marnier at the U.S. Open, Twitter and Bud Light at the Super Bowl, Coors Light, Toshiba, and SoBe. Delivered flawless execution across multiple markets with a focus on VIP hospitality and flagship activations.</div>
                     </div>
                 </div>
 
@@ -722,7 +742,7 @@
                             </div>
                             <img src="https://logo.clearbit.com/hofstra.edu" alt="Hofstra University" class="career-main-logo" onerror="this.style.display='none'">
                         </div>
-                        <div class="career-desc">Bachelor of Science in Marketing, Associate in Business Administration. Started career as Campus Brand Ambassador in 2002, executing grassroots campaigns.</div>
+                        <div class="career-desc">Earned Bachelor of Science in Marketing and Associate in Business Administration. Launched marketing career as Campus Brand Ambassador in 2002, executing grassroots sampling programs and student engagement campaigns that sparked a lifelong passion for experiential marketing.</div>
                     </div>
                 </div>
             </div>
@@ -746,7 +766,7 @@
                 </a>
                 <a href="https://stressfreegolfcarts.com" target="_blank" class="launched-card">
                     <div class="launched-logo">
-                        <img src="https://www.stressfreegroup.com/assets/golf-CVlDeo6m.webp" alt="Stress Free Golf Carts">
+                        <img src="images/stress-free-golf-carts-logo.png" alt="Stress Free Golf Carts">
                     </div>
                     <h3>Stress Free Golf Carts</h3>
                     <p>Cart rentals & sales</p>
