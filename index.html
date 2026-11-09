@@ -85,17 +85,19 @@
         /* LOOKING FOR - ILLUSTRATED CARDS */
         #looking-for { background: var(--teal-light); }
         .looking-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .looking-card { background: white; border-radius: 24px; padding: 2rem; text-align: left; box-shadow: 0 8px 40px rgba(0,0,0,0.08); transition: all 0.4s ease; position: relative; overflow: hidden; }
+        .looking-card { background: white; border-radius: 24px; padding: 2.5rem 2rem 2rem; text-align: left; box-shadow: 0 8px 40px rgba(0,0,0,0.08); transition: all 0.4s ease; position: relative; overflow: visible; }
         .looking-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,131,143,0.2); }
         .looking-card-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
         .looking-icon { width: 60px; height: 60px; min-width: 60px; background: linear-gradient(135deg, var(--teal-light), #B2EBF2); border-radius: 16px; display: flex; align-items: center; justify-content: center; }
         .looking-icon svg { width: 28px; height: 28px; fill: var(--teal); }
         .looking-card h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; color: var(--grey-900); line-height: 1.3; margin: 0; }
         .looking-card p { font-size: 1rem; color: var(--grey-600); line-height: 1.7; margin: 0; }
-        .looking-card-tag { display: inline-block; background: var(--teal); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; }
+        .looking-card-tag { display: inline-block; background: var(--teal); color: white; padding: 0.375rem 0.875rem; border-radius: 3px; font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; position: absolute; top: 1.25rem; right: 1.25rem; }
 
         /* WHY WORK WITH ME - VALUE-BASED ICONS */
-        #why-me { background: var(--white); }
+        #why-me { background: linear-gradient(180deg, var(--white) 0%, var(--grey-50) 100%); }
+        #why-me .section-title { font-size: 2.75rem; color: var(--red); }
+        #why-me .section-header { margin-bottom: 3.5rem; }
         .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
         .why-card { background: var(--grey-50); border-radius: 20px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; transition: all 0.3s ease; border: 2px solid transparent; }
         .why-card:hover { background: white; border-color: var(--teal-light); box-shadow: 0 15px 50px rgba(0,131,143,0.12); transform: translateY(-4px); }
@@ -355,7 +357,7 @@
             <div class="section-header">
                 <div class="section-label">Opportunities</div>
                 <h2 class="section-title">How I Can Help</h2>
-                <p class="section-subtitle">I partner with brands and agencies who want to create meaningful consumer connections.</p>
+                <p class="section-subtitle">I partner with brands and agencies<br>to create meaningful consumer connections.</p>
             </div>
             <div class="looking-grid">
                 <div class="looking-card">
@@ -371,7 +373,7 @@
                         <div class="looking-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
                         <h3>Keep Leaders at the Top</h3>
                     </div>
-                    <p>Help established brands maintain market dominance through innovative activations, flawless execution, and programs that keep consumers engaged and loyal.</p>
+                    <p>Help established brands maintain market dominance through innovative activations, flawless execution, and programs that deepen consumer engagement and drive measurable results.</p>
                     <span class="looking-card-tag">Fortune 500</span>
                 </div>
                 <div class="looking-card">
@@ -869,7 +871,7 @@
                 <div class="client-card"><img src="https://logo.clearbit.com/twitter.com" alt="Twitter" onerror="this.style.display='none'"><span class="client-text">Twitter</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/v8.com" alt="V8" onerror="this.style.display='none'"><span class="client-text">V8</span></div>
                 <div class="client-card"><img src="https://logo.clearbit.com/verizon.com" alt="Verizon" onerror="this.style.display='none'"><span class="client-text">Verizon</span></div>
-                <div class="client-card" style="background: linear-gradient(135deg, rgba(183,28,28,0.2), rgba(183,28,28,0.1)); border: 2px dashed rgba(255,255,255,0.3);"><span class="client-text" style="color: rgba(255,255,255,0.9); font-size: 0.8125rem;">Your Brand Here</span></div>
+                <div class="client-card" style="background: linear-gradient(135deg, rgba(46,125,50,0.4), rgba(46,125,50,0.25)); border: 2px solid rgba(46,125,50,0.6);"><span class="client-text" style="color: #A5D6A7; font-size: 0.875rem; font-weight: 700;">Your Brand Here</span></div>
             </div>
             </div>
         </div>
