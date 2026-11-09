@@ -172,6 +172,10 @@
         /* MAIN CAREER CARD with logo */
         .career-main-card { background: white; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; margin-left: 0; position: relative; }
         .career-main-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        /* Sub-items nested INSIDE main card - indented like bullet points */
+        .career-main-card .career-sub-items { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--grey-200); margin-left: 1.5rem; padding-left: 1.5rem; border-left: 3px solid var(--grey-200); }
+        .career-main-card .career-sub-card { padding: 1rem; box-shadow: none; background: var(--grey-50); }
+        .career-main-card .career-sub-card:hover { background: var(--grey-100); box-shadow: none; transform: none; }
         .career-main-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
         .career-main-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--grey-900); margin: 0; }
         .career-main-logo { width: 56px; height: 56px; object-fit: contain; border-radius: 10px; }
@@ -490,76 +494,60 @@
                 <p>My career spans the full spectrum of experiential marketing — from executing grassroots sampling programs as a college brand ambassador to founding and scaling my own agencies.</p>
             </div>
             <div class="career-grid">
-                <!-- 2026 - HIERARCHICAL NESTED STRUCTURE -->
+                <!-- 2026 - Main milestone with indented sub-milestones -->
                 <div class="career-year-block">
                     <div class="career-year-header">
                         <div class="career-year-dot"></div>
                         <div class="career-year-text">2026 <small>Present</small></div>
-                        <span class="career-year-label">— Expanded Stress Free Group's Services</span>
                     </div>
-                    <div class="career-sub-items">
-                        <div class="career-sub-item">
-                            <a href="https://stressfreestaffing.com" target="_blank" class="sub-dot" title="Stress Free Staffing"></a>
-                            <div class="career-sub-card">
-                                <div class="career-sub-card-header">
-                                    <h4>Stress Free Staffing & Events</h4>
-                                    <img src="https://www.stressfreegroup.com/assets/staffing-Bis7d4Vj.webp" alt="Stress Free Staffing" class="career-sub-logo">
+                    <div class="career-main-card">
+                        <h3>Expanded Stress Free Group's Services</h3>
+                        <p class="career-desc">Diversified the portfolio with new service lines, each leveraging our core competencies in logistics, staffing, and fleet management.</p>
+                        <!-- Indented sub-milestones -->
+                        <div class="career-sub-items">
+                            <div class="career-sub-item">
+                                <div class="career-sub-card">
+                                    <div class="career-sub-card-header">
+                                        <h4>Stress Free Staffing & Events</h4>
+                                        <img src="https://www.stressfreegroup.com/assets/staffing-Bis7d4Vj.webp" alt="Stress Free Staffing" class="career-sub-logo">
+                                    </div>
+                                    <p>Event staffing and brand ambassador services.</p>
+                                    <a href="https://stressfreestaffing.com" target="_blank" class="career-link">stressfreestaffing.com →</a>
                                 </div>
-                                <p>Event staffing and brand ambassador services. Leveraging 25+ years of experiential marketing connections.</p>
-                                <a href="https://stressfreestaffing.com" target="_blank" class="career-link">stressfreestaffing.com →</a>
                             </div>
-                        </div>
-                        <div class="career-sub-item">
-                            <a href="https://stressfreegolfcarts.com" target="_blank" class="sub-dot" title="Stress Free Golf Carts"></a>
-                            <div class="career-sub-card">
-                                <div class="career-sub-card-header">
-                                    <h4>Stress Free Golf Carts</h4>
-                                    <img src="https://www.stressfreegroup.com/assets/golf-CVlDeo6m.webp" alt="Stress Free Golf Carts" class="career-sub-logo">
+                            <div class="career-sub-item">
+                                <div class="career-sub-card">
+                                    <div class="career-sub-card-header">
+                                        <h4>Stress Free Golf Carts</h4>
+                                        <img src="https://www.stressfreegroup.com/assets/golf-CVlDeo6m.webp" alt="Stress Free Golf Carts" class="career-sub-logo">
+                                    </div>
+                                    <p>Golf cart rentals for festivals, events, and venues.</p>
+                                    <a href="https://stressfreegolfcarts.com" target="_blank" class="career-link">stressfreegolfcarts.com →</a>
                                 </div>
-                                <p>Golf cart rentals for festivals, events, corporate campuses, and venues.</p>
-                                <a href="https://stressfreegolfcarts.com" target="_blank" class="career-link">stressfreegolfcarts.com →</a>
                             </div>
-                        </div>
-                        <div class="career-sub-item">
-                            <a href="https://rvfms-stressfreervs.vercel.app" target="_blank" class="sub-dot" title="RVFMS"></a>
-                            <div class="career-sub-card">
-                                <div class="career-sub-card-header">
-                                    <h4>RVFMS Fleet Management</h4>
-                                    <img src="https://www.stressfreegroup.com/assets/rvfms-B5MPrwF5.webp" alt="RVFMS" class="career-sub-logo">
+                            <div class="career-sub-item">
+                                <div class="career-sub-card">
+                                    <div class="career-sub-card-header">
+                                        <h4>RVFMS Fleet Management</h4>
+                                        <img src="https://www.stressfreegroup.com/assets/rvfms-B5MPrwF5.webp" alt="RVFMS" class="career-sub-logo">
+                                    </div>
+                                    <p>Proprietary fleet management technology platform.</p>
+                                    <a href="https://rvfms-stressfreervs.vercel.app" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
                                 </div>
-                                <p>Proprietary fleet management technology platform for RV rental operations.</p>
-                                <a href="https://rvfms-stressfreervs.vercel.app" target="_blank" class="career-link">rvfms.stressfreervs.com →</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2025 - HIERARCHICAL -->
-                <div class="career-year-block">
-                    <div class="career-year-header">
-                        <div class="career-year-dot"></div>
-                        <div class="career-year-text">2025</div>
-                        <span class="career-year-label">— Expanded Stress Free Group's Services</span>
-                    </div>
-                    <div class="career-sub-items">
-                        <div class="career-sub-item">
-                            <a href="https://stressfreegroup.com" target="_blank" class="sub-dot" title="Stress Free Shield"></a>
-                            <div class="career-sub-card">
-                                <div class="career-sub-card-header">
-                                    <h4>Stress Free Shield</h4>
-                                    <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
-                                        <defs>
-                                            <linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stop-color="#1565C0"/>
-                                                <stop offset="100%" stop-color="#00838F"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M50 8 L85 22 L85 48 C85 68 68 85 50 92 C32 85 15 68 15 48 L15 22 Z" fill="url(#shieldGrad2)"/>
-                                        <polyline points="35,50 45,60 65,40" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                                    </svg>
+                            <div class="career-sub-item">
+                                <div class="career-sub-card">
+                                    <div class="career-sub-card-header">
+                                        <h4>Stress Free Shield</h4>
+                                        <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="career-sub-logo">
+                                            <defs><linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00838F"/></linearGradient></defs>
+                                            <path d="M50 8 L85 22 L85 48 C85 68 68 85 50 92 C32 85 15 68 15 48 L15 22 Z" fill="url(#shieldGrad2)"/>
+                                            <polyline points="35,50 45,60 65,40" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                        </svg>
+                                    </div>
+                                    <p>Interior damage liability protection product.</p>
+                                    <a href="https://stressfreegroup.com" target="_blank" class="career-link">stressfreegroup.com →</a>
                                 </div>
-                                <p>Interior damage liability protection product, diversifying revenue streams and creating new B2B partnership opportunities.</p>
-                                <a href="https://stressfreegroup.com" target="_blank" class="career-link">stressfreegroup.com →</a>
                             </div>
                         </div>
                     </div>
